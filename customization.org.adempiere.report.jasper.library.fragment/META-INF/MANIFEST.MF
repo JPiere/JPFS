@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: cutomization.org.adempiere.report.jasper.library.fragment
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Hideaki Hagiwara
+Fragment-Host: org.adempiere.report.jasper.library
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: iTextAsian.jar
