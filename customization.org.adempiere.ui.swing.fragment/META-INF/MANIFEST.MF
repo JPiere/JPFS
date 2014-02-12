@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: customization.org.adempiere.ui.swing.fragment
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Hideaki Hagiwara
+Fragment-Host: org.adempiere.ui.swing
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
