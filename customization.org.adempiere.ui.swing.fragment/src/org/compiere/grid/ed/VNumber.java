@@ -51,7 +51,7 @@ import javax.swing.text.Document;
 import org.compiere.apps.AEnv;
 import org.compiere.apps.FieldRecordInfo;
 import org.compiere.model.GridField;
-import org.compiere.model.MCurrency;				//FIXME Hideaki Hagiwara
+import org.compiere.model.MCurrency;				//FIXME Hideaki Hagiwara import MCurrency to VNumber
 import org.compiere.model.MRole;
 import org.compiere.swing.CButton;
 import org.compiere.swing.CComboBox;
