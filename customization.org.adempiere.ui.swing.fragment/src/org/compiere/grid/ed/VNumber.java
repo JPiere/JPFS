@@ -51,7 +51,7 @@ import javax.swing.text.Document;
 import org.compiere.apps.AEnv;
 import org.compiere.apps.FieldRecordInfo;
 import org.compiere.model.GridField;
-import org.compiere.model.MCurrency;				//FIXME Hideaki Hagiwara import MCurrency to VNumber
+import org.compiere.model.MCurrency;				//JPIERE-3 Import MCurrency to VNumber by Hideaki Hagiwara
 import org.compiere.model.MRole;
 import org.compiere.swing.CButton;
 import org.compiere.swing.CComboBox;
@@ -383,7 +383,7 @@ public final class VNumber extends JComponent
 		if (value == null)
 			m_oldText = "";
 		else
-		{								//FIXME Hideaki Hagiwara Modify VNumber#setValue() -start-
+		{								//JPIERE-3 Modify VNumber#setValue() by Hideaki Hagiwara
 			if( m_text != null )
 			{
 				if( m_mField != null )
@@ -406,7 +406,7 @@ public final class VNumber extends JComponent
 				m_oldText = m_format.format(value);
 			}
 		}
-											//FIXME Hideaki Hagiwara Modify VNumber#setValue() -Finish-
+											//JPiere-3 Finish
 		//	only set when not updated here
 		if (m_setting)
 			return;

@@ -47,7 +47,7 @@ import javax.print.DocFlavor;
 import javax.print.attribute.DocAttributeSet;
 
 import org.compiere.model.MClientInfo;
-import org.compiere.model.MLocation;				//FIXME Hideaki Hagiwara import MLocation to Layout Engine
+import org.compiere.model.MLocation;				//JPIERE-3 Import MLocation to LayoutEngine
 import org.compiere.model.MQuery;
 import org.compiere.model.MTable;
 import org.compiere.model.PrintInfo;
@@ -68,9 +68,9 @@ import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
-import org.compiere.util.FragmentDisplayType;				//FIXME Hideaki Hagiwara import FragmentDisplayType to Layout Engine
+import org.compiere.util.FragmentDisplayType;				//JPIERE-3 Import FragmentDisplayType to LayoutEngine
 import org.compiere.util.KeyNamePair;
-import org.compiere.util.Language;							//FIXME Hideaki Hagiwara import Language to Layout Engine
+import org.compiere.util.Language;							//JPIERE-3 Import Language to LayoutEngine
 import org.compiere.util.Msg;
 import org.compiere.util.NamePair;
 import org.compiere.util.ValueNamePair;
@@ -1348,7 +1348,7 @@ public class LayoutEngine implements Pageable, Printable, Doc
 		}
 
 		//	Convert DataElement to String
-		PrintDataElement data = (PrintDataElement)obj;//FIXME Hideaki Hagiwara Modify LayoutEngine#createFiledElement -start-
+		PrintDataElement data = (PrintDataElement)obj;//JPIERE-3-1 Modify LayoutEngine#createFiledElement by Hideaki Hagiwara
 		if (data.isNull() && item.isSuppressNull())
 			return null;
 
@@ -1359,7 +1359,7 @@ public class LayoutEngine implements Pageable, Printable, Doc
 		}else{
 			stringContent = data.getValueDisplay (m_format.getLanguage());
 		}
-													//FIXME Hideaki Hagiwara Modify LayoutEngine#createFiledElement -finish-
+													//JPiere-3-1 Finish
 		if ((stringContent == null || stringContent.length() == 0) && item.isSuppressNull())
 			return null;
 		//	non-string
@@ -1728,7 +1728,7 @@ public class LayoutEngine implements Pageable, Printable, Doc
 							if (pde.isID() || pde.isYesNo())
 								dataElement = (Serializable) pde.getValue();
 							else
-							{				//FIXME Hideaki Hagiwara Modify LayoutEngine#layoutTable -start-
+							{				//JPIERE-3-2 Modify LayoutEngine#layoutTable by Hideaki Hagiwara
 								if(pde.getDisplayType()==DisplayType.Amount || pde.getDisplayType()==DisplayType.CostPrice)
 								{
 									int C_Currency_ID = getC_Currency_ID(printData);
@@ -1743,7 +1743,7 @@ public class LayoutEngine implements Pageable, Printable, Doc
 								}
 							}
 
-						}				//FIXME Hideaki Hagiwara Modify LayoutEngine#layoutTable -finish-
+						}				//JPiere-3-2 Finish
 						else
 							log.log(Level.SEVERE, "Element not PrintDataElement " + obj.getClass());
 						columnElement = dataElement;
@@ -1973,8 +1973,10 @@ public class LayoutEngine implements Pageable, Printable, Doc
 	}
 
 	/**
+	 * Get C_Currency_ID
+	 * JPIERE-3 Add LayoutEngine#getC_Currency_ID()
 	 *
-	 * FIXME Hideaki Hagiwara Create LayoutEngine#getC_Currency_ID()
+	 * @author Hideaki Hagiwara
 	 */
 	private int getC_Currency_ID(PrintData printData)
 	{
@@ -2000,8 +2002,10 @@ public class LayoutEngine implements Pageable, Printable, Doc
 	}
 
 	/**
+	 * Get Display Value
+	 * JPIERE-3 Add LayoutEngine#getValueDisplay()
 	 *
-	 * FIXME Hideaki Hagiwara Create LayoutEngine#getValueDisplay()
+	 * @author Hideaki Hagiwara
 	 */
 	private String getValueDisplay (Language language, int C_Currency_ID, PrintDataElement pde)
 	{
@@ -2031,8 +2035,9 @@ public class LayoutEngine implements Pageable, Printable, Doc
 	}//getValueDisplay
 
 	/**
-	 *
-	 * FIXME Hideaki Hagiwara Create LayoutEngine#getValueDisplay_BPLocation()
+	 * Get Value Displapay BPLocation
+	 * JPIERE-3 Add LayoutEngine#getValueDisplay_BPLocation()
+	 * @author Hideaki Hagiwara
 	 */
 	private String getValueDisplay_BPLocation ( PrintDataElement pde)
 	{

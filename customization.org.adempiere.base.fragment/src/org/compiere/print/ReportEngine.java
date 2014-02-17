@@ -67,7 +67,7 @@ import org.compiere.model.MColumn;
 import org.compiere.model.MDunningRunEntry;
 import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
-import org.compiere.model.MLocation;				//FIXME Hideaki Hagiwara import MLocation to ReportEngine
+import org.compiere.model.MLocation;				//JPIERE-3 Import MLocation to ReportEngine
 import org.compiere.model.MOrder;
 import org.compiere.model.MPaySelectionCheck;
 import org.compiere.model.MProject;
@@ -80,11 +80,11 @@ import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
-import org.compiere.util.FragmentDisplayType;		//FIXME Hideaki Hagiwara import FragmentDisplayType to ReportEngine
+import org.compiere.util.FragmentDisplayType;		//JPIERE-3 Import FragmentDisplayType to ReportEngine
 import org.compiere.util.Ini;
-import org.compiere.util.KeyNamePair;				//FIXME Hideaki Hagiwara import KeyNamePair to ReportEngine
+import org.compiere.util.KeyNamePair;				//JPIERE-3 Import KeyNamePair to ReportEngine
 import org.compiere.util.Language;
-import org.compiere.util.NamePair;					//FIXME Hideaki Hagiwara import NamePair to ReportEngine
+import org.compiere.util.NamePair;					//JPIERE-3 Import NamePair to ReportEngine
 import org.compiere.util.Util;
 import org.eevolution.model.MDDOrder;
 import org.eevolution.model.X_PP_Order;
@@ -635,7 +635,7 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 								td.addElement("&nbsp;");
 							else if (obj instanceof PrintDataElement)
 							{
-								PrintDataElement pde = (PrintDataElement) obj;//FIXME Hideaki Hagiwara Modify ReportEngine#createHTML -Start-
+								PrintDataElement pde = (PrintDataElement) obj;//JPIERE-3 Modify ReportEngine#createHTML by Hideaki Hagiwara
 								String value = null;
 								if(pde.getDisplayType()==DisplayType.Amount || pde.getDisplayType() == DisplayType.CostPrice)
 								{
@@ -643,7 +643,7 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 								}else{
 									value = pde.getValueDisplay(language);
 								}
-								 											//FIXME Hideaki Hagiwara Modify ReportEngine#createHTML  -finish-
+								 											//JPiere-3 Finish
 								if (pde.getColumnName().endsWith("_ID") && extension != null)
 								{
 									//link for column
@@ -835,7 +835,7 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 							{
 								PrintDataElement pde = (PrintDataElement)obj;
 								if (pde.isPKey())
-								{					//FIXME Hideaki Hagiwara Modify ReportEngine#createCSV  -Start-
+								{					//JPIERE-3 Modify ReportEngine#createCSV by Hideaki Hagiwara
 									data = pde.getValueAsString();
 								}else{
 									if(pde.getDisplayType()==DisplayType.Amount || pde.getDisplayType()==DisplayType.CostPrice)
@@ -844,7 +844,7 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 									}else{
 										data = pde.getValueDisplay(language);
 									}
-								}					//FIXME Hideaki Hagiwara Modify ReportEngine#createCSV -finish-
+								}					//JPiere-3 Finish
 							}
 							else if (obj instanceof PrintData)
 							{
@@ -1723,8 +1723,9 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 
 
 	/**
-	 *
-	 * FIXME Hideaki Hagiwara Create ReportEngine#getC_Currency_ID()
+	 * Get C_Currency_ID
+	 * JPIERE-3 Add ReportEngine#getC_Currency_ID()
+	 * @author Hideaki Hagiwara
 	 */
 	private int getC_Currency_ID(PrintData printData)
 	{
@@ -1751,8 +1752,9 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 
 
 	/**
-	 *
-	 * FIXME Hideaki Hagiwara Create ReportEngine#getValueDisplay()
+	 * Get Value Display
+	 * JPIERE-3 Add ReportEngine#getValueDisplay()
+	 * @author Hideaki Hagiwara
 	 */
 	private String getValueDisplay (Language language, int C_Currency_ID, PrintDataElement pde)
 	{
@@ -1782,9 +1784,10 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 	}//getValueDisplay
 
 	/**
+	 * Get Value Display BPLocation
+	 * JPIERE-3 Add ReportEngine#getValueDisplay_BPLocation()
 	 *
-	 *
-	 * FIXME Hideaki Hagiwara Create ReportEngine#getValueDisplay_BPLocation()
+	 * @author Hideaki Hagiwara
 	 */
 	private String getValueDisplay_BPLocation ( PrintDataElement pde)
 	{

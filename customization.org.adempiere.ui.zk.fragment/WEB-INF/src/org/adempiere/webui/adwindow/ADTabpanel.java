@@ -25,14 +25,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 
-import javax.servlet.ServletRequest;				//FIXME Hideaki Hagiwara import ServletRequest to ADTabpanel
+import javax.servlet.ServletRequest;				//JPIERE-2 Import ServletRequest to ADTabpanel
 
 import org.adempiere.base.Core;
 import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.webui.AdempiereIdGenerator;
 import org.adempiere.webui.AdempiereWebUI;
 import org.adempiere.webui.LayoutUtils;
-import org.adempiere.webui.apps.AEnv;				//FIXME Hideaki Hagiwara import AEnv to ADTabpanel
+import org.adempiere.webui.apps.AEnv;				//JPIERE-2 Import AEnv to ADTabpanel
 import org.adempiere.webui.component.Borderlayout;
 import org.adempiere.webui.component.Column;
 import org.adempiere.webui.component.Columns;
@@ -80,7 +80,7 @@ import org.compiere.util.Env;
 import org.compiere.util.Evaluatee;
 import org.compiere.util.Msg;
 import org.compiere.util.Util;
-import org.zkoss.web.servlet.Servlets;				//FIXME Hideaki Hagiwara import Servlet to ADTa
+import org.zkoss.web.servlet.Servlets;				//JPIERE-2 Import Servlet to ADTabpanel
 import org.zkoss.zk.au.out.AuFocus;
 import org.zkoss.zk.au.out.AuScript;
 import org.zkoss.zk.ui.Component;
@@ -108,6 +108,7 @@ import org.zkoss.zul.Treeitem;
 import org.zkoss.zul.Vlayout;
 import org.zkoss.zul.West;
 import org.zkoss.zul.impl.XulElement;
+;
 
 
 /**
@@ -367,14 +368,14 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
 			Vlayout div = new Vlayout();
 			div.setSclass("adtab-form");
 			div.appendChild(form);
-												//FIXME Hideaki Hagiwara Modify ADTabpanel#init() -start-
+												//JPIERE-2 Modify ADTabpanel#init() by Hideaki Hagiwara
 			if ( AEnv.isInternetExplorer() &&
 					(Servlets.getBrowser((ServletRequest) Executions.getCurrent().getNativeRequest(), "ie").intValue() < 9))
 			{
 				div.setStyle("overflow-y: scroll;");
 			}else{
 				div.setStyle("overflow-y: visible;");
-			}									//FIXME Hideaki Hagiwara Modify ADTabpanel#init() -finish-
+			}									//JPiere-2 Finish
 			div.setVflex("1");
 			div.setWidth("100%");
 			div.setSpacing("0px");

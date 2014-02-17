@@ -30,7 +30,7 @@ import org.adempiere.webui.window.WFieldRecordInfo;
 import org.compiere.model.GridField;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
-import org.compiere.util.FragmentDisplayType;	//FIXME Hideaki Hagiwara import FragmentDisplayType to WNumberEditor
+import org.compiere.util.FragmentDisplayType;	//JPIERE-3 Import FragmentDisplayType to WNumberEditor
 import org.compiere.util.Language;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;
@@ -216,7 +216,7 @@ public class WNumberEditor extends WEditor implements ContextMenuListener
     	if (value == null)
     		oldValue = null;
     	else if (value instanceof BigDecimal)
-    	{										//FIXME Hideaki Hagiwara Modify WNumberEditor#setValue() -start-
+    	{										//JPIERE-3 Modify WNumberEditor#setValue() by Hideaki Hagiwara
     		oldValue = (BigDecimal) value;
     		if(gridField != null  && (displayType==DisplayType.Amount || displayType==DisplayType.CostPrice) )
     		{
@@ -225,7 +225,7 @@ public class WNumberEditor extends WEditor implements ContextMenuListener
     			getComponent().getDecimalbox().setFormat(format.toPattern());
     			getComponent().setFormat(format);
     		}
-    	} 												//FIXME Hideaki Hagiwara Modify WNumberEditor#setValue() -finish-
+    	} 												//JPiere-3 Finish
     	else if (value instanceof Number)
     		oldValue = BigDecimal.valueOf(((Number)value).doubleValue());
     	else
