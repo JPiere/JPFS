@@ -1348,7 +1348,7 @@ public class LayoutEngine implements Pageable, Printable, Doc
 		}
 
 		//	Convert DataElement to String
-		PrintDataElement data = (PrintDataElement)obj;//JPIERE-3-1 Modify LayoutEngine#createFiledElement by Hideaki Hagiwara
+		PrintDataElement data = (PrintDataElement)obj;//JPIERE-3 Modify LayoutEngine#createFiledElement by Hideaki Hagiwara
 		if (data.isNull() && item.isSuppressNull())
 			return null;
 
@@ -1728,7 +1728,7 @@ public class LayoutEngine implements Pageable, Printable, Doc
 							if (pde.isID() || pde.isYesNo())
 								dataElement = (Serializable) pde.getValue();
 							else
-							{				//JPIERE-3-2 Modify LayoutEngine#layoutTable by Hideaki Hagiwara
+							{				//JPIERE-3 Modify LayoutEngine#layoutTable by Hideaki Hagiwara
 								if(pde.getDisplayType()==DisplayType.Amount || pde.getDisplayType()==DisplayType.CostPrice)
 								{
 									int C_Currency_ID = getC_Currency_ID(printData);

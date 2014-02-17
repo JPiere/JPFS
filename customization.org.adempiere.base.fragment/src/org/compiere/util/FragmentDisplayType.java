@@ -9,7 +9,7 @@ import java.util.logging.Level;
 
 import org.compiere.model.MCurrency;
 
-public class FragmentDisplayType {
+public class FragmentDisplayType {		//JPIERE-3 Create FragmentDisplayType Class
 
 	/** Maximum number of digits    */
 	private static final int    MAX_DIGITS = 28;        //  Oracle Standard Limitation 38 digits
