@@ -33,7 +33,7 @@ import org.compiere.util.Msg;
 import org.compiere.util.Trx;
 
 /**
- *	JPIERE-7 Update User of WF Activity in a lump
+ * JPIERE-7 Update User of WF Activity in a lump
  *
  * This process update user of WF Activity that WFState is "OS" and Processed is "false".
  *
@@ -173,8 +173,7 @@ public class WFActivityUserBatchUpdate extends SvrProcess
 			boolean isOK = process.processItWithoutTrxClose(pi,Trx.get(get_TrxName(), false));
 			if(isOK)
 			{
-				addLog(Msg.getElement(getCtx(), "AD_WF_Process_ID")+"_"+Msg.getElement(getCtx(), "TextMsg")+" = "+ activities[i].getAD_WF_Process().getTextMsg()
-						+ " / " + Msg.getElement(getCtx(), "AD_WF_Activity_ID")+"_"+Msg.getElement(getCtx(), "TextMsg")+" = "+ activities[i].getTextMsg());
+				addLog(Msg.getElement(getCtx(), "AD_WF_Process_ID")+" "+Msg.getElement(getCtx(), "TextMsg")+" => "+ activities[i].getAD_WF_Process().getTextMsg());
 			}else{
 				throw new Exception(Msg.getMsg(getCtx(), "ProcessRunError"));//Process failed during execution
 			}

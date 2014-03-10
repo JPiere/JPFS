@@ -33,7 +33,7 @@ import org.compiere.util.Msg;
 import org.compiere.util.Trx;
 
 /**
- *	JPIERE-8 Update WF Responsible of WF Activity in a lump
+ * JPIERE-8 Update WF Responsible of WF Activity in a lump
  *
  * This process update WF Responsible of WF Activity that WFState is "OS" and Processed is "false".
  *
@@ -54,7 +54,7 @@ public class WFActivityRespBatchUpdate extends SvrProcess
 	private int			p_AD_WF_Responsible_ID = 0;
 
 	/**Substitute WF Responsible(Mandatory)*/
-	private int			p_AD_WF_RespSubstitute_ID = 0;//TODO
+	private int			p_AD_WF_RespSubstitute_ID = 0;
 
 	/**Target Organization(Option)*/
 	private int			p_AD_Org_ID = 0;
@@ -81,7 +81,7 @@ public class WFActivityRespBatchUpdate extends SvrProcess
 				;
 			}else if (name.equals("AD_WF_Responsible_ID")){
 				p_AD_WF_Responsible_ID = para[i].getParameterAsInt();
-			}else if (name.equals("AD_WF_ResSubstitute_ID")){
+			}else if (name.equals("AD_WF_RespSubstitute_ID")){
 				p_AD_WF_RespSubstitute_ID = para[i].getParameterAsInt();
 			}else if (name.equals("AD_Workflow_ID")){
 				p_AD_Workflow_ID = para[i].getParameterAsInt();
@@ -173,8 +173,7 @@ public class WFActivityRespBatchUpdate extends SvrProcess
 			boolean isOK = process.processItWithoutTrxClose(pi,Trx.get(get_TrxName(), false));
 			if(isOK)
 			{
-				addLog(Msg.getElement(getCtx(), "AD_WF_Process_ID")+"_"+Msg.getElement(getCtx(), "TextMsg")+" = "+ activities[i].getAD_WF_Process().getTextMsg()
-						+ " / " + Msg.getElement(getCtx(), "AD_WF_Activity_ID")+"_"+Msg.getElement(getCtx(), "TextMsg")+" = "+ activities[i].getTextMsg());
+				addLog(Msg.getElement(getCtx(), "AD_WF_Process_ID")+" "+Msg.getElement(getCtx(), "TextMsg")+" => "+ activities[i].getAD_WF_Process().getTextMsg());
 			}else{
 				throw new Exception(Msg.getMsg(getCtx(), "ProcessRunError"));//Process failed during execution
 			}
