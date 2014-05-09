@@ -173,7 +173,9 @@ public class WFActivityUserBatchUpdate extends SvrProcess
 			boolean isOK = process.processItWithoutTrxClose(pi,Trx.get(get_TrxName(), false));
 			if(isOK)
 			{
-				addLog(Msg.getElement(getCtx(), "AD_WF_Process_ID")+" "+Msg.getElement(getCtx(), "TextMsg")+" => "+ activities[i].getAD_WF_Process().getTextMsg());
+				String msg = Msg.getElement(getCtx(), "AD_WF_Process_ID")+" "+Msg.getElement(getCtx(), "TextMsg")+" => "+ activities[i].getAD_WF_Process().getTextMsg();
+				addBufferLog(getAD_PInstance_ID(), null, null, msg, MWFActivity.Table_ID, activities[i].get_ID());
+//				addLog(Msg.getElement(getCtx(), "AD_WF_Process_ID")+" "+Msg.getElement(getCtx(), "TextMsg")+" => "+ activities[i].getAD_WF_Process().getTextMsg());
 			}else{
 				throw new Exception(Msg.getMsg(getCtx(), "ProcessRunError"));//Process failed during execution
 			}
