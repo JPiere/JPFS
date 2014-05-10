@@ -28,15 +28,19 @@ import org.compiere.util.Msg;
 public class GLJournalBulkComplete extends SvrProcess {
 	
 	private int 		p_AD_Client_ID = 0;
-
-
-	/**Original User(Mandatory)*/
-	private int			p_AD_User_ID = 0;
-
-
+	
 	/**Target Organization(Option)*/
 	private int			p_AD_Org_ID = 0;
 
+	/**Target DateAcct Date(Option)*/
+	private Timestamp	p_DateAcct_From = null;
+	private Timestamp	p_DateAcct_To = null;
+	
+	/**Target DocStatus(Mandatory)*/
+	private String		p_DocStatus = "DR";
+
+	/**Original User(Option)*/
+	private int			p_AD_User_ID = 0;
 
 	/**Target Created Date(Option)*/
 	private Timestamp	p_Created_From = null;
@@ -55,19 +59,32 @@ public class GLJournalBulkComplete extends SvrProcess {
 			String name = para[i].getParameterName();
 			if (para[i].getParameter() == null){
 				;
+			}else if (name.equals("AD_Org_ID")){
+				p_AD_Org_ID = para[i].getParameterAsInt();
+			}else if (name.equals("DateAcct")){
+				p_DateAcct_From = (Timestamp)para[i].getParameter();
+				p_DateAcct_To = (Timestamp)para[i].getParameter_To();
+				if(p_DateAcct_To!=null)
+				{
+					Calendar cal = Calendar.getInstance();
+					cal.setTimeInMillis(p_DateAcct_To.getTime());
+					cal.add(Calendar.DAY_OF_MONTH, 1);
+					p_DateAcct_To = new Timestamp(cal.getTimeInMillis());
+				}				
+			}else if (name.equals("DocStatus")){
+				p_DocStatus = para[i].getParameterAsString();
 			}else if (name.equals("AD_User_ID")){
 				p_AD_User_ID = para[i].getParameterAsInt();
 			}else if (name.equals("Created")){
 				p_Created_From = (Timestamp)para[i].getParameter();
 				p_Created_To = (Timestamp)para[i].getParameter_To();
 				if(p_Created_To!=null)
-				{Calendar cal = Calendar.getInstance();
-				cal.setTimeInMillis(p_Created_To.getTime());
-				cal.add(Calendar.DAY_OF_MONTH, 1);
-				p_Created_To = new Timestamp(cal.getTimeInMillis());
+				{
+					Calendar cal = Calendar.getInstance();
+					cal.setTimeInMillis(p_Created_To.getTime());
+					cal.add(Calendar.DAY_OF_MONTH, 1);
+					p_Created_To = new Timestamp(cal.getTimeInMillis());
 				}
-			}else if (name.equals("AD_Org_ID")){
-				p_AD_Org_ID = para[i].getParameterAsInt();
 			}else{
 				log.log(Level.SEVERE, "Unknown Parameter: " + name);
 			}//if
@@ -83,8 +100,8 @@ public class GLJournalBulkComplete extends SvrProcess {
 	{
 		//Mandatory parameters
 		StringBuilder whereClause = new StringBuilder(MJournal.COLUMNNAME_AD_Client_ID + " = ? AND "
-														+ MJournal.COLUMNNAME_Processed +" = 'N' AND "
-														+ MJournal.COLUMNNAME_DocStatus +" = 'DR' "
+														+ MJournal.COLUMNNAME_Processed + " = 'N' AND "
+														+ MJournal.COLUMNNAME_DocStatus + " = " + "'" + p_DocStatus + "'" 
 														);
 
 		ArrayList<Object> docListParams = new ArrayList<Object>();
@@ -93,26 +110,39 @@ public class GLJournalBulkComplete extends SvrProcess {
 		//Option parameters
 		if (p_AD_Org_ID != 0)
 		{
-			whereClause.append("AND " + MJournal.COLUMNNAME_AD_Org_ID + " = ? ");
+			whereClause.append(" AND " + MJournal.COLUMNNAME_AD_Org_ID + " = ? ");
 			docListParams.add(p_AD_Org_ID);
 		}
 		
+		if(p_DateAcct_From != null)
+		{
+			whereClause.append(" AND " + MJournal.COLUMNNAME_DateAcct + " >= ? ");
+			docListParams.add(p_DateAcct_From);
+		}
+		
+		if(p_DateAcct_To != null)
+		{
+			whereClause.append(" AND " + MJournal.COLUMNNAME_DateAcct + " <= ? ");
+			docListParams.add(p_DateAcct_To);
+		}
+
+		
 		if(p_AD_User_ID != 0)
 		{
-			whereClause.append("AND " + MJournal.COLUMNNAME_CreatedBy + " = ? ");
+			whereClause.append(" AND " + MJournal.COLUMNNAME_CreatedBy + " = ? ");
 			docListParams.add(p_AD_User_ID);
 		}
 
 
 		if(p_Created_From != null)
 		{
-			whereClause.append("AND " + MJournal.COLUMNNAME_Created + " >= ? ");
+			whereClause.append(" AND " + MJournal.COLUMNNAME_Created + " >= ? ");
 			docListParams.add(p_Created_From);
 		}
 
 		if(p_Created_To != null)
 		{
-			whereClause.append("AND " + MJournal.COLUMNNAME_Created + " <= ? ");
+			whereClause.append(" AND " + MJournal.COLUMNNAME_Created + " <= ? ");
 			docListParams.add(p_Created_To);
 		}
 
