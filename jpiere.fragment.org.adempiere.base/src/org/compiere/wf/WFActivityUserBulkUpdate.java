@@ -186,8 +186,8 @@ public class WFActivityUserBulkUpdate extends SvrProcess
 			}
 			
 			String msg =Msg.getElement(getCtx(), "AD_WF_Process_ID")+" "+Msg.getElement(getCtx(), "TextMsg")+" => "+ activities[i].getAD_WF_Process().getTextMsg();
-			
 			addBufferLog(0, null, null, msg, I_AD_WF_Activity.Table_ID, activities[i].get_ID());
+			
 			if (processMonitor != null)
 			{
 				processMonitor.statusUpdate(msg);

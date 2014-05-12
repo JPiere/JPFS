@@ -171,7 +171,6 @@ public class GLJournalBulkComplete extends SvrProcess {
 
 			String msg = Msg.getElement(getCtx(), "DocumentNo") + " : " + mj.getDocumentNo() 
 							+ " - " + Msg.getElement(getCtx(), "DocStatus") + " : " + mj.getDocStatus();
-			
 			addBufferLog(0, null, null, msg, MJournal.Table_ID, mj.get_ID());
 			
 			if (processMonitor != null)
