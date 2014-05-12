@@ -184,7 +184,7 @@ public class GLJournalBulkComplete extends SvrProcess {
 		}//for
 
 
-		return "Success" + " = " + success + "    failure" + " = " + failure ;
+		return "Success" + " = " + success + "    Failure" + " = " + failure ;
 	}	//	doIt
 	
 }
