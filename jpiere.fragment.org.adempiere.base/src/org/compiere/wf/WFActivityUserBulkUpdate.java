@@ -191,6 +191,8 @@ public class WFActivityUserBulkUpdate extends SvrProcess
 			if (processMonitor != null)
 			{
 				processMonitor.statusUpdate(msg);
+			}else{
+				processMonitor = Env.getProcessUI(getCtx());
 			}
 
 		}//for

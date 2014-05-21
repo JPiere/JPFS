@@ -176,6 +176,8 @@ public class GLJournalBulkComplete extends SvrProcess {
 			if (processMonitor != null)
 			{
 				processMonitor.statusUpdate(msg);
+			}else{
+				processMonitor = Env.getProcessUI(getCtx());
 			}
 
 			
