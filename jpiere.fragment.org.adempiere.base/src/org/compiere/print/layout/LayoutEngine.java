@@ -997,7 +997,8 @@ public class LayoutEngine implements Pageable, Printable, Doc
 		if (m_data == null)
 			return;
 		//	for every row
-		for (int row = 0; row < m_data.getRowCount(); row++)
+		int rowCount = m_data.getRowCount();
+		for (int row = 0; row < rowCount; row++)
 		{
 			if (log.isLoggable(Level.INFO)) log.info("Row=" + row);
 			m_data.setRowIndex(row);
@@ -1119,11 +1120,22 @@ public class LayoutEngine implements Pageable, Printable, Doc
 				}
 				else	//	(item.isTypeText())		//**	Text
 				{
+					String printName = item.getPrintName (m_format.getLanguage ());
+					int summaryTagStart = printName == null ? -1 : printName.indexOf("<s>");
+					int summaryTagEnd = summaryTagStart >= 0 ? printName.indexOf("</s>", summaryTagStart) : -1;
+					if (summaryTagStart >= 0 && summaryTagEnd > summaryTagStart) {
+						if (m_data.isFunctionRow(row) && row+1 == rowCount) {
+							printName = printName.substring(summaryTagStart+3);
+							printName = printName.substring(0, printName.length()-4);
+						} else {
+							printName = printName.substring(0, summaryTagStart);
+						}
+					}
 					if (maxWidth == 0 && item.isFieldAlignBlock())
 						maxWidth = getAreaBounds().width;
-					element = createStringElement (item.getPrintName (m_format.getLanguage ()),
-						item.getAD_PrintColor_ID (), item.getAD_PrintFont_ID (),
-						maxWidth, item.getMaxHeight (), item.isHeightOneLine (), alignment, true);
+					element = createStringElement (printName,
+							item.getAD_PrintColor_ID (), item.getAD_PrintFont_ID (),
+							maxWidth, item.getMaxHeight (), item.isHeightOneLine (), alignment, true);
 				}
 
 				//	Printed - set last width/height

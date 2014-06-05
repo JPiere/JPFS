@@ -16,8 +16,6 @@
  *****************************************************************************/
 package org.compiere.print;
 
-import static org.compiere.model.SystemIDs.*;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.print.PrinterJob;
@@ -74,6 +72,7 @@ import org.compiere.model.MProject;
 import org.compiere.model.MQuery;
 import org.compiere.model.MRfQResponse;
 import org.compiere.model.PrintInfo;
+import static org.compiere.model.SystemIDs.*;
 import org.compiere.print.layout.LayoutEngine;
 import org.compiere.process.ProcessInfo;
 import org.compiere.util.CLogger;

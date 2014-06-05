@@ -61,6 +61,7 @@ import org.compiere.model.DataStatusEvent;
 import org.compiere.model.DataStatusListener;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
+import org.compiere.model.GridTable;
 import org.compiere.model.GridWindow;
 import org.compiere.model.I_AD_Preference;
 import org.compiere.model.MLookup;
@@ -108,7 +109,6 @@ import org.zkoss.zul.Treeitem;
 import org.zkoss.zul.Vlayout;
 import org.zkoss.zul.West;
 import org.zkoss.zul.impl.XulElement;
-;
 
 
 /**
@@ -540,7 +540,6 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
         			editor.getComponent().setWidgetOverride("fieldDescription", HelpController.escapeJavascriptContent(field.getDescription()));
         			editor.getComponent().setWidgetOverride("fieldHelp", HelpController.escapeJavascriptContent(field.getHelp()));
         			editor.getComponent().setWidgetListener("onFocus", "zWatch.fire('onFieldTooltip', this, null, this.fieldHeader(), this.fieldDescription(), this.fieldHelp());");
-        			editor.getComponent().setWidgetListener("onBlur", "zWatch.fire('onFieldTooltip', this);");
 
         			editor.setGridTab(this.getGridTab());
         			field.addPropertyChangeListener(editor);
@@ -1290,6 +1289,10 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
         if (listPanel.isVisible()) {
         	listPanel.updateListIndex();
         	listPanel.dynamicDisplay(col);
+        	if (GridTable.DATA_REFRESH_MESSAGE.equals(e.getAD_Message()) || 
+            		"Sorted".equals(e.getAD_Message())) {
+            		Clients.resize(listPanel.getListbox());
+            	}
         }
     }
 
@@ -1409,6 +1412,7 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
 		if (listPanel.isVisible()) {
 			listPanel.refresh(gridTab);
 			listPanel.scrollToCurrentRow();
+			Clients.resize(listPanel.getListbox());
 		} else {
 			listPanel.deactivate();
 		}
