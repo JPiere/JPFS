@@ -6,11 +6,14 @@ import org.adempiere.webui.component.Label;
 import org.adempiere.webui.component.Panel;
 import org.adempiere.webui.editor.WSearchEditor;
 import org.adempiere.webui.panel.ADForm;
+import org.adempiere.webui.theme.ThemeManager;
 import org.compiere.model.MLookup;
 import org.compiere.model.MLookupFactory;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
 import org.zkoss.zul.Borderlayout;
 import org.zkoss.zul.Center;
 
@@ -27,14 +30,17 @@ public class ExtendADForm extends ADForm{
 		Panel centerPanel = new Panel();
 		center.appendChild(centerPanel);
 
+		Component component = Executions.createComponents(ThemeManager.getThemeResource("zul/iframe.zul"), centerPanel, null);
+		centerPanel.appendChild(component);
 		
-		Label label_BP = new Label(Msg.translate(Env.getCtx(), "C_BPartner_ID"));
-		centerPanel.appendChild(label_BP);
 		
-		int AD_Column_ID = COLUMN_C_INVOICE_C_BPARTNER_ID;        //  C_Invoice.C_BPartner_ID
-		MLookup lookupBP = MLookupFactory.get (Env.getCtx(), this.getWindowNo(), 0, AD_Column_ID, DisplayType.Search);
-		WSearchEditor search_BP = new WSearchEditor("C_BPartner_ID", true, false, true, lookupBP);
-    	centerPanel.appendChild(search_BP.getComponent());
+//		Label label_BP = new Label(Msg.translate(Env.getCtx(), "C_BPartner_ID"));
+//		centerPanel.appendChild(label_BP);
+//		
+//		int AD_Column_ID = COLUMN_C_INVOICE_C_BPARTNER_ID;        //  C_Invoice.C_BPartner_ID
+//		MLookup lookupBP = MLookupFactory.get (Env.getCtx(), this.getWindowNo(), 0, AD_Column_ID, DisplayType.Search);
+//		WSearchEditor search_BP = new WSearchEditor("C_BPartner_ID", true, false, true, lookupBP);
+//    	centerPanel.appendChild(search_BP.getComponent());
 		
 	}
 }

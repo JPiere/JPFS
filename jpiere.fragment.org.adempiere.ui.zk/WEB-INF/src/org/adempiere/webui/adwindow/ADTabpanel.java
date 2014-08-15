@@ -61,7 +61,6 @@ import org.compiere.model.DataStatusEvent;
 import org.compiere.model.DataStatusListener;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
-import org.compiere.model.GridTable;
 import org.compiere.model.GridWindow;
 import org.compiere.model.I_AD_Preference;
 import org.compiere.model.MLookup;
@@ -1092,7 +1091,7 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
     		int windowId = getGridTab().getAD_Window_ID();
     		int adTabId = getGridTab().getAD_Tab_ID();
     		if (windowId > 0 && adTabId > 0) {
-    			Query query = new Query(Env.getCtx(), MTable.get(Env.getCtx(), I_AD_Preference.Table_ID), "AD_Window_ID=? AND Attribute=?", null);
+    			Query query = new Query(Env.getCtx(), MTable.get(Env.getCtx(), I_AD_Preference.Table_ID), "AD_Window_ID=? AND Attribute=?  AND AD_Process_ID IS NULL AND PreferenceFor = 'W'", null);
     			MPreference preference = query.setOnlyActiveRecords(true)
     										  .setApplyAccessFilter(true)
     										  .setParameters(windowId, adTabId+"|DetailPane.IsOpen")
@@ -1289,10 +1288,6 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
         if (listPanel.isVisible()) {
         	listPanel.updateListIndex();
         	listPanel.dynamicDisplay(col);
-        	if (GridTable.DATA_REFRESH_MESSAGE.equals(e.getAD_Message()) || 
-            		"Sorted".equals(e.getAD_Message())) {
-            		Clients.resize(listPanel.getListbox());
-            	}
         }
     }
 
@@ -1412,7 +1407,7 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
 		if (listPanel.isVisible()) {
 			listPanel.refresh(gridTab);
 			listPanel.scrollToCurrentRow();
-			Clients.resize(listPanel.getListbox());
+			Clients.resize(listPanel);
 		} else {
 			listPanel.deactivate();
 		}
@@ -1665,6 +1660,14 @@ DataStatusListener, IADTabpanel, IdSpace, IFieldEditorContainer
 			script.append("b=false;}}}catch(error){}");
 			script.append("if(b){var w=zk.Widget.$('#").append(c.getUuid()).append("');w.focus(0);}");
 			Clients.response(new AuScript(script.toString()));
+		}
+	}
+	
+	@Override
+	public void setParent(Component parent) {
+		super.setParent(parent);
+		if (parent != null) {
+			listPanel.onADTabPanelParentChanged();
 		}
 	}
 }
