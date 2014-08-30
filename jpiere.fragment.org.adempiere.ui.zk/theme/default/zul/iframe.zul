@@ -1,0 +1,5 @@
+
+<zk>
+	<iframe id="iframe" src="http://www.compiere-distribution-lab.net/" height="100%" width="100%"
+		style="border: 1px solid gray" />
+</zk>
