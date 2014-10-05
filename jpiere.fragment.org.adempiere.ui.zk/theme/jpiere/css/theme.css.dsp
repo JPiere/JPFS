@@ -603,16 +603,16 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 }
 
 .z-panel-hl .z-panel-header {
-	padding: 0 0 2px 0;
-	color: #262626; 
-	background: #F4F4F4;
+	padding: 4px 2px 4px 2px;
+	color: #dddddd; 
+	background: #005396;
 	font-weight: 300;
 	font-size: 13px;
 }	
 
 .z-caption .z-caption-l, .z-caption .z-caption-r {
 	padding: 0 0 2px 0;
-	color: #262626; 
+	color: #dddddd; 
 	font-weight: 300;
 	font-size: 13px;
 	cursor: move;
