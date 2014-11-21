@@ -1513,25 +1513,25 @@ i.grid-combobox-editor {
 .z-window-overlapped-hl, .z-window-popup-hl, .z-window-modal-hl, .z-window-highlighted-hl, .embedded-dialog .z-window-embedded-hl,
 .z-window-overlapped-hr, .z-window-popup-hr, .z-window-modal-hr, .z-window-highlighted-hr, .embedded-dialog .z-window-embedded-hr
 {
-	background-color: #484848;
+	background-color: #91BEE6;
 }
 
 .z-window-overlapped-cl, .z-window-popup-cl, .z-window-modal-cl, .z-window-highlighted-cl, .embedded-dialog .z-window-embedded-cl
 {
 	padding-left: 1px;
-	border-left: 1px solid #c5c5c5;
+	border-left: 1px solid #91BEE6;
 }
 
 .z-window-overlapped-cr, .z-window-popup-cr, .z-window-modal-cr, .z-window-highlighted-cr, .embedded-dialog .z-window-embedded-cr
 {
 	padding-right: 1px;
-	border-right: 1px solid #c5c5c5;
+	border-right: 1px solid #91BEE6;
 }
 
 .z-window-overlapped-bl, .z-window-popup-bl, .z-window-modal-bl, .z-window-highlighted-bl, .embedded-dialog .z-window-embedded-bl
 {
-	border-left: 1px solid #c5c5c5;
-	border-right: 1px solid #c5c5c5;
+	border-left: 1px solid #91BEE6;
+	border-right: 1px solid #91BEE6;
 	background-color: #fff;
 	margin: 0px;
 	padding-bottom: 3px;
@@ -1553,8 +1553,8 @@ i.grid-combobox-editor {
 
 .z-window-overlapped, .z-window-modal, .z-window-highlighted
 {
-	border-top: 1px solid #c5c5c5 !important;
-	border-bottom: 1px solid #c5c5c5 !important;
+	border-top: 1px solid #91BEE6 !important;
+	border-bottom: 1px solid #91BEE6 !important;
 }
 
 .z-window-overlapped-hl, .z-window-popup-hl, .z-window-modal-hl, .z-window-highlighted-hl, .z-window-embedded-hl,
