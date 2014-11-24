@@ -398,8 +398,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .desktop-tabbox {
 	padding-top: 0px;
-	/*background-color: #E4E4E4;*/
-	background-color: #E2EEF5;
+	background-color: #E4E4E4;
+	/*background-color: #E2EEF5;*/
 }
 
 .desktop-tabbox .z-tab {
@@ -417,10 +417,11 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 }
 
 .desktop-tabbox .z-tab-seld {
-	border-top: 4px solid #91BEE6;
+	border-top: 4px solid #F39700;
 	border-top-left-radius: 5px 5px;
 	border-top-right-radius: 5px 5px;
 }
+
 
 .desktop-north, .desktop-center {
 	border: none;
@@ -428,7 +429,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .desktop-center {
 	padding-top: 4px;
-	background-color: #E2EEF5;
+	background-color: #E4E4E4;
+	/*background-color: #E2EEF5;*/
 }
 
 .desktop-tabpanel {
@@ -436,7 +438,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	padding: 0;
 	border: 0;
 	position: absolute !important;
-	background-color: #FFFFFF
+	background-color: #FFFFFF;
 }
 
 .menu-search-panel .z-comboitem-img {
@@ -459,7 +461,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	width: 200px;
 	border: none;
 	border-right: 1px solid #C5C5C5;
-	background-color: #E2EEF5;
+	background-color: #E4E4E4;
+	/*background-color: #E2EEF5;*/
 	padding-top: 4px;
 }
 
@@ -467,7 +470,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	width: 200px;
 	border: none;
 	border-left: 1px solid #C5C5C5;
-	background-color: #E2EEF5;
+	/*background-color: #E2EEF5;*/
+	background-color: #E4E4E4;
 	padding-top: 4px;
 }
 
@@ -605,7 +609,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .z-panel-hl .z-panel-header {
 	padding: 4px 2px 4px 2px;
-	color: #003894;
+	color: #0069B7;
 	background: #91BEE6;
 	font-weight: 300;
 	font-size: 13px;
@@ -742,7 +746,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 <%-- adwindow and form --%>
 .adwindow-form > .z-grid-body {
-	background-color: #F9F9F9;
+	/*background-color: #F9F9F9;*/
+	background-color: #E9F0FF;
 }
 
 .adwindow-layout {
@@ -775,6 +780,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .adwindow-status {
 	min-height: 22px;
+	background-color: #E9F0FF;
 }
 
 .adwindow-status-docinfo {
@@ -803,11 +809,13 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	height: 26px;
 	background-image: none;
 	background-color: #FFF;
+	/*background-color: #91BEE6;*/
 }
 
 .adwindow-breadcrumb {
 	height: 30px;
 	background-color: #FFF;
+	/*background-color: #91BEE6;*/
 	padding: 0px;
 	padding-left: 5px;
 	border-bottom: 1px solid #C5C5C5 !important;
@@ -828,7 +836,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 }
 
 .adwindow-detailpane-tabpanel {
-	background-color: #fff
+	background-color: #FFF;
 }
 
 .adwindow-detailpane-toolbar {
@@ -867,8 +875,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 .adwindow-detailpane-tabbox {
 	width: 99%;
 	margin: auto;
-	/*background-color: #D3D3D3;*/
-	background-color: #E2EEF5;
+	background-color: #D3D3D3;
+	/*background-color: #E2EEF5;*/
 }
 
 .adwindow-detailpane-adtab-grid-south {
@@ -918,6 +926,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	border:none !important;
 	margin:0;
 	padding:0;
+	background-color: #E9F0FF;
 }
 
 .adtab-grid {
