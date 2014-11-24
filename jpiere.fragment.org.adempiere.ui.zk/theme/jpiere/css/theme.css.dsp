@@ -398,7 +398,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .desktop-tabbox {
 	padding-top: 0px;
-	background-color: #E4E4E4;
+	/*background-color: #E4E4E4;*/
+	background-color: #E2EEF5;
 }
 
 .desktop-tabbox .z-tab {
@@ -427,7 +428,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .desktop-center {
 	padding-top: 4px;
-	background-color: #E4E4E4;
+	background-color: #E2EEF5;
 }
 
 .desktop-tabpanel {
@@ -458,7 +459,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	width: 200px;
 	border: none;
 	border-right: 1px solid #C5C5C5;
-	background-color: #E4E4E4;
+	background-color: #E2EEF5;
 	padding-top: 4px;
 }
 
@@ -466,7 +467,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	width: 200px;
 	border: none;
 	border-left: 1px solid #C5C5C5;
-	background-color: #E4E4E4;
+	background-color: #E2EEF5;
 	padding-top: 4px;
 }
 
@@ -604,7 +605,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .z-panel-hl .z-panel-header {
 	padding: 4px 2px 4px 2px;
-	color: #dddddd;
+	color: #003894;
 	background: #91BEE6;
 	font-weight: 300;
 	font-size: 13px;
@@ -866,7 +867,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 .adwindow-detailpane-tabbox {
 	width: 99%;
 	margin: auto;
-	background-color: #D3D3D3;
+	/*background-color: #D3D3D3;*/
+	background-color: #E2EEF5;
 }
 
 .adwindow-detailpane-adtab-grid-south {
