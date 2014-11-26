@@ -934,6 +934,10 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	border: none !important;
 }
 
+tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {
+	background-color: #E9F0FF;
+}
+
 .adtab-grid-south {
 	border: none;
 	height: 30px;
@@ -1062,7 +1066,7 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 
 <%-- highlight focus form element --%>
 input:focus, textarea:focus, .z-combobox-inp:focus, z-datebox-inp:focus {
-	border: 1px solid #0000ff;
+	border: 1px solid #F39700;
 }
 
 .mandatory-decorator-text {
@@ -1128,7 +1132,7 @@ span.z-tree-tee, span.z-tree-last, span.z-tree-firstspacer {
 }
 
 .editor-input:focus {
-	border: 1px solid #0000ff;
+	border: 1px solid #F39700;
 }
 
 .editor-input-disd {
