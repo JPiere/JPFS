@@ -1,3 +1,16 @@
+/******************************************************************************
+ * Product: JPiere(ジェイピエール) - JPiere Fragments                         *
+ * Copyright (C) Hideaki Hagiwara All Rights Reserved.                        *
+ * このプログラムはGNU Gneral Public Licens Version2のもと公開しています。    *
+ * このプログラムは自由に活用してもらう事を期待して公開していますが、         *
+ * いかなる保証もしていません。                                               *
+ * 著作権は萩原秀明(h.hagiwara@oss-erp.co.jp)が保持し、サポートサービスは     *
+ * 株式会社オープンソース・イーアールピー・ソリューションズで                 *
+ * 提供しています。サポートをご希望の際には、                                 *
+ * 株式会社オープンソース・イーアールピー・ソリューションズまでご連絡下さい。 *
+ * http://www.oss-erp.co.jp/                                                  *
+ *****************************************************************************/
+
 package org.adempiere.process;
 
 import java.sql.Timestamp;
@@ -26,16 +39,16 @@ import org.compiere.util.Msg;
  *  @version $Id: GLJournalBulkComplete.java,v 1.0 2014/05/10 00:00:00 $
  */
 public class GLJournalBulkComplete extends SvrProcess {
-	
+
 	private int 		p_AD_Client_ID = 0;
-	
+
 	/**Target Organization(Option)*/
 	private int			p_AD_Org_ID = 0;
 
 	/**Target DateAcct Date(Option)*/
 	private Timestamp	p_DateAcct_From = null;
 	private Timestamp	p_DateAcct_To = null;
-	
+
 	/**Target DocStatus(Mandatory)*/
 	private String		p_DocStatus = "DR";
 
@@ -70,7 +83,7 @@ public class GLJournalBulkComplete extends SvrProcess {
 					cal.setTimeInMillis(p_DateAcct_To.getTime());
 					cal.add(Calendar.DAY_OF_MONTH, 1);
 					p_DateAcct_To = new Timestamp(cal.getTimeInMillis());
-				}				
+				}
 			}else if (name.equals("DocStatus")){
 				p_DocStatus = para[i].getParameterAsString();
 			}else if (name.equals("AD_User_ID")){
@@ -90,7 +103,7 @@ public class GLJournalBulkComplete extends SvrProcess {
 			}//if
 		}//for
 	}//	prepare
-	
+
 	/**
 	 *  Perform process.
 	 *  @return Message (variables are parsed)
@@ -101,7 +114,7 @@ public class GLJournalBulkComplete extends SvrProcess {
 		//Mandatory parameters
 		StringBuilder whereClause = new StringBuilder(MJournal.COLUMNNAME_AD_Client_ID + " = ? AND "
 														+ MJournal.COLUMNNAME_Processed + " = 'N' AND "
-														+ MJournal.COLUMNNAME_DocStatus + " = " + "'" + p_DocStatus + "'" 
+														+ MJournal.COLUMNNAME_DocStatus + " = " + "'" + p_DocStatus + "'"
 														);
 
 		ArrayList<Object> docListParams = new ArrayList<Object>();
@@ -113,20 +126,20 @@ public class GLJournalBulkComplete extends SvrProcess {
 			whereClause.append(" AND " + MJournal.COLUMNNAME_AD_Org_ID + " = ? ");
 			docListParams.add(p_AD_Org_ID);
 		}
-		
+
 		if(p_DateAcct_From != null)
 		{
 			whereClause.append(" AND " + MJournal.COLUMNNAME_DateAcct + " >= ? ");
 			docListParams.add(p_DateAcct_From);
 		}
-		
+
 		if(p_DateAcct_To != null)
 		{
 			whereClause.append(" AND " + MJournal.COLUMNNAME_DateAcct + " <= ? ");
 			docListParams.add(p_DateAcct_To);
 		}
 
-		
+
 		if(p_AD_User_ID != 0)
 		{
 			whereClause.append(" AND " + MJournal.COLUMNNAME_CreatedBy + " = ? ");
@@ -169,10 +182,10 @@ public class GLJournalBulkComplete extends SvrProcess {
 				failure++;
 			}
 
-			String msg = Msg.getElement(getCtx(), "DocumentNo") + " : " + mj.getDocumentNo() 
+			String msg = Msg.getElement(getCtx(), "DocumentNo") + " : " + mj.getDocumentNo()
 							+ " - " + Msg.getElement(getCtx(), "DocStatus") + " : " + mj.getDocStatus();
 			addBufferLog(0, null, null, msg, MJournal.Table_ID, mj.get_ID());
-			
+
 			if (processMonitor != null)
 			{
 				processMonitor.statusUpdate(msg);
@@ -180,12 +193,12 @@ public class GLJournalBulkComplete extends SvrProcess {
 				processMonitor = Env.getProcessUI(getCtx());
 			}
 
-			
-			
+
+
 		}//for
 
 
 		return "Success" + " = " + success + "    Failure" + " = " + failure ;
 	}	//	doIt
-	
+
 }

@@ -1,18 +1,14 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
+ * Product: JPiere(ジェイピエール) - JPiere Fragments                         *
+ * Copyright (C) Hideaki Hagiwara All Rights Reserved.                        *
+ * このプログラムはGNU Gneral Public Licens Version2のもと公開しています。    *
+ * このプログラムは自由に活用してもらう事を期待して公開していますが、         *
+ * いかなる保証もしていません。                                               *
+ * 著作権は萩原秀明(h.hagiwara@oss-erp.co.jp)が保持し、サポートサービスは     *
+ * 株式会社オープンソース・イーアールピー・ソリューションズで                 *
+ * 提供しています。サポートをご希望の際には、                                 *
+ * 株式会社オープンソース・イーアールピー・ソリューションズまでご連絡下さい。 *
+ * http://www.oss-erp.co.jp/                                                  *
  *****************************************************************************/
 package org.compiere.print.layout;
 
@@ -1497,7 +1493,7 @@ public class TableElement extends PrintElement
 					}
 					else if (printItems[index] instanceof BarcodeElement)
 					{
-						BarcodeElement barcodeElement = (BarcodeElement)printItems[index]; 
+						BarcodeElement barcodeElement = (BarcodeElement)printItems[index];
 						barcodeElement.paint(g2D, curX, (int)penY);
 					}
 					else if (printItems[index] instanceof Boolean)

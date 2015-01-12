@@ -1,20 +1,19 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
+ * Product: JPiere(ジェイピエール) - JPiere Fragments                         *
+ * Copyright (C) Hideaki Hagiwara All Rights Reserved.                        *
+ * このプログラムはGNU Gneral Public Licens Version2のもと公開しています。    *
+ * このプログラムは自由に活用してもらう事を期待して公開していますが、         *
+ * いかなる保証もしていません。                                               *
+ * 著作権は萩原秀明(h.hagiwara@oss-erp.co.jp)が保持し、サポートサービスは     *
+ * 株式会社オープンソース・イーアールピー・ソリューションズで                 *
+ * 提供しています。サポートをご希望の際には、                                 *
+ * 株式会社オープンソース・イーアールピー・ソリューションズまでご連絡下さい。 *
+ * http://www.oss-erp.co.jp/                                                  *
  *****************************************************************************/
+
 package org.compiere.print;
+
+import static org.compiere.model.SystemIDs.*;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -57,8 +56,10 @@ import org.apache.ecs.xhtml.a;
 import org.apache.ecs.xhtml.link;
 import org.apache.ecs.xhtml.script;
 import org.apache.ecs.xhtml.table;
+import org.apache.ecs.xhtml.tbody;
 import org.apache.ecs.xhtml.td;
 import org.apache.ecs.xhtml.th;
+import org.apache.ecs.xhtml.thead;
 import org.apache.ecs.xhtml.tr;
 import org.compiere.model.MClient;
 import org.compiere.model.MColumn;
@@ -72,7 +73,6 @@ import org.compiere.model.MProject;
 import org.compiere.model.MQuery;
 import org.compiere.model.MRfQResponse;
 import org.compiere.model.PrintInfo;
-import static org.compiere.model.SystemIDs.*;
 import org.compiere.print.layout.LayoutEngine;
 import org.compiere.process.ProcessInfo;
 import org.compiere.process.ServerProcessCtl;
@@ -80,12 +80,12 @@ import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
-import org.compiere.util.Ini;
-import org.compiere.util.Language;
-import org.compiere.util.Trx;
 import org.compiere.util.FragmentDisplayType;		//JPIERE-3 Import FragmentDisplayType to ReportEngine
+import org.compiere.util.Ini;
 import org.compiere.util.KeyNamePair;				//JPIERE-3 Import KeyNamePair to ReportEngine
+import org.compiere.util.Language;
 import org.compiere.util.NamePair;					//JPIERE-3 Import NamePair to ReportEngine
+import org.compiere.util.Trx;
 import org.compiere.util.Util;
 import org.eevolution.model.MDDOrder;
 import org.eevolution.model.X_PP_Order;
@@ -591,6 +591,8 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 				}
 				doc.output(w);
 			}
+			thead thead = new thead();
+			tbody tbody = new tbody();
 			//	for all rows (-1 = header row)
 			for (int row = -1; row < m_printData.getRowCount(); row++)
 			{
@@ -602,6 +604,16 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 					{
 						extension.extendRowElement(tr, m_printData);
 					}
+					if (m_printData.isFunctionRow()) {
+						tr.setClass(cssPrefix + "-functionrow");
+					} else if ( row < m_printData.getRowCount() && m_printData.isFunctionRow(row+1)) {
+						tr.setClass(cssPrefix + "-lastgrouprow");
+					}
+					// add row to table body
+					tbody.addElement(tr);
+				} else {
+					// add row to table header
+					thead.addElement(tr);
 				}
 				//	for all columns
 				for (int col = 0; col < m_printFormat.getItemCount(); col++)
@@ -730,8 +742,10 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 						}
 					}	//	printed
 				}	//	for all columns
-				tr.output(w);
 			}	//	for all rows
+
+			thead.output(w);
+			tbody.output(w);
 
 			w.println();
 			w.println("</table>");
@@ -1143,7 +1157,6 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 		int AD_Table_ID = 0;
 		int AD_ReportView_ID = 0;
 		String TableName = null;
-		String whereClause = "";
 		int AD_PrintFormat_ID = 0;
 		boolean IsForm = false;
 		int Client_ID = -1;
@@ -1170,9 +1183,6 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 			if (rs.next())
 			{
 				AD_ReportView_ID = rs.getInt(1);		//	required
-				whereClause = rs.getString(2);
-				if (rs.wasNull())
-					whereClause = "";
 				//
 				AD_Table_ID = rs.getInt(3);
 				TableName = rs.getString(4);			//	required for query
@@ -1206,7 +1216,6 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 				rs = pstmt.executeQuery();
 				if (rs.next())
 				{
-					whereClause = "";
 					AD_Table_ID = rs.getInt(1);
 					TableName = rs.getString(2);			//	required for query
 					AD_PrintFormat_ID = rs.getInt(3);		//	required
@@ -1241,10 +1250,6 @@ queued-job-count = 0  (class javax.print.attribute.standard.QueuedJobCount)
 		{
 			query = MQuery.get (ctx, pi.getAD_PInstance_ID(), TableName);
 		}
-
-		//  Add to static where clause from ReportView
-		if (whereClause.length() != 0)
-			query.addRestriction(whereClause);
 
 		//	Get Print Format
 		MPrintFormat format = null;

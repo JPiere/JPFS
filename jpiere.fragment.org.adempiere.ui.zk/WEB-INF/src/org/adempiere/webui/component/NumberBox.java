@@ -1,18 +1,14 @@
 /******************************************************************************
- * Product: Posterita Ajax UI 												  *
- * Copyright (C) 2007 Posterita Ltd.  All Rights Reserved.                    *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * Posterita Ltd., 3, Draper Avenue, Quatre Bornes, Mauritius                 *
- * or via info@posterita.org or http://www.posterita.org/                     *
+ * Product: JPiere(ジェイピエール) - JPiere Base Plugin                       *
+ * Copyright (C) Hideaki Hagiwara All Rights Reserved.                        *
+ * このプログラムはGNU Gneral Public Licens Version2のもと公開しています。    *
+ * このプログラムは自由に活用してもらう事を期待して公開していますが、         *
+ * いかなる保証もしていません。                                               *
+ * 著作権は萩原秀明(h.hagiwara@oss-erp.co.jp)が保持し、サポートサービスは     *
+ * 株式会社オープンソース・イーアールピー・ソリューションズで                 *
+ * 提供しています。サポートをご希望の際には、                                 *
+ * 株式会社オープンソース・イーアールピー・ソリューションズまでご連絡下さい。 *
+ * http://www.oss-erp.co.jp/                                                  *
  *****************************************************************************/
 
 package org.adempiere.webui.component;
@@ -21,11 +17,16 @@ import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.text.ParseException;
 
+import javax.servlet.ServletRequest;				//JPIERE-9 Import ServletRequest to NumberBox
+
 import org.adempiere.webui.LayoutUtils;
+import org.adempiere.webui.apps.AEnv;				//JPIERE-9 Import AEnv to NumberBox
 import org.adempiere.webui.theme.ThemeManager;
 import org.compiere.model.MSysConfig;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
+import org.zkoss.web.servlet.Servlets;				//JPIERE-9 Import Servlets to NumberBox
+import org.zkoss.zk.ui.Executions;					//JPIERE-9 Import Executions to NumberBox
 import org.zkoss.zk.ui.Page;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
@@ -34,46 +35,42 @@ import org.zkoss.zul.Div;
 import org.zkoss.zul.Hbox;
 import org.zkoss.zul.Popup;
 import org.zkoss.zul.Vbox;
-import org.zkoss.web.servlet.Servlets;				//JPIERE-9 Import Servlets to NumberBox
-import org.zkoss.zk.ui.Executions;					//JPIERE-9 Import Executions to NumberBox
-import org.adempiere.webui.apps.AEnv;				//JPIERE-9 Import AEnv to NumberBox
-import javax.servlet.ServletRequest;				//JPIERE-9 Import ServletRequest to NumberBox
 
 /**
  *
  * @author  <a href="mailto:agramdass@gmail.com">Ashley G Ramdass</a>
  * @date    Mar 11, 2007
  * @version $Revision: 0.10 $
- * 
+ *
  * @author Low Heng Sin
  */
 public class NumberBox extends Div
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -3548087521669052891L;
 
 	private Textbox txtCalc = new Textbox();
-    
+
     boolean integral = false;
-    
+
     NumberFormat format = null;
-    
+
     private Decimalbox decimalBox = null;
     private Button btn;
 
 	private Popup popup;
-	
+
 	private boolean isIE10 = false;		//JPIERE-9 Add Property isIE10 to NumberBox
-    
+
 	public NumberBox(boolean integral)
 	{
 		this(integral, false);
 	}
-	
+
     /**
-     * 
+     *
      * @param integral
      */
     public NumberBox(boolean integral, boolean tableEditor)
@@ -82,13 +79,13 @@ public class NumberBox extends Div
         this.integral = integral;
         init(tableEditor);
     }
-    
+
     private void init(boolean tableEditor)
     {
 		decimalBox = new Decimalbox();
     	if (integral)
     		decimalBox.setScale(0);
-    	
+
     	//JPIERE-9  Modify NumberBox#init() by Hideaki Hagiwara
     	Double ivValue = Servlets.getBrowser((ServletRequest) Executions.getCurrent().getNativeRequest(), "ie");
 		if ( !(ivValue == null) && AEnv.isInternetExplorer() && (ivValue >= 10 && ivValue < 11) ){
@@ -101,7 +98,7 @@ public class NumberBox extends Div
     	decimalBox.setHflex("0");
 //    	decimalBox.setSclass("editor-input");			//JPiere-9 Finish
     	decimalBox.setId(decimalBox.getUuid());
-    	
+
         char separatorChar = DisplayType.getNumberFormat(DisplayType.Number, Env.getLanguage(Env.getCtx())).getDecimalFormatSymbols().getDecimalSeparator();
         String separator = Character.toString(separatorChar);
         boolean processDotKeypad = MSysConfig.getBooleanValue(MSysConfig.ZK_DECIMALBOX_PROCESS_DOTKEYPAD, true, Env.getAD_Client_ID(Env.getCtx()));
@@ -133,9 +130,9 @@ public class NumberBox extends Div
             decimalBox.setWidgetListener("onKeyUp", funct.toString());
         }
 
-    	
+
     	appendChild(decimalBox);
-		
+
 		btn = new Button();
         btn.setImage(ThemeManager.getThemeResource("images/Calculator16.png"));
 		btn.setTabindex(-1);
@@ -145,27 +142,27 @@ public class NumberBox extends Div
 
 		LayoutUtils.addSclass("editor-button", btn);
 		appendChild(btn);
-        
+
         popup = getCalculatorPopup();
         appendChild(popup);
         btn.setPopup(popup);
-        btn.setStyle("text-align: center;");        
-     
-        LayoutUtils.addSclass("number-box", this);	     
+        btn.setStyle("text-align: center;");
+
+        LayoutUtils.addSclass("number-box", this);
         LayoutUtils.addSclass("editor-box", this);
     }
-    
+
     /**
-     * 
+     *
      * @param format
      */
     public void setFormat(NumberFormat format)
     {
     	this.format = format;
     }
-    
+
     /**
-     * 
+     *
      * @param value
      */
     public void setValue(Object value)
@@ -179,18 +176,18 @@ public class NumberBox extends Div
     	else
     		decimalBox.setValue(new BigDecimal(value.toString()));
     }
-    
+
     /**
-     * 
+     *
      * @return BigDecimal
      */
     public BigDecimal getValue()
     {
     	return decimalBox.getValue();
     }
-    
+
     /**
-     * 
+     *
      * @return text
      */
     public String getText()
@@ -199,15 +196,15 @@ public class NumberBox extends Div
     	if (value == null) return null;
    		return decimalBox.getText();
     }
-    
+
     /**
-     * 
+     *
      * @param value
      */
     public void setValue(String value)
     {
     	Number numberValue = null;
-    	
+
     	if (format != null)
     	{
     		try
@@ -222,14 +219,14 @@ public class NumberBox extends Div
     	else
     	{
     		decimalBox.setValue(new BigDecimal(value));
-    	}    	
+    	}
     }
-    
+
     private Popup getCalculatorPopup()
     {
         Popup popup = new Popup() {
         	/**
-			 * 
+			 *
 			 */
 			private static final long serialVersionUID = -5991248152956632527L;
 
@@ -248,12 +245,12 @@ public class NumberBox extends Div
 
         char separatorChar = DisplayType.getNumberFormat(DisplayType.Number, Env.getLanguage(Env.getCtx())).getDecimalFormatSymbols().getDecimalSeparator();
         String separator = Character.toString(separatorChar);
-        
+
         txtCalc = new Textbox();
-        
+
         decimalBox.setId(decimalBox.getUuid());
         txtCalc.setId(txtCalc.getUuid());
-        
+
         boolean processDotKeypad = MSysConfig.getBooleanValue(MSysConfig.ZK_DECIMALBOX_PROCESS_DOTKEYPAD, true, Env.getAD_Client_ID(Env.getCtx()));
         if (".".equals(separator))
         	processDotKeypad = false;
@@ -272,15 +269,15 @@ public class NumberBox extends Div
         funct.append("}");
         txtCalc.setWidgetOverride("doKeyPress_", funct.toString());
 
-        txtCalc.setWidgetListener("onKeyUp", "calc.validateUp('" + 
-        		decimalBox.getId() + "','" + txtCalc.getId() 
+        txtCalc.setWidgetListener("onKeyUp", "calc.validateUp('" +
+        		decimalBox.getId() + "','" + txtCalc.getId()
                 + "'," + integral + "," + (int)separatorChar + ", event, " + ( processDotKeypad ? "true" : "false" ) + ");");
-        txtCalc.setWidgetListener("onKeyPress", "calc.validatePress('" + 
-        		decimalBox.getId() + "','" + txtCalc.getId() 
+        txtCalc.setWidgetListener("onKeyPress", "calc.validatePress('" +
+        		decimalBox.getId() + "','" + txtCalc.getId()
                 + "'," + integral + "," + (int)separatorChar + ", event);");
         txtCalc.setMaxlength(250);
         txtCalc.setCols(30);
-        
+
         String txtCalcId = txtCalc.getId();
 
         vbox.appendChild(txtCalc);
@@ -323,7 +320,7 @@ public class NumberBox extends Div
         btnC.setWidth("40px");
         btnC.setLabel("C");
         btnC.setWidgetListener("onClick", "calc.clear('" + txtCalcId + "')");
-        
+
         Button btn4 = new Button();
         btn4.setWidth("30px");
         btn4.setLabel("4");
@@ -338,7 +335,7 @@ public class NumberBox extends Div
         btn6.setWidth("30px");
         btn6.setLabel("6");
         btn6.setWidgetListener("onClick", "calc.append('" + txtCalcId + "', '6')");
-        
+
         Button btnDivide = new Button();
         btnDivide.setWidth("30px");
         btnDivide.setLabel("/");
@@ -404,9 +401,9 @@ public class NumberBox extends Div
         Button btnEqual = new Button();
         btnEqual.setWidth("30px");
         btnEqual.setLabel("=");
-        btnEqual.setWidgetListener("onClick", "calc.evaluate('" + decimalBox.getId() + "','" 
+        btnEqual.setWidgetListener("onClick", "calc.evaluate('" + decimalBox.getId() + "','"
                 + txtCalcId + "','" + separator + "')");
-        
+
         Button btnAdd = new Button();
         btnAdd.setWidth("30px");
         btnAdd.setLabel("+");
@@ -429,7 +426,7 @@ public class NumberBox extends Div
     }
 
     /**
-     * 
+     *
      * @return boolean
      */
 	public boolean isIntegral() {
@@ -437,7 +434,7 @@ public class NumberBox extends Div
 	}
 
 	/**
-	 * 
+	 *
 	 * @param integral
 	 */
 	public void setIntegral(boolean integral) {
@@ -447,9 +444,9 @@ public class NumberBox extends Div
 		else
 			decimalBox.setScale(Decimalbox.AUTO);
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param enabled
 	 */
 	public void setEnabled(boolean enabled)
@@ -462,7 +459,7 @@ public class NumberBox extends Div
 	    		 btn.setParent(decimalBox.getParent());
 	    	 btn.setPopup(popup);
 	     }
-	     else 
+	     else
 	     {
 	    	 Popup p = null;
 	    	 btn.setPopup(p);
@@ -482,16 +479,16 @@ public class NumberBox extends Div
 	    		LayoutUtils.addSclass("editor-input-disd", decimalBox);
 	     }//JPiere-9 finish
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @return boolean
 	 */
 	public boolean isEnabled()
 	{
 		 return decimalBox.isReadonly();
 	}
-	
+
 	@Override
 	public boolean addEventListener(String evtnm, EventListener<?> listener)
 	{
@@ -504,27 +501,27 @@ public class NumberBox extends Div
 	         return decimalBox.addEventListener(evtnm, listener);
 	     }
 	}
-	
+
 	@Override
 	public void focus()
 	{
 		decimalBox.focus();
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @return decimalBox
 	 */
 	public Decimalbox getDecimalbox()
 	{
 		return decimalBox;
 	}
-	
+
 	public Button getButton()
 	{
 		return btn;
 	}
-	
+
 	public void setTableEditorMode(boolean flag) {
 		if (flag) {
 			setHflex("0");
@@ -535,6 +532,6 @@ public class NumberBox extends Div
 			LayoutUtils.removeSclass("grid-editor-input", decimalBox);
 			LayoutUtils.removeSclass("grid-editor-button", btn);
 		}
-			
+
 	}
 }
