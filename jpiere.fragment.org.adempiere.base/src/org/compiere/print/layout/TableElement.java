@@ -68,6 +68,8 @@ import org.compiere.util.ValueNamePair;
  *
  * @author Teo Sarca, SC ARHIPAC SERVICE SRL
  * 			<li>FR [ 1803359 ] Migrate to barbecue 1.1
+ *
+ * @author Hideaki Hagiwara(h.hagiwara@oss-erp.co.jp)
  */
 public class TableElement extends PrintElement
 {
