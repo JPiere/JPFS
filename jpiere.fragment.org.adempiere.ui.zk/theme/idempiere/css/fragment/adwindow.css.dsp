@@ -208,6 +208,7 @@
 	border:none !important;
 	margin:0;
 	padding:0;
+	background-color: #E9F0FF;/*JPIERE*/
 }
 
 .adtab-grid {

@@ -6,7 +6,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	border: none;
 }
 
-.z-window-embedded .z-window-header, 
+.z-window-embedded .z-window-header,
 .z-window-embedded .z-window-content {
 	background-image: none;
 }
@@ -22,7 +22,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	border: none;
 }
 
-.z-window-overlapped .z-window-content,  .z-window-modal .z-window-content, 
+.z-window-overlapped .z-window-content,  .z-window-modal .z-window-content,
 .z-window-highlighted .z-window-content, .z-window-embedded .z-window-content {
 	border: none;
 }
@@ -31,15 +31,15 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	padding: 4px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	background-color: #484848;
-	border-color: #484848;
+	background-color: #91BEE6;/*JPIERE*/
+	border-color: #91BEE6;/*JPIERE*/
 }
 .z-window-embedded > .z-window-header {
 	border-radius: 0px;
 	background-color: transparent;
 }
 
-.z-window-overlapped, .z-window-popup, .z-window-modal, .z-window-highlighted, 
+.z-window-overlapped, .z-window-popup, .z-window-modal, .z-window-highlighted,
 .embedded-dialog .z-window-embedded
 {
 	background-color: #fff;
