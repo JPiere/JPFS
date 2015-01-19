@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: jpiere.fragment.org.adempiere.ui.swing
-Bundle-SymbolicName: jpiere.fragment.org.adempiere.ui.swing
-Bundle-Version: 1.0.0.qualifier
-Bundle-Vendor: OSS ERP Solutions
-Fragment-Host: org.adempiere.ui.swing
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
