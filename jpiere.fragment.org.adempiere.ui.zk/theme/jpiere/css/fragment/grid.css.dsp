@@ -50,7 +50,7 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 }
 
 .z-grid-body .z-cell {
-	padding: 2px 3px;
+	padding: 1px 1px;
 }
 
 .z-row .z-cell, .z-listitem .z-listcell, .z-listitem.z-listitem-selected>.z-listcell {
@@ -101,4 +101,8 @@ div.z-listbox-body .z-listcell {
 
 tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
 	background-color: #E0EAF7;
+}
+
+.z-row-content{/*JPIERE*/
+	padding: 2px 2px;
 }
