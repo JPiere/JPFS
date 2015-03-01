@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: jpiere.fragment.org.adempiere.base
-Bundle-SymbolicName: jpiere.fragment.org.adempiere.base
-Bundle-Version: 1.0.0.qualifier
-Fragment-Host: org.adempiere.base;bundle-version="2.0.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Bundle-Vendor: OSS ERP Solutions
-Bundle-ClassPath: jpiere.fragment.org.adempiere.base.jar
