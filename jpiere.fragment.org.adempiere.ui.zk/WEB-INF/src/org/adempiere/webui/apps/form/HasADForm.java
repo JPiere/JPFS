@@ -12,11 +12,11 @@
  *****************************************************************************/
 package org.adempiere.webui.apps.form;
 
-import org.adempiere.webui.adwindow.ADWindow;
 import org.adempiere.webui.panel.ADForm;
 import org.adempiere.webui.panel.CustomForm;
 import org.adempiere.webui.panel.IFormController;
-import org.compiere.util.Env;
+import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
 
 public class HasADForm implements IFormController{
 
@@ -26,10 +26,11 @@ public class HasADForm implements IFormController{
     {
     	form = new CustomForm();
 
-//    	Component component = Executions.createComponents("zul/iframe.zul", form, null);
+    	Component component = Executions.createComponents("zul/iframe.zul", form, null);
+    	form.appendChild(component);
 
-    	ADWindow adw = new ADWindow(Env.getCtx(),1000014,null);
-    	adw.createPart(form);
+//    	ADWindow adw = new ADWindow(Env.getCtx(),1000014,null);
+//    	adw.createPart(form);
 
     }
 
