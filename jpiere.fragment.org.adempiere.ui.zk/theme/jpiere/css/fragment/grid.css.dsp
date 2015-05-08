@@ -45,8 +45,14 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 	width: 100%;
 }
 
-.z-column-content, .z-listheader-content, .z-listcell-content {
+/*JPIERE-0014 .z-column-contentを削除*/
+.z-listheader-content, .z-listcell-content {
 	padding: 2px 3px 1px;
+}
+
+/*JPIERE-0014 追加*/
+.z-column-content,.z-auxheader-content{
+	padding: 0px 3px 0px;
 }
 
 .z-grid-body .z-cell {
@@ -103,6 +109,7 @@ tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
 	background-color: #E0EAF7;
 }
 
-.z-row-content{/*JPIERE*/
-	padding: 2px 2px;
+/*JPIERE-0014*/
+.z-row-content{
+	padding: 1px 2px;
 }
