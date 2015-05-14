@@ -8,6 +8,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7,
  JavaSE-1.8
 Bundle-Vendor: OSS ERP Solutions
 Jetty-WarFragmentFolderPath: /
-Bundle-ClassPath: jpiere.fragment.org.adempiere.ui.zk.jar
-Import-Package: org.zkoss.zk.ui
 
