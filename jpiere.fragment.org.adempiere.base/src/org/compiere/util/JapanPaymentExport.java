@@ -1,5 +1,5 @@
 /******************************************************************************
- * Product: JPiere(ジェイピエール) - JPiere Modifications                     *
+ * Product: JPiere(ジェイピエール) - JPiere Fragments                         *
  * Copyright (C) Hideaki Hagiwara All Rights Reserved.                        *
  * このプログラムはGNU Gneral Public Licens Version2のもと公開しています。    *
  * このプログラムは自由に活用してもらう事を期待して公開していますが、         *

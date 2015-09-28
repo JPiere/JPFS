@@ -246,3 +246,13 @@
 	left: 4px;
 	height: 12px;
 }
+
+
+/*JPIERE-0110 Info Gadget*/
+.jpiere-infogadget-content {
+	background-color: #FFFFFF !important;
+}
+
+.jpiere-infogadget-attachment {
+	background-color: #FFFFFF !important;
+}
