@@ -7,17 +7,17 @@
 			<window use="org.adempiere.webui.window.LoginWindow" id="loginWindow"/>
 		</vbox>
 	</center>
-	<east sclass="login-east-panel">
-		<include src="/theme/default/zul/login/login-right.zul"/>
-	</east>
-	<west sclass="login-west-panel">
-		<include src="/theme/default/zul/login/login-left.zul"/>
-	</west>
-	<north sclass="login-north-panel">
-		<include src="/theme/default/zul/login/login-top.zul"/>
-	</north>
-	<south sclass="login-south-panel">
-		<include src="/theme/default/zul/login/login-bottom.zul"/>
-	</south>
+  <east sclass="login-east-panel">
+        <!--include src="/theme/default/zul/login/login-right.zul"/-->
+    </east>
+    <west sclass="login-west-panel">
+        <!--include src="/theme/default/zul/login/login-left.zul"/-->
+    </west>
+    <north sclass="login-north-panel">
+        <!--include src="/theme/default/zul/login/login-top.zul"/-->
+    </north>
+    <south sclass="login-south-panel">
+        <!--include src="/theme/default/zul/login/login-bottom.zul"/-->
+    </south>
 </borderlayout>
 </zk>
