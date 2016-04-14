@@ -24,7 +24,8 @@ when detect side effect, fix to only apply for parameter window*/
 }
 
 .bottom-parameter-layout{
-
+	background-color: #ddeeff;	/*JPIERE*/
+	padding: 5px;				/*JPIERE*/
 }
 
 .message-paramenter{

@@ -1,25 +1,28 @@
 .login-window {
-	background-color: #E5E5E5;
+	background-image: url(../images/background-line.png);
 }
 
 .login-window .z-window-content {
-	background-color: #E5E5E5;
+     background-image: url(../images/background-world.png) !important;
+     background-position: center;
+	 /*background-attachment: scroll;*/
+	 background-repeat: no-repeat;
 }
 
 .login-box-body {
-	width: 660px;
-	background-image: url(../images/login-box-bg.png);
-	background-repeat: repeat-y;
-	background-color: transparent;
+	width: 580px;
+    background: rgba(234,240,256,0.5);
+	border-radius: 20px;
+	font-weight: 100;
+	color: #222222;
 	z-index: 1;
-	padding: 0;
+	padding: 40px 40px 60px 40px;
 	margin: 0;
 	text-align: center;
-	padding-bottom: 100px;
 }
 
 .login-box-header {
-	background-image: url(../images/login-box-header.png);
+	<%-- background-image: url(../images/login-box-header.png); --%>
 	background-color: transparent;
 	z-index: 2;
 	height: 54px;
@@ -27,7 +30,7 @@
 }
 
 .login-box-header-txt {
-	color: white !important;
+	color: transparent !important;
 	font-weight: bold;
 	position: relative;
 	top: 30px;
@@ -39,13 +42,17 @@
 }
 
 .login-box-footer {
-	background-image: url(../images/login-box-footer.png);
+	/*background-image: url(../images/login-box-footer.png);*/
 	background-position: top right;
 	background-attachment: scroll;
 	background-repeat: repeat-y;
 	z-index: 2;
 	height: 110px;
 	width: 660px;
+}
+
+.login-label .z-label {
+    color: #222222;
 }
 
 .login-box-footer .confirm-panel {
