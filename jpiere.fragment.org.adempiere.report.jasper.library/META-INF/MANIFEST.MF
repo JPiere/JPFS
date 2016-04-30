@@ -6,4 +6,5 @@ Bundle-Version: 3.0.0.qualifier
 Bundle-Vendor: OSS ERP Solutions
 Fragment-Host: org.adempiere.report.jasper.library;bundle-version="2.1.0.qualifier"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Bundle-ClassPath: iTextAsian.jar
+Bundle-ClassPath: iTextAsian.jar,
+ lib/IPAfont.jar
