@@ -45,6 +45,13 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 	width: 100%;
 }
 
+.z-listcell > div.z-listcell-content {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	width: 100%;
+}
+
 /*JPIERE-0014 .z-column-contentを削除*/
 .z-listheader-content, .z-listcell-content {
 	padding: 2px 3px 1px;
