@@ -247,6 +247,16 @@
 	height: 12px;
 }
 
+/*JPIERE-0023*/
+.message-paramenter b{
+	line-height: 160%;
+} 
+
+/*JPIERE-0023*/
+.message-paramenter p{
+	line-height: 140%;
+} 
+
 
 /*JPIERE-0110 Info Gadget*/
 .jpiere-infogadget-content {
