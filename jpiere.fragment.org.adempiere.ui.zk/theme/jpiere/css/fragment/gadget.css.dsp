@@ -121,6 +121,7 @@
 	padding: 5px 0px 5px 0px;
 }
 
+
 .views-box .z-vbox {
 	width: 100%;
 }
@@ -136,9 +137,10 @@
 }
 
 .activities-box {
-	width: 90%;
-	margin: auto;
-	padding: 5px 0px 5px 0px;
+	width: 100%;
+ 	margin: auto;
+	padding: 0px 14px;
+	border: 1px solid #c8c8c8;/*JPIERE*/
 }
 
 .activities-box .z-vbox {
