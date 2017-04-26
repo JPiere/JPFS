@@ -116,7 +116,7 @@
 }
 
 .views-box {
-	width: 90%;
+	width: 100%; /*JPIERE*/
 	margin: auto;
 	padding: 5px 0px 5px 0px;
 }
