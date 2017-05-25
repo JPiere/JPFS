@@ -13,11 +13,15 @@
 	background-image: none;
 	/*background-color: #91BEE6;JPiere*/
 	background: #3a5caa;
+	border: 1px solid #3a5caa;
+	border-radius: 8px 8px 0px 0px;
+	margin: 2px;
 }
 
 .z-panel {
-	border-radius: 3px;
+	border-radius: 8px 8px 0px 0px;
 	border: 1px solid #d8d8d8;
+	/*border: 1px solid #3a5caa;*/
 	border-bottom-width: 2px;
 }
 
