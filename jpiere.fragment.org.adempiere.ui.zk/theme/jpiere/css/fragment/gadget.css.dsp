@@ -46,7 +46,7 @@
 	/*color: #262626;*/
 	color: #ffffff;/*JPiere*/
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 13px;
 	cursor: move;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .favourites-box .z-hbox:hover {
-    background-color: #fcc654;
+    background-color: #FBD87E;
 }
 
 .favourites-box .z-hbox {
@@ -124,11 +124,12 @@
 }
 
 .views-box {
-	width: 100%; /*JPIERE*/
+	width: 98%;
 	margin: auto;
-	padding: 5px 0px 5px 0px;
+	/*padding: 5px 0px 5px 0px;*/
+	padding: 2px 0px 2px 2px !important;
+	background: #EAF1F6 !important;
 }
-
 
 .views-box .z-vbox {
 	width: 100%;
@@ -136,7 +137,38 @@
 
 .views-box .z-toolbarbutton {
 	width: 100%;
-	padding: 2px 0px;
+    padding: 0px 5px 0px 0px;
+    background: #E9F0FF !important;
+    display: block;
+    border: 1px solid #cccccc !important;
+}
+
+.views-box .z-toolbarbutton:hover {
+	background: #FBD87E !important;
+	text-decoration: none !important;
+	display: block;
+    border: 1px solid #cccccc !important;
+	padding: 0px 5px 0px 0px;
+}
+
+.views-box .link img {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #E8E8E8;
+    padding: 5px 5px 5px 5px;
+    background: #f4f4f4;
+}
+
+.views-box .z-toolbarbutton-content{
+	text-decoration: none !important;
+	color: #333 !important;
+	text-shadow: none !important;
+}
+
+.views-box .z-toolbarbutton-cnt {
+	padding: 0px 0px 0px 0px;
+	font-size: 11px !important;
+	
 }
 
 .views-box .link img {
@@ -153,7 +185,7 @@
 }
 
 .activities-box:hover {
-    background-color: #fcc654;
+    background-color: #FBD87E;
 }
 
 .activities-box .z-vbox {
