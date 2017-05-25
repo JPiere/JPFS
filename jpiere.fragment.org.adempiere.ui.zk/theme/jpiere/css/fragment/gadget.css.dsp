@@ -13,11 +13,15 @@
 	background-image: none;
 	/*background-color: #91BEE6;JPiere*/
 	background: #3a5caa;
+	border: 1px solid #3a5caa;
+	border-radius: 8px 8px 0px 0px;
+	margin: 2px;
 }
 
 .z-panel {
-	border-radius: 3px;
+	border-radius: 8px 8px 0px 0px;
 	border: 1px solid #d8d8d8;
+	/*border: 1px solid #3a5caa;*/
 	border-bottom-width: 2px;
 }
 
@@ -47,6 +51,14 @@
 	padding: 0 0 2px 0;
 	/*color: #262626;*/
 	color: #ffffff;/*JPiere*/
+	font-weight: 400;
+	font-size: 13px;
+	cursor: move;
+}
+
+.z-groupbox .z-caption-content {
+	padding: 0 0 2px 0;
+	color: #666666;
 	font-weight: 400;
 	font-size: 13px;
 	cursor: move;
