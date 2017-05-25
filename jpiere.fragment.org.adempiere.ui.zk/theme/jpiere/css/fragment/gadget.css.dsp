@@ -11,7 +11,8 @@
 
 .z-panel-head {
 	background-image: none;
-	background-color: #91BEE6;/*JPiere*/
+	/*background-color: #91BEE6;JPiere*/
+	background: #3a5caa;
 }
 
 .z-panel {
@@ -36,7 +37,8 @@
 .z-panel-head .z-panel-header {
 	padding: 0 0 2px 0;
 	color: #262626;
-	background: #91BEE6;/*JPiere*/
+	/*background: #91BEE6;JPiere*/
+	background: #3a5caa;
 	font-weight: 300;
 	font-size: 13px;
 }
@@ -44,8 +46,8 @@
 .z-caption .z-caption-content {
 	padding: 0 0 2px 0;
 	/*color: #262626;*/
-	color: #003894;/*JPiere*/
-	font-weight: 300;
+	color: #ffffff;/*JPiere*/
+	font-weight: 400;
 	font-size: 13px;
 	cursor: move;
 }
@@ -82,23 +84,31 @@
 }
 
 .favourites-box {
-	width: 90%;
-	margin: auto;
-	padding: 5px 0px 5px 0px;
+	/*width: 90%;*/
+	/*margin: auto;*/
+	/*padding: 5px 0px 5px 0px;*/
 }
 
 .favourites-box .z-vbox {
 	width: 100%;
 }
 
-.favourites-box .z-hbox {
-	padding: 2px 0px;
-	width: 100%;
+.favourites-box .z-hbox:hover {
+    background-color: #FBD87E;
 }
 
-.favourites-box .z-toolbar-start {
-	float: right;
+.favourites-box .z-hbox {
+	border: solid 1px #ccc;
+    background-color: #E9F0FF;
+    cursor: pointer;
+    width: 100%;
 }
+
+.favourites-box .z-vbox-separator {
+    height: .1em;
+    background-color: #ffffff;
+}
+
 
 .recentitems-box {
 	width: 90%;
@@ -116,11 +126,12 @@
 }
 
 .views-box {
-	width: 90%;
+	width: 98%;
 	margin: auto;
-	padding: 5px 0px 5px 0px;
+	/*padding: 5px 0px 5px 0px;*/
+	padding: 2px 0px 2px 2px !important;
+	background: #EAF1F6 !important;
 }
-
 
 .views-box .z-vbox {
 	width: 100%;
@@ -128,7 +139,38 @@
 
 .views-box .z-toolbarbutton {
 	width: 100%;
-	padding: 2px 0px;
+    padding: 0px 5px 0px 0px;
+    background: #E9F0FF !important;
+    display: block;
+    border: 1px solid #cccccc !important;
+}
+
+.views-box .z-toolbarbutton:hover {
+	background: #FBD87E !important;
+	text-decoration: none !important;
+	display: block;
+    border: 1px solid #cccccc !important;
+	padding: 0px 5px 0px 0px;
+}
+
+.views-box .link img {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #E8E8E8;
+    padding: 5px 5px 5px 5px;
+    background: #f4f4f4;
+}
+
+.views-box .z-toolbarbutton-content{
+	text-decoration: none !important;
+	color: #333 !important;
+	text-shadow: none !important;
+}
+
+.views-box .z-toolbarbutton-cnt {
+	padding: 0px 0px 0px 0px;
+	font-size: 11px !important;
+	
 }
 
 .views-box .link img {
@@ -140,7 +182,12 @@
 	width: 100%;
  	margin: auto;
 	padding: 0px 14px;
+	background-color: #E9F0FF;/*JPIERE*/
 	border: 1px solid #c8c8c8;/*JPIERE*/
+}
+
+.activities-box:hover {
+    background-color: #FBD87E;
 }
 
 .activities-box .z-vbox {
