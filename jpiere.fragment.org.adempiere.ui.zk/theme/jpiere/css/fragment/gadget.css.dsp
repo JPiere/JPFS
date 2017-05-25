@@ -11,7 +11,8 @@
 
 .z-panel-head {
 	background-image: none;
-	background-color: #91BEE6;/*JPiere*/
+	/*background-color: #91BEE6;JPiere*/
+	background: #3a5caa;
 }
 
 .z-panel {
@@ -36,7 +37,8 @@
 .z-panel-head .z-panel-header {
 	padding: 0 0 2px 0;
 	color: #262626;
-	background: #91BEE6;/*JPiere*/
+	/*background: #91BEE6;JPiere*/
+	background: #3a5caa;
 	font-weight: 300;
 	font-size: 13px;
 }

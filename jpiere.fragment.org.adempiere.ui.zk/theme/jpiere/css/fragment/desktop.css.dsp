@@ -217,7 +217,8 @@
 }
 
 .desktop-home-tabpanel .z-panel-head {
-	background-color: #91BEE6;/*JPiere*/
+	/*background-color: #91BEE6;JPiere*/
+	background-color: #3a5caa;
 }
 
 <%-- window container --%>
