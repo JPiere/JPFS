@@ -56,6 +56,14 @@
 	cursor: move;
 }
 
+.z-groupbox .z-caption-content {
+	padding: 0 0 2px 0;
+	color: #666666;
+	font-weight: 400;
+	font-size: 13px;
+	cursor: move;
+}
+
 .dashboard-layout {
 	width: 100%;
 	height: 100%;
