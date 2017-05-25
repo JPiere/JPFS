@@ -107,7 +107,7 @@
 }
 
 .adwindow-detailpane-toolbar {
-	border: none;
+	border-bottom: 1px solid #C5C5C5 !important;
 }
 
 .adwindow-detailpane-toolbar .z-toolbar-body {
