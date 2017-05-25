@@ -44,9 +44,9 @@
 .z-caption .z-caption-content {
 	padding: 0 0 2px 0;
 	/*color: #262626;*/
-	color: #003894;/*JPiere*/
-	font-weight: 300;
-	font-size: 13px;
+	color: #ffffff;/*JPiere*/
+	font-weight: 400;
+	font-size: 14px;
 	cursor: move;
 }
 
@@ -82,23 +82,31 @@
 }
 
 .favourites-box {
-	width: 90%;
-	margin: auto;
-	padding: 5px 0px 5px 0px;
+	/*width: 90%;*/
+	/*margin: auto;*/
+	/*padding: 5px 0px 5px 0px;*/
 }
 
 .favourites-box .z-vbox {
 	width: 100%;
 }
 
-.favourites-box .z-hbox {
-	padding: 2px 0px;
-	width: 100%;
+.favourites-box .z-hbox:hover {
+    background-color: #fcc654;
 }
 
-.favourites-box .z-toolbar-start {
-	float: right;
+.favourites-box .z-hbox {
+	border: solid 1px #ccc;
+    background-color: #E9F0FF;
+    cursor: pointer;
+    width: 100%;
 }
+
+.favourites-box .z-vbox-separator {
+    height: .1em;
+    background-color: #ffffff;
+}
+
 
 .recentitems-box {
 	width: 90%;
@@ -140,7 +148,12 @@
 	width: 100%;
  	margin: auto;
 	padding: 0px 14px;
+	background-color: #E9F0FF;/*JPIERE*/
 	border: 1px solid #c8c8c8;/*JPIERE*/
+}
+
+.activities-box:hover {
+    background-color: #fcc654;
 }
 
 .activities-box .z-vbox {

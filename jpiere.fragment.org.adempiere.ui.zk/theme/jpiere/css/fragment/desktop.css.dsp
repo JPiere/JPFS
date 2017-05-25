@@ -16,10 +16,10 @@
 }
 
 .desktop-header {
-	background-color: #F4F4F4;/*JPIERE*/
+    background: linear-gradient(to bottom, #E9F0FF 5%,#ffffff 60%);/*JPIERE*/
 	width: 100%;
 	height: 46px;
-	border-bottom: 1px solid #C5C5C5 !important;
+	border-bottom: 1px solid #fcc654 !important;/*JPIERE*/
 }
 
 .desktop-header-font {
