@@ -19,7 +19,7 @@
     background: linear-gradient(to bottom, #E9F0FF 5%,#ffffff 60%);/*JPIERE*/
 	width: 100%;
 	height: 46px;
-	border-bottom: 1px solid #fcc654 !important;/*JPIERE*/
+	border-bottom: 1px solid #91BEE6 !important;/*JPIERE-Orange:#fcc654*/
 }
 
 .desktop-header-font {

@@ -33,7 +33,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	border-top-right-radius: 3px;
 	background-color: #91BEE6;
 	border-color: #91BEE6;
-	border-bottom: solid 2px #FCC654
+	border-bottom: solid 1px #dddddd ;
 }
 
 .info-panel td.z-listcell {/*JPIERE*/

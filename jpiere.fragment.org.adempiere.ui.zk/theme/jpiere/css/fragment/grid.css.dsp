@@ -64,10 +64,12 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 
 .z-grid-body .z-cell {
 	padding: 1px 1px;
+	line-height: 22px;
 }
 
 .z-row .z-cell, .z-listitem .z-listcell, .z-listitem.z-listitem-selected>.z-listcell {
-	border-left: 1px solid #cfcfcf;
+	border-left: 1px solid #dddddd ;
+	border-bottom: 1px solid #dddddd !important;
 }
 
 .z-grid-emptybody td {
