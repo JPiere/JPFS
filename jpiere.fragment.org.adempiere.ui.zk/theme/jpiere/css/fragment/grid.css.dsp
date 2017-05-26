@@ -115,7 +115,7 @@ div.z-listbox-body .z-listcell {
 }
 
 tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
-	background-color: #E0EAF7;
+	background-color: #E9F0FF; 
 }
 
 /*JPIERE-Start*/
@@ -138,6 +138,10 @@ tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
 
 .z-grid tbody .z-row:hover>.z-row-inner {/*Display multi row at form window*/
 	background-color: #ffffbb;
+}
+
+.find-window-simple .z-grid tbody .z-row:hover>.z-row-inner {/*find window*/
+	background: none;
 }
 
 .z-listbox-odd.z-listitem{/*info window*/
