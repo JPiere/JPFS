@@ -16,12 +16,12 @@
 ,.z-decimalbox[readonly]
  {
     border: 1px solid #bbbbbb;
-    /*background-color: #D9E0EB;*/
+    background-color: #f0f0f0!important; /*#D9E0EB;*/
  }
  
  .z-combobox-disabled .z-combobox-input {
     border: 1px solid #bbbbbb;
-    /*background-color: #D9E0EB !important;:*/
+    background-color: #f0f0f0!important; /*#D9E0EB;*/
  }
   
  
