@@ -115,7 +115,7 @@ div.z-listbox-body .z-listcell {
 }
 
 tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
-	background-color: #E0EAF7;
+	background-color: #E9F0FF; 
 }
 
 /*JPIERE-Start*/
