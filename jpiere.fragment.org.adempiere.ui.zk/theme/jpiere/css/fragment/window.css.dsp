@@ -36,15 +36,7 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	border-bottom: solid 2px #FCC654
 }
 
-.z-north-body{
-    background-color: #E9F0FF;
-}
-
-.z-north-body .z-grid-body{
-    background-color: #E9F0FF;
-}
-
-.info-panel td.z-listcell {
+.info-panel td.z-listcell {/*JPIERE*/
     border-bottom: 0.01em solid #CDD7BB !important;
     border-left: 0.01em solid #CDD7BB !important;
     border-left: none;

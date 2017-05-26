@@ -24,7 +24,11 @@
  
  
  .z-combobox-button
+,.z-timebox-button
+,.z-datebox-button
 ,.z-combobox-button:hover
+,.z-timebox-button:hover
+,.z-datebox-button:hover
  {
      border-style: Solid;
     border-color: #0099ff;
