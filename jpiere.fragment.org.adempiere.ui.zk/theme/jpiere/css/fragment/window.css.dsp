@@ -31,9 +31,17 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 	padding: 4px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	background-color: #91BEE6;/*JPIERE*/
-	border-color: #91BEE6;/*JPIERE*/
+	background-color: #3a5caa; /*JPIERE-OLD-COLOR:#91BEE6*/
+	border-color: #3a5caa;
+	border-bottom: solid 2px #FCC654
 }
+
+.info-panel td.z-listcell {/*JPIERE*/
+    border-bottom: 0.01em solid #CDD7BB !important;
+    border-left: 0.01em solid #CDD7BB !important;
+    border-left: none;
+}
+
 .z-window-embedded > .z-window-header {
 	border-radius: 0px;
 	background-color: transparent;
