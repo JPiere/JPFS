@@ -106,7 +106,7 @@
 }
 
 .favourites-box .z-hbox:hover {
-    background-color: #FBD87E;
+    background-color: #ffffbb;
 }
 
 .favourites-box .z-hbox {
@@ -158,7 +158,7 @@
 }
 
 .views-box .z-toolbarbutton:hover {
-	background: #FBD87E !important;
+	background: #ffffbb !important;
 	text-decoration: none !important;
 	display: block;
     border: 1px solid #cccccc !important;
@@ -199,7 +199,7 @@
 }
 
 .activities-box:hover {
-    background-color: #FBD87E;
+    background-color: #ffffbb;
 }
 
 .activities-box .z-vbox {
