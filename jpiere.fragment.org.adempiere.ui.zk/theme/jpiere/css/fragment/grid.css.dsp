@@ -15,12 +15,12 @@
 }
 
 .z-grid tbody tr.highlight td.z-cell {
-	background-color: #FFFFCC !important;
+	background-color: #FFFFdd !important;
 	background-image: none !important;
 }
 
 .z-grid tbody tr.highlight td.row-indicator-selected {
-	background-color: #FFFFCC !important;
+	background-color: #FFFFdd !important;
 	background-image: url(${c:encodeURL('/theme/default/images/EditRecord16.png')}) !important;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -64,10 +64,12 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 
 .z-grid-body .z-cell {
 	padding: 1px 1px;
+	line-height: 22px;
 }
 
 .z-row .z-cell, .z-listitem .z-listcell, .z-listitem.z-listitem-selected>.z-listcell {
-	border-left: 1px solid #cfcfcf;
+	border-left: 1px solid #dddddd ;
+	border-bottom: 1px solid #dddddd !important;
 }
 
 .z-grid-emptybody td {
@@ -116,12 +118,30 @@ tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
 	background-color: #E0EAF7;
 }
 
-/*JPIERE-0014*/
+/*JPIERE-Start*/
 .z-row-content{
 	padding: 1px 2px;
 }
 
-/*JPIERE-0014*/
-.z-row:hover>.z-cell{
-	background:linear-gradient(to bottom,#E9F0FF 0, #E9F0FF 100%);
+.z-row:hover>.z-cell{/*Display single row*/
+	background: none;
 }
+
+.z-grid tbody .z-row:hover>.z-cell {/*Display multi row*/
+	background-color: #ffffbb; /*Blue:E9F0FF */
+}
+
+.z-row:hover>.z-row-inner{/*Display single row at form window*/
+    background: none;
+}
+
+
+.z-grid tbody .z-row:hover>.z-row-inner {/*Display multi row at form window*/
+	background-color: #ffffbb;
+}
+
+.z-listbox-odd.z-listitem{/*info window*/
+    background-color: #E9F0FF;
+}
+
+/*JPIERE-Finish*/
