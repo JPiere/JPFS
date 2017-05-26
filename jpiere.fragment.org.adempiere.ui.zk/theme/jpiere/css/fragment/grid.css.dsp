@@ -140,5 +140,8 @@ tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
 	background-color: #ffffbb;
 }
 
+.z-listbox-odd.z-listitem{/*info window*/
+    background-color: #E9F0FF;
+}
 
 /*JPIERE-Finish*/
