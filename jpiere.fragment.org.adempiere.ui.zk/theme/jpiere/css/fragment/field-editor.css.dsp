@@ -1,27 +1,29 @@
 /*JPIERE-CSS:Start*/
 
-.z-combobox-input,
-.z-textbox ,
-.z-datebox-input,
-.z-timebox-input,
-.z-decimalbox
+ .z-combobox-input
+,.z-textbox
+,.z-datebox-input
+,.z-timebox-input
+,.z-decimalbox
  {
     border: 1px solid #0099ff;
  }
  
-.z-combobox-input[readonly],
-.z-textbox[readonly],
-.z-datebox-input[readonly],
-.z-timebox-input[readonly],
-.z-decimalbox[readonly]
+ .z-combobox-input[readonly]
+,.z-textbox[readonly]
+,.z-datebox-input[readonly]
+,.z-timebox-input[readonly]
+,.z-decimalbox[readonly]
  {
     border: 1px solid #bbbbbb;
+    /*background-color: #D9E0EB;*/
  }
  
  .z-combobox-disabled .z-combobox-input {
     border: 1px solid #bbbbbb;
+    /*background-color: #D9E0EB !important;:*/
  }
- 
+  
  
  .z-combobox-button
 ,.z-timebox-button
@@ -30,7 +32,7 @@
 ,.z-timebox-button:hover
 ,.z-datebox-button:hover
  {
-     border-style: Solid;
+    border-style: Solid;
     border-color: #0099ff;
     border-top-width: 1px;
     border-bottom-width: 1px;
