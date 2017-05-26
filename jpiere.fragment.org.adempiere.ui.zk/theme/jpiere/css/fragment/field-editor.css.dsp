@@ -1,3 +1,41 @@
+/*JPIERE-CSS:Start*/
+
+.z-combobox-input,
+.z-textbox ,
+.z-datebox-input,
+.z-timebox-input,
+.z-decimalbox
+ {
+    border: 1px solid #0099ff;
+ }
+ 
+.z-combobox-input[readonly],
+.z-textbox[readonly],
+.z-datebox-input[readonly],
+.z-timebox-input[readonly],
+.z-decimalbox[readonly]
+ {
+    border: 1px solid #bbbbbb;
+ }
+ 
+ .z-combobox-disabled .z-combobox-input {
+    border: 1px solid #bbbbbb;
+ }
+ 
+ 
+ .z-combobox-button
+,.z-combobox-button:hover
+ {
+     border-style: Solid;
+    border-color: #0099ff;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 0px;
+ }
+ 
+/*JPIERE-CSS:Finish*/
+
 .mandatory-decorator-text {
 	text-decoration: none; font-size: xx-small; vertical-align: top; color:red;
 }
@@ -21,12 +59,11 @@
 }
 
 .editor-input:focus {
-	/*border: 1px solid #0000ff;*/
 	border: 1px solid #F39700;/*JPIERE*/
 }
 
 .editor-input-disd {
-	padding-right: 0px !important;
+	padding-right: 2px !important;
 }
 
 .editor-button {
@@ -158,7 +195,12 @@ span.grid-combobox-editor {
 	position: absolute;
 	right: 0px;
 	top: 1px;
+	
+	border-left-color: #0099ff;
+    border-left-style: Solid;
+    border-left-width: 1px;
 }
+
 .payment-rule-editor .z-combobox .z-combobox-button-hover {
 	background-color: #ddd;
 	background-position: 0px 0px;
