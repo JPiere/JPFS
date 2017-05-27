@@ -154,6 +154,16 @@ span.grid-combobox-editor {
 .grid-combobox-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
+	top: 0px;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.find-window-simple .grid-combobox-editor .z-combobox-button{
+	position: absolute;
+	right: 0px;
 	top: 1px;
 	border-bottom-right-radius: 3px;
 	border-top-right-radius: 3px;
@@ -200,7 +210,7 @@ span.grid-combobox-editor {
 .payment-rule-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
-	top: 1px;
+	top: 0px;
 	
 	border-left-color: #0099ff;
     border-left-style: Solid;

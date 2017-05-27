@@ -2,7 +2,7 @@
 	position: relative;
 }
 .help-window-header {
-	padding: 10px 0 10px 20px;
+	padding: 10px 10px 10px 20px;
 }
 .help-window-title {
 	color: #FF0000;
@@ -59,6 +59,7 @@
 
 .help-window p, .help-window h3, .help-window h4, .help-window h5 {
 	display: inline;
+	line-height: 160%;
 }
 
 .help-window-content-r a {
@@ -85,7 +86,8 @@
 }
 
 .help-window-tab td {
-	padding: 5px 15px 0 15px;
+	padding: 5px 15px 5px 15px;
+	text-align: justify;
 }
 
 .help-window-content-l tr:hover td {
