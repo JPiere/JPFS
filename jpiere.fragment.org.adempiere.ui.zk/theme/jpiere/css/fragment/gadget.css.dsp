@@ -198,6 +198,10 @@
 	border: 1px solid #c8c8c8;/*JPIERE*/
 }
 
+.views-box .z-vbox-separator{
+    height: .2em;
+}
+
 .activities-box:hover {
     background-color: #ffffbb;
 }
