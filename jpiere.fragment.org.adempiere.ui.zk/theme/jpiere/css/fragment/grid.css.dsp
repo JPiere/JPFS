@@ -41,8 +41,14 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 .z-cell > span.z-label {
 	overflow: hidden;
 	text-overflow: ellipsis;
+	vertical-align: sub;/*JPIERE*/
 	display: inline-block;
 	width: 100%;
+}
+
+.z-separator-horizontal-bar {
+    height: 2px;
+    margin: 0px 0px 0px 2px;
 }
 
 .z-listcell > div.z-listcell-content {
