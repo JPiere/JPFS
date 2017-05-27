@@ -200,7 +200,7 @@ span.grid-combobox-editor {
 .payment-rule-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
-	top: 1px;
+	top: 0px;
 	
 	border-left-color: #0099ff;
     border-left-style: Solid;
