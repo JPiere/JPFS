@@ -95,6 +95,11 @@
 	height: 90%;
 }
 
+
+.favourites-box .z-panel{
+  border-radius: 0px;
+}
+
 .favourites-box {
 	/*width: 90%;*/
 	/*margin: auto;*/
