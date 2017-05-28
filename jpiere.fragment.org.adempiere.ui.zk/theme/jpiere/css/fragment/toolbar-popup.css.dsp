@@ -46,3 +46,9 @@
 .toolbar-popup-window .dialog-footer {
 	padding: 4px;
 }
+
+/*User prefarence Window*/
+.z-window-overlapped .z-row .z-cell{
+   border-bottom: 0px !important;
+   border-left: 0px;
+}
