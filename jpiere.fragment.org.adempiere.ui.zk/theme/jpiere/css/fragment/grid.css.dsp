@@ -41,8 +41,8 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 .z-cell > span.z-label {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	vertical-align: sub;/*JPIERE*/
-	display: inline-block;
+	/*vertical-align: sub;JPIERE*/
+	/*display: inline-block;JPIERE*/
 	width: 100%;
 }
 
