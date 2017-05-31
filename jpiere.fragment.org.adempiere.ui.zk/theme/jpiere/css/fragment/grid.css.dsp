@@ -120,11 +120,19 @@ div.z-listbox-body .z-listcell {
 	height: 20px;
 }
 
-tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
+/*JPIERE-Start*/
+tr.z-grid-odd td.z-row-inner
+,tr.z-grid-odd .z-cell
+,tr.z-grid-odd {/*Form Window*/
 	background-color: #E9F0FF; 
 }
 
-/*JPIERE-Start*/
+ tr.z-row:hover
+,tr.z-grid-odd:hover{/*Form Window*/
+	background-color: #ffffbb; 
+}
+
+
 .z-row-content{
 	padding: 1px 2px;
 }
