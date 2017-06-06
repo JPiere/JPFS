@@ -41,8 +41,8 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 .z-cell > span.z-label {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	vertical-align: sub;/*JPIERE*/
-	display: inline-block;
+	/*vertical-align: sub;JPIERE*/
+	/*display: inline-block;JPIERE*/
 	width: 100%;
 }
 
@@ -120,11 +120,19 @@ div.z-listbox-body .z-listcell {
 	height: 20px;
 }
 
-tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
+/*JPIERE-Start*/
+tr.z-grid-odd td.z-row-inner
+,tr.z-grid-odd .z-cell
+,tr.z-grid-odd {/*Form Window*/
 	background-color: #E9F0FF; 
 }
 
-/*JPIERE-Start*/
+ tr.z-row:hover
+,tr.z-grid-odd:hover{/*Form Window*/
+	background-color: #ffffbb; 
+}
+
+
 .z-row-content{
 	padding: 1px 2px;
 }
@@ -147,11 +155,40 @@ tr.z-grid-odd td.z-row-inner, tr.z-grid-odd .z-cell, tr.z-grid-odd {/*JPIERE*/
 }
 
 .find-window-simple .z-grid tbody .z-row:hover>.z-row-inner {/*find window*/
-	background: none;
+	background-color: #ffffff;
 }
 
 .z-listbox-odd.z-listitem{/*info window*/
     background-color: #E9F0FF;
+}
+
+.jpiere-pivotwindow .grid-layout{
+    border: 1px solid #F39700 !important;
+    padding: 0px  !important;
+    background-color: #ffffff !important;
+}
+
+.jpiere-pivotwindow .z-group td.z-group-inner{
+    border-bottom: 1px solid #F39700 !important;
+    background-color: #91BEE6 !important;
+}
+
+.jpiere-pivotwindow .z-grid-body .z-cell{
+    padding: 5px;
+    line-height: 22px;
+    background-color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+.jpiere-pivotwindow .grid-layout .z-groupbox{
+    margin: 6px 0px 0px 0px !important;
+    padding: 0px !important;
+    background-color: #ffffff !important;
+}
+
+
+.jpiere-pivotwindow .z-pivottable {
+    border: 1px solid #0099ff;
 }
 
 /*JPIERE-Finish*/
