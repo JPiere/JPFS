@@ -11,11 +11,12 @@
 
 .z-panel-head {
 	background-image: none;
-	background-color: #91BEE6;
-	/*background: #3a5caa;JPiere*/
-	border: 1px solid #3a5caa;
+	background-color: #003894;
+	/*border: 1px solid #3a5caa;*/
 	border-radius: 8px 8px 0px 0px;
 	margin: 2px;
+	padding-bottom: 4px;
+	border: none;
 }
 
 .z-panel {
@@ -33,15 +34,11 @@
 	border: none;
 }
 
-.z-panel-head {
-	padding-bottom: 4px;
-	border: none;
-}
 
 .z-panel-head .z-panel-header {
 	padding: 0 0 2px 0;
 	color: #262626;
-	background: #91BEE6;
+	background: #003894;;
 	/*background: #3a5caa;JPiere*/
 	font-weight: 300;
 	font-size: 13px;

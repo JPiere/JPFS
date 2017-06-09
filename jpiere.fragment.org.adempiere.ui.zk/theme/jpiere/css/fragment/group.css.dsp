@@ -1,5 +1,5 @@
 tr.z-group {
-	background: #E9F2FB repeat-x 0 0;
+	background: #E9F0FF repeat-x 0 0;
 	background-image: url(../images/group_bg.gif) !important;
 }
 
