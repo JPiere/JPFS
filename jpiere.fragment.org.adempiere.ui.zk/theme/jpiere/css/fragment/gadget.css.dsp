@@ -169,6 +169,10 @@
     padding: 2px 2px 2px 2px;
 }
 
+.views-box .z-toolbarbutton{
+    border-radius:0px ;
+}
+
 .views-box .z-toolbarbutton-content{
 	text-decoration: none !important;
 	color: #333 !important;
