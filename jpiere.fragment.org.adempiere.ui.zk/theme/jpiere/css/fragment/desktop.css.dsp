@@ -216,10 +216,6 @@
 	color: blue;
 }
 
-.desktop-home-tabpanel .z-panel-head {
-	background-color: #91BEE6;
-}
-
 <%-- window container --%>
 .window-container-toolbar-btn .z-toolbarbutton-content img {
 	width: 22px;

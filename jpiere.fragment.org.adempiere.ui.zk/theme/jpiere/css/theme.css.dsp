@@ -2,12 +2,21 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 <%@ taglib uri="http://www.idempiere.org/dsp/web/util" prefix="u" %>
 
+/************[JPere Color Info]**************
+
+Base Background color : #E9F0FF(Light Bulue)
+Header color1(Old): #91BEE6 (Sky Blue)
+Header color2(Now): #003894 (Dark blue(navy))
+Accent Color1: #F39700 (Orange)
+Accent Color2: #2FABE1 (Bule)
+
+********************************************/
 html,body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #D4E3F4;
+	background-color: #ffffff ;
 	color: #333;
 	font-family: Helvetica,Arial,sans-serif;
 	overflow: hidden;
