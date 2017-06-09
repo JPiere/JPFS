@@ -2,8 +2,8 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 <%@ taglib uri="http://www.idempiere.org/dsp/web/util" prefix="u" %>
 
-/*******************************************
-[JPere Color Info]
+/************[JPere Color Info]**************
+
 Base Background color : #E9F0FF(Light Bulue)
 Header color1(Old): #91BEE6 (Sky Blue)
 Header color2(Now): #003894 (Dark blue(navy))

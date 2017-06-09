@@ -140,11 +140,7 @@
 }
 
 .views-box {
-	width: 98%;
 	margin: auto;
-	/*padding: 5px 0px 5px 0px;*/
-	padding: 2px 0px 2px 2px !important;
-	background: #EAF1F6 !important;
 }
 
 .views-box .z-vbox {
@@ -170,9 +166,7 @@
 .views-box .link img {
     height: 16px;
     width: 16px;
-    border: 1px solid #E8E8E8;
-    padding: 5px 5px 5px 5px;
-    background: #f4f4f4;
+    padding: 2px 2px 2px 2px;
 }
 
 .views-box .z-toolbarbutton-content{
@@ -184,12 +178,10 @@
 .views-box .z-toolbarbutton-cnt {
 	padding: 0px 0px 0px 0px;
 	font-size: 11px !important;
-	
 }
 
-.views-box .link img {
-	height: 16px;
-	width: 16px;
+.views-box .z-vbox-separator{
+    height: 2px;
 }
 
 .activities-box {
@@ -198,10 +190,6 @@
 	padding: 0px 14px;
 	background-color: #E9F0FF;/*JPIERE*/
 	border: 1px solid #c8c8c8;/*JPIERE*/
-}
-
-.views-box .z-vbox-separator{
-    height: .2em;
 }
 
 .activities-box:hover {
