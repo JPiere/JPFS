@@ -16,7 +16,8 @@
 }
 
 .desktop-header {
-    background: linear-gradient(to bottom, #E9F0FF 5%,#ffffff 60%);/*JPIERE*/
+    /*background: linear-gradient(to bottom, #E9F0FF 5%,#ffffff 60%);/*JPIERE*/
+    background: linear-gradient(to bottom, #ffffff 0%,#E9F0FF 90%);
 	width: 100%;
 	height: 46px;
 	border-bottom: 1px solid #91BEE6 !important;/*JPIERE-Orange:#fcc654*/
