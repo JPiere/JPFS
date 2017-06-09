@@ -55,7 +55,7 @@
 	position: relative;
 }
 
-.editor-input {
+.editor-input{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
 	display: inline-block;
@@ -65,7 +65,7 @@
 }
 
 .editor-input:focus {
-	border: 1px solid #F39700;/*JPIERE*/
+	border: 1px solid #F39700;
 }
 
 .editor-input-disd {
@@ -246,4 +246,16 @@ span.grid-combobox-editor {
 .image-field.image-field-readonly {
 	cursor: default;
 	border: none;
+}
+
+
+ .z-select{
+    width: 100%;
+	height: 24px;
+    border: 1px solid #0099ff;
+    border-radius: 3px;
+ }
+ 
+ .z-select:focus {
+	border: 1px solid #F39700;/*JPIERE*/
 }
