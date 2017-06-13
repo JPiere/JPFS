@@ -162,34 +162,5 @@ tr.z-grid-odd td.z-row-inner
     background-color: #E9F0FF;
 }
 
-.jpiere-pivotwindow .grid-layout{
-    border: 1px solid #F39700 !important;
-    padding: 0px  !important;
-    background-color: #ffffff !important;
-}
-
-.jpiere-pivotwindow .z-group td.z-group-inner{
-    border-bottom: 1px solid #F39700 !important;
-    background-color: #91BEE6 !important;
-}
-
-.jpiere-pivotwindow .z-grid-body .z-cell{
-    padding: 5px;
-    line-height: 22px;
-    background-color: #ffffff !important;
-    margin-bottom: 10px;
-}
-
-.jpiere-pivotwindow .grid-layout .z-groupbox{
-    margin: 6px 0px 0px 0px !important;
-    padding: 0px !important;
-    background-color: #ffffff !important;
-}
-
-
-.jpiere-pivotwindow .z-pivottable {
-    border: 1px solid #0099ff;
-}
-
 
 /*JPIERE-Finish*/
