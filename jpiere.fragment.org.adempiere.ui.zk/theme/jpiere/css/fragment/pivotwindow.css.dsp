@@ -24,7 +24,8 @@
     border: 1px solid #dddddd;
 }
 
-.searchFieldGrid{
+ .searchFieldGrid
+,.otherPivotControllerGrid{
     margin: 2px !important;
     border: 1px solid #dddddd !important;
     background-color: #FFFFFF !important;
@@ -32,12 +33,12 @@
 
  .predefinedButtonGrid
 ,.pivotFieldControllerGrid
-,.otherPivotControllerGrid{
+,.protrudePivotControllerGrid{
     border: none !important;
     background-color: #FFFFFF !important;
 }
 
-.searchFieldGrid tr.z-grid-odd
+ .searchFieldGrid tr.z-grid-odd
 ,.otherPivotControllerGrid tr.z-grid-odd{
     background-color: #FFFFFF !important;
 }
