@@ -27,7 +27,7 @@
  .searchFieldGrid
 ,.otherPivotControllerGrid{
     margin: 2px !important;
-    border: 1px solid #dddddd !important;
+    border: 1px solid #0099ff !important;
     background-color: #FFFFFF !important;
 }
 
