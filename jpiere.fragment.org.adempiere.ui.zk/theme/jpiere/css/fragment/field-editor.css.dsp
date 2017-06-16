@@ -250,7 +250,6 @@ span.grid-combobox-editor {
 
 
  .z-select{
-    width: 100%;
 	height: 24px;
     border: 1px solid #0099ff;
     border-radius: 3px;
