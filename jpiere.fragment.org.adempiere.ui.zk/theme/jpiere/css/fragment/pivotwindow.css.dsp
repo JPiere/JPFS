@@ -24,22 +24,46 @@
     border: 1px solid #dddddd;
 }
 
- .searchFieldGrid
-,.otherPivotControllerGrid{
+ .pivotwindow-searchFieldGrid
+,.pivotwindow-otherPivotControllerGrid{
     margin: 2px !important;
     border: 1px solid #0099ff !important;
     background-color: #FFFFFF !important;
 }
 
- .predefinedButtonGrid
-,.pivotFieldControllerGrid
-,.protrudePivotControllerGrid{
+ .pivotwindow-predefinedButtonGrid
+,.pivotwindow-pivotFieldControllerGrid
+,.pivotwindow-protrudePivotControllerGrid{
     border: none !important;
     background-color: #FFFFFF !important;
 }
 
- .searchFieldGrid tr.z-grid-odd
-,.otherPivotControllerGrid tr.z-grid-odd{
+ .pivotwindow-searchFieldGrid tr.z-grid-odd
+,.pivotwindow-otherPivotControllerGrid tr.z-grid-odd{
     background-color: #FFFFFF !important;
+}
+
+.pivotwindow-cellinfo{
+    max-width:480px;
+    margin: 2px;
+    padding: 2Px;
+}
+
+.pivotwindow-columninfo{
+    width:100%;
+    display: inline-block;
+    line-height: 18px;
+    padding: 4Px;
+    font-size: 12px;
+    border: 1px solid #dddddd;
+}
+
+.pivotwindow-rowinfo{
+    width:100%;
+    display: inline-block;
+    line-height: 18px;
+    padding: 4Px;
+    font-size: 12px;
+    border: 1px solid #dddddd;
 }
 
