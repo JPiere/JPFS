@@ -67,3 +67,7 @@
     border: 1px solid #dddddd;
 }
 
+.z-pivot-field-control .z-grid-body{
+    border: 1px solid #0099ff;
+
+}
