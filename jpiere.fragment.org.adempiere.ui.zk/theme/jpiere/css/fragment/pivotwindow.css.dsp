@@ -43,7 +43,7 @@
     background-color: #FFFFFF !important;
 }
 
-.pivotwindow-cellinfo{
+.pivotwindow-popupcellinfo{
     max-width:480px;
     margin: 2px;
     padding: 2Px;
@@ -67,7 +67,13 @@
     border: 1px solid #dddddd;
 }
 
-.z-pivot-field-control .z-grid-body{
-    border: 1px solid #0099ff;
-
+.z-pivot-field-control .z-vlayout{
+    border: 1px solid #cfcfcf;
 }
+
+
+.z-pivot-field-control .z-vlayout-inner{
+    background-color:#eeeeee;
+}
+
+
