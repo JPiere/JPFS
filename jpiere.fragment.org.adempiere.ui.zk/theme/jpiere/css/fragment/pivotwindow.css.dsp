@@ -49,7 +49,9 @@
     padding: 2Px;
 }
 
-.pivotwindow-columninfo{
+.pivotwindow-rowinfo
+,.pivotwindow-columninfo
+,.pivotwindow-drilldowninfo{
     width:100%;
     display: inline-block;
     line-height: 18px;
@@ -58,14 +60,6 @@
     border: 1px solid #dddddd;
 }
 
-.pivotwindow-rowinfo{
-    width:100%;
-    display: inline-block;
-    line-height: 18px;
-    padding: 4Px;
-    font-size: 12px;
-    border: 1px solid #dddddd;
-}
 
 .z-pivot-field-control .z-vlayout{
     border: 1px solid #cfcfcf;
