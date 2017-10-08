@@ -217,6 +217,10 @@
 	color: blue;
 }
 
+.desktop-home-tabpanel .z-panel-head {
+	/* background-color: #FFFFFF;*/ JPIERE
+}
+
 <%-- window container --%>
 .window-container-toolbar-btn .z-toolbarbutton-content img {
 	width: 22px;
@@ -227,4 +231,26 @@
 	width: 16px;
 	height: 16px;
 	padding: 3px 3px;
+}
+@media screen and (min-width: 720px) {
+	.desktop-header  > .z-hlayout-inner  {
+	    width: 50%;
+	    height: 100%;
+	}
+}
+@media screen and (max-width: 720px) {
+	.desktop-header {	
+		width: 100%;
+		height: 100%;
+		
+	}
+	.desktop-user-panel {
+		float: none;
+	}
+	.desktop-header  > .z-hlayout-inner {
+        width: 100%;
+        height: 40%;
+        display: block;
+    }
+    
 }
