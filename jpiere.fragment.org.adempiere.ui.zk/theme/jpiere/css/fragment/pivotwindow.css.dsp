@@ -24,22 +24,50 @@
     border: 1px solid #dddddd;
 }
 
- .searchFieldGrid
-,.otherPivotControllerGrid{
+ .pivotwindow-searchFieldGrid
+,.pivotwindow-otherPivotControllerGrid{
     margin: 2px !important;
     border: 1px solid #0099ff !important;
     background-color: #FFFFFF !important;
 }
 
- .predefinedButtonGrid
-,.pivotFieldControllerGrid
-,.protrudePivotControllerGrid{
+ .pivotwindow-predefinedButtonGrid
+,.pivotwindow-pivotFieldControllerGrid
+,.pivotwindow-protrudePivotControllerGrid{
     border: none !important;
     background-color: #FFFFFF !important;
 }
 
- .searchFieldGrid tr.z-grid-odd
-,.otherPivotControllerGrid tr.z-grid-odd{
+ .pivotwindow-searchFieldGrid tr.z-grid-odd
+,.pivotwindow-otherPivotControllerGrid tr.z-grid-odd{
     background-color: #FFFFFF !important;
 }
+
+.pivotwindow-popupcellinfo{
+    max-width:480px;
+    margin: 2px;
+    padding: 2Px;
+}
+
+.pivotwindow-rowinfo
+,.pivotwindow-columninfo
+,.pivotwindow-drilldowninfo{
+    width:100%;
+    display: inline-block;
+    line-height: 18px;
+    padding: 4Px;
+    font-size: 12px;
+    border: 1px solid #dddddd;
+}
+
+
+.z-pivot-field-control .z-vlayout{
+    border: 1px solid #cfcfcf;
+}
+
+
+.z-pivot-field-control .z-vlayout-inner{
+    background-color:#eeeeee;
+}
+
 
