@@ -25,9 +25,9 @@ when detect side effect, fix to only apply for parameter window*/
 
 .bottom-parameter-layout{
     padding: 12px 15px 8px 15px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    background-color: #f4f4f4;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #E9F0FF;
 }
 
 .message-paramenter{

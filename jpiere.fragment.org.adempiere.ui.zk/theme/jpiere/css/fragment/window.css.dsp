@@ -104,8 +104,8 @@ div.wc-modal, div.wc-modal-none, div.wc-highlighted, div.wc-highlighted-none {
 
 .dialog-footer {
 	margin-bottom: 0;
-	background-color: #f5f5f5;
-	border-top: 1px solid #ddd;
+	background-color: #E9F0FF;
+	border-top: 1px solid #ccc;
 	-webkit-box-shadow: inset 0 1px 0 #ffffff;
 	-moz-box-shadow: inset 0 1px 0 #ffffff;
 	box-shadow: inset 0 1px 0 #ffffff;
