@@ -13,9 +13,9 @@
 	background-image: none;
 	background-color: #003894;
 	/*border: 1px solid #3a5caa;*/
-	border-radius: 8px 8px 0px 0px;
-	margin: 2px;
-	padding-bottom: 4px;
+	/*border-radius: 8px 8px 0px 0px;*/
+	margin: 4px 4px 0px 4px;
+	padding-bottom: 0px;
 	border: none;
 }
 

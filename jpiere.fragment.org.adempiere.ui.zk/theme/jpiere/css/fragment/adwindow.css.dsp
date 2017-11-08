@@ -3,8 +3,6 @@
 <%-- breadcrumb --%>
 .breadcrumb-toolbar-button {
 	background-color: transparent;
-	display:inline-block;
-	width: 22px;
 	height: 22px;
 }
 .breadcrumb-toolbar-button img {
@@ -81,7 +79,7 @@
 .adwindow-toolbar {
 	border: 0px;
 	padding: 2px 4px;
-	height: 26px;
+	height: 26px;/*JPIERE*/
 	background-image: none;
 	background-color: #fff;
 }
@@ -260,12 +258,12 @@
 /*JPIERE-0023*/
 .message-paramenter b{
 	line-height: 160%;
-} 
+}
 
 /*JPIERE-0023*/
 .message-paramenter p{
 	line-height: 140%;
-} 
+}
 
 
 /*JPIERE-0110 Info Gadget*/
