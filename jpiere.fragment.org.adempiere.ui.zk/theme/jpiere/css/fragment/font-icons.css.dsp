@@ -1,13 +1,13 @@
 .z-icon-Account:before {
 	content: "\f12e";
 }
-.z-icon-Archive:before {	
+.z-icon-Archive:before {
 	content: "\f187";
 }
 .z-icon-Assignment:before {
 	content: "\f0cb";
 }
-.z-icon-Attachment:before {	
+.z-icon-Attachment:before {
 	content: "\f0c6";
 }
 .z-icon-BPartner:before {
@@ -26,7 +26,7 @@
 .z-icon-Chat:before {
 	content: "\f0e6";
 }
-.z-icon-Copy:before {	
+.z-icon-Copy:before {
 	content: "\f0c5";
 }
 .z-icon-Customize:before {
@@ -36,10 +36,10 @@
 	font-weight: bold;
 	content: "\f068";
 }
-.z-icon-Detail:before {	
+.z-icon-Detail:before {
 	content: "\f0d7";
 }
-.z-icon-Edit:before {	
+.z-icon-Edit:before {
 	content: "\f044";
 }
 .z-icon-ErrorMessageBox:before {
@@ -57,19 +57,19 @@
 .z-icon-Expand:before {
 	content: "\f0d7";
 }
-.z-icon-Export:before {	
+.z-icon-Export:before {
 	content: "\f0ed";
 }
 .z-icon-FieldSuggestion:before {
 	content: "\f0e5";
 }
 .z-icon-FileImport:before {
-	content: "\f0ee";		
+	content: "\f0ee";
 }
-.z-icon-Find:before {	 
+.z-icon-Find:before {
 	content: "\f002";
 }
-.z-icon-FirstRecord:before {	 
+.z-icon-FirstRecord:before {
 	content: "\f048";
 }
 .z-icon-Folder:before {
@@ -91,18 +91,18 @@
 	content: "\f0e2";
 }
 .z-icon-Import:before {
-	content: "\f0ee";		
+	content: "\f0ee";
 }
-.z-icon-Info:before {	
+.z-icon-Info:before {
 	content: "\f0eb";
 }
-.z-icon-InfoAccount:before {	
+.z-icon-InfoAccount:before {
 	content: "\f02d";
 }
-.z-icon-InfoAsset:before {	
+.z-icon-InfoAsset:before {
 	content: "\f0b1";
 }
-.z-icon-InfoBPartner:before {	
+.z-icon-InfoBPartner:before {
 	content: "\f0c0";
 }
 .z-icon-InfoMessageBox:before {
@@ -111,25 +111,25 @@
 	color: blue;
 	font-family: FontAwesome;
 }
-.z-icon-InfoInOut:before {	
+.z-icon-InfoInOut:before {
 	content: "\f0d1";
 }
-.z-icon-InfoInvoice:before {	
+.z-icon-InfoInvoice:before {
 	content: "\f14b";
 }
-.z-icon-InfoOrder:before {	
+.z-icon-InfoOrder:before {
 	content: "\f0c9";
 }
-.z-icon-InfoPayment:before {	
+.z-icon-InfoPayment:before {
 	content: "\f0d6";
 }
-.z-icon-InfoProduct:before {	
+.z-icon-InfoProduct:before {
 	content: "\f07a";
 }
-.z-icon-InfoResource:before {	
+.z-icon-InfoResource:before {
 	content: "\f0eb";
 }
-.z-icon-InfoSchedule:before {	
+.z-icon-InfoSchedule:before {
 	content: "\f017";
 }
 .z-icon-LastRecord:before {
@@ -148,7 +148,7 @@
 	content: "\f023";
 }
 .z-icon-More:before {
-	content: "\f142";
+	content: "\f002";/*JPIERE*/
 }
 .z-icon-MoveDown:before {
 	content: "\f0d7";
@@ -162,7 +162,7 @@
 .z-icon-MoveUp:before {
 	content: "\f0d8";
 }
-.z-icon-Multi:before {	
+.z-icon-Multi:before {
 	content: "\f0ce";
 }
 .z-icon-New:before {
@@ -187,7 +187,7 @@
 .z-icon-Open:before {
 	content: "\f016";
 }
-.z-icon-Parent:before {	
+.z-icon-Parent:before {
 	content: "\f0d8";
 }
 .z-icon-PAttribute:before {
@@ -214,7 +214,7 @@
 .z-icon-Process:before {
 	content: "\f013";
 }
-.z-icon-Product:before {	
+.z-icon-Product:before {
 	content: "\f07a";
 }
 .z-icon-QuestionMessageBox:before {
@@ -223,19 +223,19 @@
 	color: green;
 	font-family: FontAwesome;
 }
-.z-icon-Request:before {	
+.z-icon-Request:before {
 	content: "\f046";
 }
 .z-icon-Refresh:before {
 	content: "\f021";
 }
-.z-icon-Report:before {	
+.z-icon-Report:before {
 	content: "\f1ea";
 }
 .z-icon-Reset:before {
 	content: "\f0e2";
 }
-.z-icon-Save:before {	
+.z-icon-Save:before {
 	content: "\f0c7";
 }
 .z-icon-SaveCreate:before {
@@ -247,7 +247,7 @@
 .z-icon-SendMail:before {
 	content: "\f003";
 }
-.z-icon-Single:before {	
+.z-icon-Single:before {
 	content: "\f044";
 }
 .z-icon-Task:before {
@@ -256,7 +256,7 @@
 .z-icon-Trash:before {
 	content: "\f014";
 }
-.z-icon-UnprocessedDoc:before {	
+.z-icon-UnprocessedDoc:before {
 	content: "\f044";
 }
 .z-icon-VPreference:before {
@@ -265,21 +265,21 @@
 .z-icon-Window:before {
 	content: "\f022";
 }
-.z-icon-WorkFlow:before {	
+.z-icon-WorkFlow:before {
 	content: "\f126";
 }
 .z-icon-Zoom:before {
 	content: "\f14c";
 }
 
-.z-icon-ZoomAcross:before {	
+.z-icon-ZoomAcross:before {
 	content: "\f00e";
 }
 
-.z-icon-Request:before {	
+.z-icon-Request:before {
 	content: "\f046";
 }
 
-.z-icon-WorkFlow:before {	
+.z-icon-WorkFlow:before {
 	content: "\f126";
 }
