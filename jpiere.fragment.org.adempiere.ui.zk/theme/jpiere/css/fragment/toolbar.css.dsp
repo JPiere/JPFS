@@ -1,3 +1,11 @@
+.z-toolbar-content .z-separator-vertical { /*JPIERE*/
+    display: inline-block;
+    border-left: 1px dotted #888888;
+    margin: 0px 6px 0px 6px;
+    width: 0px;
+    overflow: hidden;
+}
+
 .z-toolbar.z-toolbar-tabs {
 	padding-top: 0px;
 }

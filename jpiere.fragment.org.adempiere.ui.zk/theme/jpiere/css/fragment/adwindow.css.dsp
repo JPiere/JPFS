@@ -178,8 +178,8 @@
 }
 
 .adwindow-gridview-detail + .z-south-splitter {
-	border-top: 1px solid #C5C5C5;
-	border-bottom: 1px solid #C5C5C5;
+	border-top: 1px solid #aaaaaa; /*JPIERE*/
+	border-bottom: 1px solid #aaaaaa;/*JPIERE*/
 }
 
 .adwindow-gridview-detail .z-south-body {
