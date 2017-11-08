@@ -72,11 +72,11 @@
 }
 
 .dashboard-widget {
-	margin-top: 1px; 
+	margin-top: 1px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	width: 99%;	
+	width: 99%;
 }
 
 .dashboard-widget-max {
@@ -96,29 +96,18 @@
 	height: 90%;
 }
 
-
-.favourites-box .z-panel{
-  border-radius: 0px;
-}
-
 .favourites-box {
-	/*width: 90%;*/
-	/*margin: auto;*/
-	/*padding: 5px 0px 5px 0px;*/
+	width: 100%;
+	margin: auto;
+	padding: 1px 0px 1px 0px;
 }
 
 .favourites-box .z-vbox {
 	width: 100%;
 }
 
-.favourites-box .z-hbox:hover {
-    background-color: #ffffbb;
-}
-
 .favourites-box .z-hbox {
-	border: solid 1px #ccc;
-    background-color: #E9F0FF;
-    cursor: pointer;
+	padding: 0px 4px;
     width: 100%;
 }
 
@@ -132,14 +121,14 @@
 
 
 .recentitems-box {
-	width: 90%;
+	width: 100%;
 	margin: auto;
-	padding: 5px 0px 5px 0px;
+	padding: 1px 0px 1px 0px;
 }
 
 .recentitems-box A {
 	display: block;
-	padding: 2px 0px;
+	padding: 1px 0px;
 }
 
 .recentitems-box .z-toolbar-start {
