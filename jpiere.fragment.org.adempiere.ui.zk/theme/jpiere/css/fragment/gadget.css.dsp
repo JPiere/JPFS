@@ -34,6 +34,10 @@
 	border: none;
 }
 
+.z-panel-head {
+	padding-bottom: 1px;
+	border: none;
+}
 
 .z-panel-head .z-panel-header {
 	padding: 0 0 2px 0;
@@ -64,15 +68,15 @@
 .dashboard-layout {
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: relative;
 }
 
 .dashboard-widget {
-	margin-top: 4px;
+	margin-top: 1px; 
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	width: 92%;
+	width: 99%;	
 }
 
 .dashboard-widget-max {
@@ -251,7 +255,13 @@
 
 .help-content
 {
-	padding: 5px;
+	padding: 2px;
 	font-size: 11px;
 	font-weight: normal;
+}
+.fav-new-btn.z-toolbarbutton [class^="z-icon-"] {
+	font-size: smaller;
+	color: #333;
+	padding-left: 4px;
+	padding-right: 4px;
 }

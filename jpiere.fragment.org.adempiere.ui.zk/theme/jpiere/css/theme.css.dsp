@@ -98,3 +98,7 @@ table.z-vbox > tbody > tr > td > table {
 <c:include page="fragment/parameter-process.css.dsp" />
 
 <c:include page="fragment/pivotwindow.css.dsp" />
+
+<c:include page="fragment/window-size.css.dsp" />
+
+<c:include page="fragment/font-icons.css.dsp" />

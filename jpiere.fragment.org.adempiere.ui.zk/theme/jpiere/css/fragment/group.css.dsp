@@ -1,5 +1,5 @@
 tr.z-group {
-	background: #E9F0FF repeat-x 0 0;
+	background: #E9F2FB repeat-x 0 0;
 	background-image: url(../images/group_bg.gif) !important;
 }
 
@@ -15,7 +15,7 @@ tr.z-group {
 	overflow: hidden !important;
 	border-bottom: 1px solid #CFCFCF !important;
 	border-top: 1px solid #CFCFCF !important;
-	padding: 4px 5px;
+	padding: 1px 2px;
 }
 
 .z-group-icon {

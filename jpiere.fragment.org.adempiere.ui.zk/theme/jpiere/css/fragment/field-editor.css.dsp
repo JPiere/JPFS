@@ -63,6 +63,9 @@
 	width: 100%;
 	height: 21px;
 }
+.editor-input.mobile.z-decimalbox {
+	padding-right: 5px;
+}
 
 .editor-input:focus {
 	border: 1px solid #F39700;
@@ -246,6 +249,10 @@ span.grid-combobox-editor {
 .image-field.image-field-readonly {
 	cursor: default;
 	border: none;
+}
+
+.dashboard-field-panel.z-panel, .dashboard-field-panel.z-panel > .z-panel-body,  .dashboard-field-panel.z-panel > .z-panel-body > .z-panelchildren  {
+	overflow: visible;
 }
 
 

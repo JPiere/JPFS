@@ -13,6 +13,12 @@
 	background-size: 16px 16px;
 	cursor: pointer;
 }
+.z-grid tbody tr.grid-inactive-row span.row-indicator-selected.z-icon-Edit,
+.z-grid tbody tr.highlight span.row-indicator-selected.z-icon-Edit {
+	font-family: FontAwesome;
+	font-size: larger;
+	color: #333; 
+}
 
 .z-grid tbody tr.highlight td.z-cell {
 	background-color: #FFFFdd !important;
@@ -20,7 +26,7 @@
 }
 
 .z-grid tbody tr.highlight td.row-indicator-selected {
-	background-color: #FFFFdd !important;
+	background-color: #FFFFCC !important;
 	background-image: url(${c:encodeURL('/theme/default/images/EditRecord16.png')}) !important;
 	background-position: center;
 	background-repeat: no-repeat;

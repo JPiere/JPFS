@@ -7,7 +7,7 @@
 }
 
 .info-panel .z-north-body {
-    padding-top: 4px;
+    padding-top: 4px;//
 }
 
 
@@ -35,3 +35,6 @@
 	background-color: #FFFFFF;
 }
 
+.info-panel.z-window .z-borderlayout > div > .z-north {
+	max-height: 50%;
+}

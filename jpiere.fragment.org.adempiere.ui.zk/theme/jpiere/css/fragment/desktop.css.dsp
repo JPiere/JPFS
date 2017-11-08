@@ -20,6 +20,12 @@
     background: linear-gradient(to bottom, #ffffff 0%,#E9F0FF 90%);
 	width: 100%;
 	height: 46px;
+	border-bottom: 1px solid #C5C5C5 !important;
+	padding-left: 4px;
+}
+.desktop-header.mobile {
+	height: 36px;
+	padding: 4px 4px;
 }
 
 .desktop-header-font {
@@ -29,7 +35,7 @@
 
 .desktop-header-popup {
 	width: 800px;
-	border-radius: 3px;
+	border-radius: 2px;
 	border: 1px solid #d5d5d5;
 	border-right: 2px solid #d5d5d5;
 	border-bottom-width: 2px;
@@ -52,6 +58,9 @@
 .desktop-user-panel {
 	float: right;
 }
+.desktop-user-panel.mobile .desktop-header-font.desktop-header-username {
+	font-weight: 600;
+}
 
 .desktop-layout {
 	position: absolute;
@@ -64,12 +73,17 @@
 	background-color: #E4E4E4;
 }
 
-.desktop-tabbox .z-tab {
-	margin-right: 2px;
+.desktop-tabbox .z-tabs-content {
+    width: 5555px !important;
 }
 
 .desktop-tabbox .z-tab {
 	height: 24px;
+}
+@media screen and (max-width: 360px) {
+	.desktop-tabbox .z-tab {
+		max-width: 190px;
+	}
 }
 
 .desktop-tabbox .z-tab-selected {
@@ -92,7 +106,7 @@
 }
 
 .desktop-center {
-	padding-top: 4px;
+	padding-top: 4px;	/*JPIERE*/
 	background-color: #E4E4E4;
 }
 
@@ -109,7 +123,7 @@
 	border: none;
 	border-right: 1px solid #C5C5C5;
 	background-color: #E4E4E4;
-	padding-top: 4px;
+	padding-top: 4px; /*JPIERE*/
 }
 
 .desktop-right-column {
@@ -117,7 +131,7 @@
 	border: none;
 	border-left: 1px solid #C5C5C5;
 	background-color: #E4E4E4;
-	padding-top: 4px;
+	padding-top: 4px; /*JPIERE*/
 }
 
 .desktop-left-column + .z-west-splitter,  .desktop-left-column.z-west {
@@ -151,7 +165,7 @@
 .z-anchorchildren { overflow:visible }
 
 .desktop-hometab {
-	margin-left: 4px !important;
+	margin-left: 2px !important;
 }
 
 .desktop-tabbox .z-tabs .z-toolbar-tabs-body {
@@ -221,36 +235,21 @@
 }
 
 <%-- window container --%>
-.window-container-toolbar-btn .z-toolbarbutton-content img {
-	width: 22px;
-	height: 22px;
-}
-
-.window-container-toolbar-btn.context-help-btn .z-toolbarbutton-content img {
+.window-container-toolbar-btn.z-toolbarbutton .z-toolbarbutton-content img {
 	width: 16px;
 	height: 16px;
 	padding: 3px 3px;
 }
-@media screen and (min-width: 720px) {
-	.desktop-header  > .z-hlayout-inner  {
-	    width: 50%;
-	    height: 100%;
-	    border-bottom: 1px solid #91BEE6 !important;/*JPIERE-Orange:#fcc654*/
+.window-container-toolbar-btn.z-toolbarbutton .z-toolbarbutton-content [class^="z-icon"] {
+	width: 22px;
+	height: 22px;
+	padding: 3px 3px;
 	}
-}
-@media screen and (max-width: 720px) {
-	.desktop-header {	
-		width: 100%;
-		height: 100%;
-		
-	}
-	.desktop-user-panel {
-		float: none;
-	}
-	.desktop-header  > .z-hlayout-inner {
-        width: 100%;
-        height: 40%;
-        display: block;
-    }
-    
+.window-container-toolbar > .z-toolbar-content,
+.window-container-toolbar-btn.z-toolbarbutton,
+.window-container-toolbar-btn.z-toolbarbutton .z-toolbarbutton-content,
+.window-container-toolbar-btn.z-toolbarbutton .z-toolbarbutton-content [class^="z-icon"] {
+	display:inline-flex;
+	align-items: center;
+	justify-content: center;
 }
