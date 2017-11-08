@@ -122,9 +122,12 @@
     width: 100%;
 }
 
-.favourites-box .z-vbox-separator {
-    height: .1em;
-    background-color: #ffffff;
+.favourites-box .z-toolbar-start {
+	float: right;
+}
+.favourites-box .trash-font-icon {
+	font-family: FontAwesome;
+	font-size: 20px;
 }
 
 
@@ -142,9 +145,25 @@
 .recentitems-box .z-toolbar-start {
 	float: right;
 }
+.recentitems-box A.trash-toolbarbutton {
+	display: inline-block;
+}
+.recentitems-box .z-toolbar .z-toolbar-content {
+	display: inline-flex;
+	align-items: center;
+}
+.recentitems-box .trash-toolbarbutton .z-toolbarbutton-content {
+	font-size: 16px;
+}
+.recentitems-box .trash-font-icon {
+	font-family: FontAwesome;
+	font-size: 20px;
+}
 
 .views-box {
+	width: 100%;
 	margin: auto;
+	padding: 2px 0px 2px 0px;
 }
 
 .views-box .z-vbox {

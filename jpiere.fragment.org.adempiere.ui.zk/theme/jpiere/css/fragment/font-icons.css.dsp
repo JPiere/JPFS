@@ -34,7 +34,7 @@
 }
 .z-icon-Delete:before {
 	font-weight: bold;
-	content: "\f068";
+	content: "\f014";
 }
 .z-icon-Detail:before {
 	content: "\f0d7";
