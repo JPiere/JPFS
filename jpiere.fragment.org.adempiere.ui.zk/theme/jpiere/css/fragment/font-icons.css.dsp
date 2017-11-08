@@ -29,12 +29,15 @@
 .z-icon-Copy:before {
 	content: "\f0c5";
 }
+.z-icon-CSVImport:before {
+	content: "\f093";
+}
 .z-icon-Customize:before {
 	content: "\f0db";
 }
 .z-icon-Delete:before {
 	font-weight: bold;
-	content: "\f014";
+	content: "\f014";/*JPIERE*/
 }
 .z-icon-Detail:before {
 	content: "\f0d7";
@@ -166,7 +169,7 @@
 	content: "\f0ce";
 }
 .z-icon-New:before {
-	content: "\f067";
+	content: "\f016";/*JPIERE*/
 }
 .z-icon-Next:before {
 	content: "\f0da";
@@ -224,7 +227,7 @@
 	font-family: FontAwesome;
 }
 .z-icon-Request:before {
-	content: "\f046";
+	content: "\f0c0";/*JPIERE*/
 }
 .z-icon-Refresh:before {
 	content: "\f021";
@@ -274,10 +277,6 @@
 
 .z-icon-ZoomAcross:before {
 	content: "\f00e";
-}
-
-.z-icon-Request:before {
-	content: "\f046";
 }
 
 .z-icon-WorkFlow:before {
