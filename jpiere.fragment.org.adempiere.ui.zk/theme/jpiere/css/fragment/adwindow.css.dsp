@@ -266,15 +266,6 @@
 }
 
 
-/*JPIERE-0110 Info Gadget*/
-.jpiere-infogadget-content {
-	background-color: #FFFFFF !important;
-}
-
-.jpiere-infogadget-attachment {
-	background-color: #FFFFFF !important;
-}
-
 @media screen and (max-height: 767px) {
 	.adtab-form-borderlayout.mobile.z-borderlayout > div > .z-south-collapsed > .z-borderlayout-icon.z-icon-chevron-up {
 		display: none;

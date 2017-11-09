@@ -19,11 +19,17 @@
 	border: none;
 }
 
+.desktop-left-column .z-panel-body { /*JPIERE*/
+	border-radius: 0px 0px 0px 0px !important;
+	margin: 0px 4px 0px 4px;
+}
+
 .z-panel {
-	border-radius: 8px 8px 0px 0px;
-	border: 1px solid #d8d8d8;
+	border-radius: 6px 6px 6px 6px;
+	border: 1px solid #cccccc;
 	/*border: 1px solid #3a5caa;*/
 	border-bottom-width: 2px;
+
 }
 
 .z-panel-noborder {
@@ -119,6 +125,12 @@
 	font-size: 20px;
 }
 
+.favourites-box .z-vlayout-inner{/*JPIERE*/
+    border: 1px solid #cccccc !important;
+	background: #E9F0FF !important;
+	padding: 1px 0px 0px 2px;
+	margin-bottom: 2px;
+}
 
 .recentitems-box {
 	width: 100%;
@@ -272,4 +284,13 @@
 	color: #333;
 	padding-left: 4px;
 	padding-right: 4px;
+}
+
+/*JPIERE-0110 Info Gadget*/
+.jpiere-infogadget-content {
+	background-color: #FFFFFF !important;
+}
+
+.jpiere-infogadget-attachment {
+	background-color: #FFFFFF !important;
 }
