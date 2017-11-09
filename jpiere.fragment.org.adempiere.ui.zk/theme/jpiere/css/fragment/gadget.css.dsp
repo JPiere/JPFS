@@ -27,6 +27,7 @@
 .z-panel {
 	border-radius: 6px 6px 6px 6px;
 	border: 1px solid #cccccc;
+	background-color: #ffffff;
 	/*border: 1px solid #3a5caa;*/
 	border-bottom-width: 2px;
 
@@ -105,7 +106,9 @@
 .favourites-box {
 	width: 100%;
 	margin: auto;
-	padding: 1px 0px 1px 0px;
+	/*padding: 1px 0px 1px 0px !important;
+	border: 1px solid #cccccc;
+	background-color: #ffffff;*/
 }
 
 .favourites-box .z-vbox {
