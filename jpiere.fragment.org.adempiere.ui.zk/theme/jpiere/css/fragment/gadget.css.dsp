@@ -21,7 +21,7 @@
 
 .desktop-left-column .z-panel-body { /*JPIERE*/
 	border-radius: 0px 0px 0px 0px !important;
-	margin: 0px 4px 0px 4px;
+	margin: 0px 2px 0px 2px;
 }
 
 .z-panel {

@@ -286,3 +286,6 @@
 .z-icon-Document:before {/*JPIERE*/
 	content: "\f0f6";
 }
+.z-icon-Inventory:before {/*JPIERE*/
+	content: "\f07a";
+}
