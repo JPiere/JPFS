@@ -254,7 +254,7 @@
 	content: "\f044";
 }
 .z-icon-Task:before {
-	content: "\f0ae";
+	content: "\f013";/*JPIERE*/
 }
 .z-icon-Trash:before {
 	content: "\f014";
@@ -281,4 +281,8 @@
 
 .z-icon-WorkFlow:before {
 	content: "\f126";
+}
+
+.z-icon-Document:before {/*JPIERE*/
+	content: "\f0f6";
 }
