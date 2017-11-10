@@ -1,5 +1,5 @@
 .z-icon-Account:before {
-	content: "\f12e";
+	content: "\f02d";/*JPIERE*/
 }
 .z-icon-Archive:before {
 	content: "\f187";
@@ -188,7 +188,7 @@
 	content: "\f0ac";
 }
 .z-icon-Open:before {
-	content: "\f016";
+	content: "\f115";/*JPIERE*/
 }
 .z-icon-Parent:before {
 	content: "\f0d8";
