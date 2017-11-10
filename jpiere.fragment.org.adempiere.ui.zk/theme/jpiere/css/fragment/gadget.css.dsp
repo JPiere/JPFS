@@ -128,6 +128,10 @@
 	font-size: 20px;
 }
 
+.favourites-box .z-panel {/*JPIERE*/
+    border-radius: 0px 0px 0px 0px !important;
+}
+
 .favourites-box .z-vlayout-inner{/*JPIERE*/
     border: 1px solid #cccccc !important;
 	background: #E9F0FF !important;
