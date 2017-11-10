@@ -26,7 +26,7 @@
 
 .z-panel {
 	border-radius: 6px 6px 6px 6px;
-	border: 1px solid #cccccc;
+	border: 1px solid #bbbbbb;
 	background-color: #ffffff;
 	/*border: 1px solid #3a5caa;*/
 	border-bottom-width: 2px;
