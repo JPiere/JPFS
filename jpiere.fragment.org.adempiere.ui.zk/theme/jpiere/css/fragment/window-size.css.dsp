@@ -86,7 +86,7 @@
 	.field-record-info-dialog {
 		height: 100%;
 	}
-}	
+}
 
 .record-info-dialog {
 	width: 500px;
@@ -282,7 +282,7 @@
 }
 
 .doc-action-dialog {
-	width: 410px;
+	width: 410px !important;
 }
 @media screen and (max-width: 410px) {
 	.doc-action-dialog {
