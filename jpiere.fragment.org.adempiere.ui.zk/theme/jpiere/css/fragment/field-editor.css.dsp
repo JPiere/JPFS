@@ -8,7 +8,7 @@
  {
     border: 1px solid #0099ff;
  }
- 
+
  .z-combobox-input[readonly]
 ,.z-textbox[readonly]
 ,.z-datebox-input[readonly]
@@ -18,13 +18,13 @@
     border: 1px solid #bbbbbb;
     background-color: #f0f0f0!important; /*#D9E0EB;*/
  }
- 
+
  .z-combobox-disabled .z-combobox-input {
     border: 1px solid #bbbbbb;
     background-color: #f0f0f0!important; /*#D9E0EB;*/
  }
-  
- 
+
+
  .z-combobox-button
 ,.z-timebox-button
 ,.z-datebox-button
@@ -39,7 +39,7 @@
     border-right-width: 1px;
     border-left-width: 0px;
  }
- 
+
 /*JPIERE-CSS:Finish*/
 
 .mandatory-decorator-text {
@@ -214,7 +214,7 @@ span.grid-combobox-editor {
 	position: absolute;
 	right: 0px;
 	top: 0px;
-	
+
 	border-left-color: #0099ff;
     border-left-style: Solid;
     border-left-width: 1px;
@@ -240,11 +240,16 @@ span.grid-combobox-editor {
 	float: right;
 }
 
-.image-field {
+.z-image  /*JPIERE*/
+{
+    object-fit: contain;
+}
+ .image-field {
 	cursor: pointer;
 	border: 1px solid #C5C5C5;
 	height: 24px;
 	width: 24px;
+	object-fit: contain; /*JPIERE*/
 }
 .image-field.image-field-readonly {
 	cursor: default;
@@ -261,7 +266,7 @@ span.grid-combobox-editor {
     border: 1px solid #0099ff;
     border-radius: 3px;
  }
- 
+
  .z-select:focus {
 	border: 1px solid #F39700;/*JPIERE*/
 }
