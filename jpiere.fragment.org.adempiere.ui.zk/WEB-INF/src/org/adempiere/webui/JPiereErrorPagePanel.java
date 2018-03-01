@@ -16,23 +16,16 @@ package org.adempiere.webui;
 
 import java.util.Properties;
 
-import org.adempiere.webui.component.Button;
 import org.adempiere.webui.component.ConfirmPanel;
 import org.adempiere.webui.component.Window;
 import org.adempiere.webui.theme.ITheme;
-import org.adempiere.webui.theme.ThemeManager;
-import org.adempiere.webui.util.ZKUpdateUtil;
 import org.adempiere.webui.window.FDialog;
 import org.compiere.model.MSysConfig;
 import org.zkoss.zhtml.Div;
-import org.zkoss.zhtml.Table;
-import org.zkoss.zhtml.Td;
-import org.zkoss.zhtml.Tr;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
-import org.zkoss.zul.Image;
 
 /**
  *
@@ -78,46 +71,67 @@ public class JPiereErrorPagePanel extends Window implements EventListener<Event>
     	div.setSclass(ITheme.LOGIN_BOX_HEADER_CLASS);
     	this.appendChild(div);
 
+    	div = new Div();
+    	div.setSclass(ITheme.LOGIN_BOX_HEADER_CLASS);
+    	this.appendChild(div);
 
-    	Table table = new Table();
-    	table.setId("grdLogin");
-    	table.setDynamicProperty("cellpadding", "0");
-    	table.setDynamicProperty("cellspacing", "5");
-    	table.setSclass(ITheme.LOGIN_BOX_BODY_CLASS);
+    	div = new Div();
+    	div.setSclass(ITheme.LOGIN_BOX_HEADER_CLASS);
+    	this.appendChild(div);
 
-    	this.appendChild(table);
-
-    	Tr tr = new Tr();
-    	table.appendChild(tr);
-    	Td td = new Td();
-    	td.setSclass(ITheme.LOGIN_BOX_HEADER_LOGO_CLASS);
-    	tr.appendChild(td);
-    	td.setDynamicProperty("colspan", "2");
-    	Image image = new Image();
-        image.setSrc(ThemeManager.getLargeLogo());
-        td.appendChild(image);
+    	/** JPiere Logo */
+//    	Table table = new Table();
+//    	table.setId("grdLogin");
+//    	table.setDynamicProperty("cellpadding", "0");
+//    	table.setDynamicProperty("cellspacing", "5");
+//    	table.setSclass(ITheme.LOGIN_BOX_BODY_CLASS);
+//
+//    	this.appendChild(table);
+//
+//    	Tr tr = new Tr();
+//    	table.appendChild(tr);
+//    	Td td = new Td();
+//    	td.setSclass(ITheme.LOGIN_BOX_HEADER_LOGO_CLASS);
+//    	tr.appendChild(td);
+//    	td.setDynamicProperty("colspan", "2");
+//    	Image image = new Image();
+//        image.setSrc(ThemeManager.getLargeLogo());
+//        td.appendChild(image);
 
        	div = new Div();
     	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
     	this.appendChild(div);
 
-    	div = new Div();
+       	div = new Div();
     	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
-        pnlButtons = new ConfirmPanel(false, false, false, false, false, false, true);
-        pnlButtons.addActionListener(this);
-        Button okBtn = pnlButtons.getButton(ConfirmPanel.A_OK);
-        okBtn.setWidgetListener("onClick", "zAu.cmd0.showBusy(null)");
+    	this.appendChild(div);
 
-        Button helpButton = pnlButtons.createButton(ConfirmPanel.A_HELP);
-		helpButton.addEventListener(Events.ON_CLICK, this);
-		helpButton.setSclass(ITheme.LOGIN_BUTTON_CLASS);
-		pnlButtons.addComponentsRight(helpButton);
+       	div = new Div();
+    	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
+    	this.appendChild(div);
 
-        LayoutUtils.addSclass(ITheme.LOGIN_BOX_FOOTER_PANEL_CLASS, pnlButtons);
-        ZKUpdateUtil.setWidth(pnlButtons, null);
-        pnlButtons.getButton(ConfirmPanel.A_OK).setSclass(ITheme.LOGIN_BUTTON_CLASS);
-        div.appendChild(pnlButtons);
-        this.appendChild(div);
+       	div = new Div();
+    	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
+    	this.appendChild(div);
+
+    	/** Button */
+//    	div = new Div();
+//    	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
+//        pnlButtons = new ConfirmPanel(false, false, false, false, false, false, true);
+//        pnlButtons.addActionListener(this);
+//        Button okBtn = pnlButtons.getButton(ConfirmPanel.A_OK);
+//        okBtn.setWidgetListener("onClick", "zAu.cmd0.showBusy(null)");
+//
+//        Button helpButton = pnlButtons.createButton(ConfirmPanel.A_HELP);
+//		helpButton.addEventListener(Events.ON_CLICK, this);
+//		helpButton.setSclass(ITheme.LOGIN_BUTTON_CLASS);
+//		pnlButtons.addComponentsRight(helpButton);
+//
+//        LayoutUtils.addSclass(ITheme.LOGIN_BOX_FOOTER_PANEL_CLASS, pnlButtons);
+//        ZKUpdateUtil.setWidth(pnlButtons, null);
+//        pnlButtons.getButton(ConfirmPanel.A_OK).setSclass(ITheme.LOGIN_BUTTON_CLASS);
+//        div.appendChild(pnlButtons);
+//        this.appendChild(div);
 	}
 
     public void onEvent(Event event)

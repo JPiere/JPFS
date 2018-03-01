@@ -14,7 +14,6 @@
 
 package org.adempiere.webui;
 
-import org.adempiere.webui.theme.ThemeManager;
 import org.zkoss.zul.Window;
 
 /**
@@ -33,8 +32,6 @@ public class JPiereWebUIErrorPage extends Window
 	 */
 	private static final long serialVersionUID = -3320656546509525766L;
 
-	public static final String EXECUTION_CARRYOVER_SESSION_KEY = "execution.carryover";
-
 
     public JPiereWebUIErrorPage()
     {
@@ -44,7 +41,7 @@ public class JPiereWebUIErrorPage extends Window
 
     public void onCreate()
     {
-        this.getPage().setTitle(ThemeManager.getBrowserTitle());
+        /*this.getPage().setTitle(ThemeManager.getBrowserTitle());*/
 
         JPiereErrorPage loginDesktop = new JPiereErrorPage();
 
