@@ -143,8 +143,7 @@ public class JPiereErrorPagePanel extends Window implements EventListener<Event>
     **/
     public void showLogin()
     {
-
-    	Executions.sendRedirect("../index.zul");
+    	Executions.sendRedirect("../.."+ Executions.getCurrent().getContextPath());
     }
 
     /**

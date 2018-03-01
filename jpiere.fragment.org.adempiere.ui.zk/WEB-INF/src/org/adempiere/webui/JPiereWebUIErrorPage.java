@@ -39,7 +39,7 @@ public class JPiereWebUIErrorPage extends Window
     public JPiereWebUIErrorPage()
     {
     	this.setVisible(false);
-//    	logout();
+    	logout();
     }
 
     public void onCreate()
