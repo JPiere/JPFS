@@ -41,12 +41,8 @@ public class JPiereWebUIErrorPage extends Window
 
     public void onCreate()
     {
-        /*this.getPage().setTitle(ThemeManager.getBrowserTitle());*/
-
         JPiereErrorPage loginDesktop = new JPiereErrorPage();
-
     	loginDesktop.createPart(this.getPage());
-
     }
 
 

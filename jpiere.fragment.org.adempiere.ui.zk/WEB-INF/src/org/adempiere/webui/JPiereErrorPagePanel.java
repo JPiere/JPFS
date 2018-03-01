@@ -16,12 +16,18 @@ package org.adempiere.webui;
 
 import java.util.Properties;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.adempiere.webui.component.ConfirmPanel;
+import org.adempiere.webui.component.Label;
 import org.adempiere.webui.component.Window;
 import org.adempiere.webui.theme.ITheme;
 import org.adempiere.webui.window.FDialog;
 import org.compiere.model.MSysConfig;
 import org.zkoss.zhtml.Div;
+import org.zkoss.zhtml.Table;
+import org.zkoss.zhtml.Td;
+import org.zkoss.zhtml.Tr;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.EventListener;
@@ -71,44 +77,40 @@ public class JPiereErrorPagePanel extends Window implements EventListener<Event>
     	div.setSclass(ITheme.LOGIN_BOX_HEADER_CLASS);
     	this.appendChild(div);
 
-    	div = new Div();
-    	div.setSclass(ITheme.LOGIN_BOX_HEADER_CLASS);
-    	this.appendChild(div);
 
-    	div = new Div();
-    	div.setSclass(ITheme.LOGIN_BOX_HEADER_CLASS);
-    	this.appendChild(div);
+    	HttpServletResponse response = (HttpServletResponse)Executions.getCurrent().getNativeResponse();
+    	int statusCode = response.getStatus();
 
     	/** JPiere Logo */
-//    	Table table = new Table();
-//    	table.setId("grdLogin");
-//    	table.setDynamicProperty("cellpadding", "0");
-//    	table.setDynamicProperty("cellspacing", "5");
-//    	table.setSclass(ITheme.LOGIN_BOX_BODY_CLASS);
-//
-//    	this.appendChild(table);
-//
-//    	Tr tr = new Tr();
-//    	table.appendChild(tr);
-//    	Td td = new Td();
-//    	td.setSclass(ITheme.LOGIN_BOX_HEADER_LOGO_CLASS);
-//    	tr.appendChild(td);
-//    	td.setDynamicProperty("colspan", "2");
-//    	Image image = new Image();
-//        image.setSrc(ThemeManager.getLargeLogo());
-//        td.appendChild(image);
+    	Table table = new Table();
+    	table.setId("grdLogin");
+    	table.setDynamicProperty("cellpadding", "0");
+    	table.setDynamicProperty("cellspacing", "5");
+    	table.setSclass(ITheme.LOGIN_BOX_BODY_CLASS);
 
-       	div = new Div();
-    	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
-    	this.appendChild(div);
+    	this.appendChild(table);
 
-       	div = new Div();
-    	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
-    	this.appendChild(div);
+    	Tr tr = new Tr();
+    	table.appendChild(tr);
+    	tr.setStyle("height:100px");
+    	Td td = new Td();
+    	td.setSclass(ITheme.LOGIN_BOX_HEADER_LOGO_CLASS);
+    	tr.appendChild(td);
+    	td.setDynamicProperty("colspan", "2");
+    	org.adempiere.webui.component.Label error = new org.adempiere.webui.component.Label("Status Code");
+    	error.setStyle("font-size: 48px; color:#003894;");
+        td.appendChild(error);
 
-       	div = new Div();
-    	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);
-    	this.appendChild(div);
+        tr = new Tr();
+    	table.appendChild(tr);
+    	tr.setStyle("height:100px");
+    	td = new Td();
+    	td.setSclass(ITheme.LOGIN_BOX_HEADER_LOGO_CLASS);
+    	tr.appendChild(td);
+    	td.setDynamicProperty("colspan", "2");
+    	Label status = new Label(String.valueOf(statusCode));
+    	status.setStyle("font-size: 80px; color:#003894;");
+        td.appendChild(status);
 
        	div = new Div();
     	div.setSclass(ITheme.LOGIN_BOX_FOOTER_CLASS);

@@ -2,11 +2,19 @@
 		<param-name>org.eclipse.jetty.servlet.Default.dirAllowed</param-name>
 		<param-value>false</param-value>
 	</context-param>
-		<error-page>
+	<error-page>
 		<error-code>403</error-code>
 		<location>/jpiere_web-ui_error.zul</location>
 	</error-page>
 	<error-page>
 		<error-code>404</error-code>
+		<location>/jpiere_web-ui_error.zul</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/jpiere_web-ui_error.zul</location>
+	</error-page>
+	<error-page>
+		<error-code>503</error-code>
 		<location>/jpiere_web-ui_error.zul</location>
 	</error-page>
