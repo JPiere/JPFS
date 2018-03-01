@@ -4,9 +4,9 @@
 	</context-param>
 		<error-page>
 		<error-code>403</error-code>
-		<location>/jpiere-error.zul</location>
+		<location>/jpiere_web-ui_error.zul</location>
 	</error-page>
 	<error-page>
 		<error-code>404</error-code>
-		<location>/jpiere-error.zul</location>
+		<location>/jpiere_web-ui_error.zul</location>
 	</error-page>
