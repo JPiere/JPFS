@@ -1,0 +1,43 @@
+body{
+	background-image: url(../images/background-line.png);
+	font-family: verdana;
+}
+
+.world {
+	background-image: url(../images/background-world.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+}
+
+.statuscode{
+	font-size: 48px;
+	color: #003894;
+	display: block;
+	text-align: center;
+	padding-top: 40px;
+	margin: 10px;
+
+}
+
+.status{
+	font-size: 80px;
+	color: #003894;
+	display: block;
+	text-align: center;
+	margin: 10px;
+}
+
+.parent
+{
+  text-align: center;
+  width: 100%;
+}
+.inner
+{
+
+}
+.tablecell{
+  width: 100%;
+  height: 100%;
+}
