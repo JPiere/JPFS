@@ -1,19 +1,25 @@
-<%@ page import="org.bmlaurus.home.JPiereProp" %>
 <html>
-<% JPiereProp.load(); %>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="stylesheet" href="<%=JPiereProp.loadCss()%>">
-	<script type="text/javascript" src="resources/jquery/jquery.js"></script>
-	<title>uhouho</title>
+	<link rel="icon" type="image/png" href="resources/templates/jpiere/images/ErrorIndicator16.png">
+	<link rel="stylesheet" href="resources/templates/jpiere/styles/template.css">
+	<title>JPiere</title>
 </head>
 <body>
     <div class="world">
 		<div class="parent">
 		  <div class="inner">
 		    <div class="tablecell">
-		      <p class="statuscode">Status Code</p>
-		      <p class="status">404</p>
+		    <%
+    			int status = response.getStatus();
+			    if(status == 200)
+			    {
+			    	;
+			    }else{
+			    	out.println("<p class=\"statuscode\">Status Code</p>");
+			    	out.println("<p class=\"status\">"+status+"</p>");
+			    }
+			%>
 		    </div>
 		  </div>
 		</div>
