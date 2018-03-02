@@ -1,8 +1,8 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="icon" type="image/png" href="resources/templates/jpiere/images/ErrorIndicator16.png">
-	<link rel="stylesheet" href="resources/templates/jpiere/styles/template.css">
+	<link rel="icon" type="image/png" href="/resources/templates/jpiere/images/icon.png">
+	<link rel="stylesheet" href="/resources/templates/jpiere/styles/template.css">
 	<title>JPiere</title>
 </head>
 <body>
