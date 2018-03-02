@@ -8,52 +8,34 @@ Copyright (C) 2009 Idalica Corporation
 <style>
 	.section-head {
 		margin-top: 20px;
-		font-size: 9pt;
+		font-size: 18px;
+		text-align: center;
+		color: #333333 ;
 	}
 
 	.loginInfoBox {
 		background-color: #9CBDFF;
-		margin: 5px;
-		padding: 3px;
-		margin-top: 20px;
+		margin: 10px;
+		padding: 5px;
+		line-height: 20px;
+		text-align: center;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
 </style>
 <div class="loginInfoBox">
-<span class="section-head">Initially you can log into the system with the following users:
-</span>
+<i><b><span class="section-head">Login Information</span></b></i>
 
-<table cellpadding="5" cellspacing="0" style="margin-top: 10px; font-size: 8pt; background-color: transparent;">
+<table cellpadding="2" cellspacing="10" style="margin-top: 10px; font-size: 16px; background-color: transparent;">
 
 <tbody><tr valign="top">
-</th><th><i><b>User</b></i>
-</th><th><i><b>EMail</b></i>
-</th><th><i><b>Password</b></i>
+</th><th><i><b><span class="section-head">EMail</span></b></i>
+</th><th><i><b><span class="section-head">Password</span></b></i>
 </th></tr>
 
 <tr valign="top">
-</td><td>GardenAdmin
-</td><td>admin @ gardenworld.com
-</td><td>GardenAdmin
-</td></tr>
-
-<tr valign="top">
-</td><td>GardenUser
-</td><td>user @ gardenworld.com
-</td><td>GardenUser
-</td></tr>
-
-<tr valign="top">
-</td><td>SuperUser
-</td><td>superuser @ idempiere.com
-</td><td>System
-</td></tr>
-
-<tr valign="top">
-</td><td>System
-</td><td>system @ idempiere.com
-</td><td>System
+</td><td><b><span style="color: #003894;">user01@oss-erp.co.jp</span></b>
+</td><td><b><span style="color: #003894;">password</span></b>
 </td></tr>
 
 </tbody>
