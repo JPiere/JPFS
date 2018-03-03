@@ -25,7 +25,7 @@
 	<%-- background-image: url(../images/login-box-header.png); --%>
 	background-color: transparent;
 	z-index: 2;
-	height: 54px;
+	height: 72px;
 	width: 660px;
 }
 
