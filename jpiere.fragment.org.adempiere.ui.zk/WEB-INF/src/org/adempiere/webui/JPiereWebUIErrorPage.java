@@ -36,7 +36,6 @@ public class JPiereWebUIErrorPage extends Window
     public JPiereWebUIErrorPage()
     {
     	this.setVisible(false);
-    	logout();
     }
 
     public void onCreate()
@@ -44,15 +43,5 @@ public class JPiereWebUIErrorPage extends Window
         JPiereErrorPage loginDesktop = new JPiereErrorPage();
     	loginDesktop.createPart(this.getPage());
     }
-
-
-	/* (non-Javadoc)
-	 * @see org.adempiere.webui.IWebClient#logout()
-	 */
-    public void logout()
-    {
-    	;//TODO ログアウト処理？
-    }
-
 
 }
