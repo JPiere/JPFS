@@ -13,17 +13,12 @@
 	background-size: 16px 16px;
 	cursor: pointer;
 }
-.z-grid tbody tr.grid-inactive-row span.row-indicator-selected.z-icon-Edit,
-.z-grid tbody tr.highlight span.row-indicator-selected.z-icon-Edit {
-	font-family: FontAwesome;
-	font-size: larger;
-	color: #333; 
-}
 
 .z-grid tbody tr.highlight td.z-cell {
-	background-color: #FFFFdd !important;
+	background-color: #FFFFCC !important;
 	background-image: none !important;
 }
+
 
 .z-grid tbody tr.highlight td.row-indicator-selected {
 	background-color: #FFFFCC !important;
@@ -52,11 +47,6 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 	width: 100%;
 }
 
-.z-separator-horizontal-bar {
-    height: 2px;
-    margin: 0px 0px 0px 2px;
-}
-
 .z-listcell > div.z-listcell-content {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -64,24 +54,24 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 	width: 100%;
 }
 
-/*JPIERE-0014 .z-column-contentを削除*/
+/*JPIERE-0014 Delete .z-column-content*/
 .z-listheader-content, .z-listcell-content {
 	padding: 2px 3px 1px;
 }
 
-/*JPIERE-0014 追加*/
+/*JPIERE-0014 */
 .z-column-content,.z-auxheader-content{
 	padding: 0px 3px 0px;
 }
 
 .z-grid-body .z-cell {
-	padding: 1px 1px;
-	line-height: 22px;
+	padding: 1px 1px;  /*JPIERE-0014 */
+	line-height: 22px; /*JPIERE-0014 */
 }
 
 .z-row .z-cell, .z-listitem .z-listcell, .z-listitem.z-listitem-selected>.z-listcell {
-	border-left: 1px solid #dddddd ;
-	border-bottom: 1px solid #dddddd !important;
+	border-left: 1px solid #cfcfcf;
+	border-bottom: 1px solid #dddddd !important; /*JPIERE-0014 */
 }
 
 .z-grid-emptybody td {
@@ -119,7 +109,7 @@ tbody.z-listbox-empty-body td {
 }
 
 div.z-listbox-body .z-listcell {
-	padding: 2px;
+	/*padding: 2px;*/ /*JPIERE*/
 }
 
 .z-listbox-autopaging .z-listcell-cnt {
@@ -130,12 +120,12 @@ div.z-listbox-body .z-listcell {
 tr.z-grid-odd td.z-row-inner
 ,tr.z-grid-odd .z-cell
 ,tr.z-grid-odd {/*Form Window*/
-	background-color: #E9F0FF; 
+	background-color: #E9F0FF;
 }
 
  tr.z-row:hover
 ,tr.z-grid-odd:hover{/*Form Window*/
-	background-color: #ffffbb; 
+	background-color: #ffffbb;
 }
 
 
