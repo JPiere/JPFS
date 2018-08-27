@@ -13,9 +13,13 @@
  *****************************************************************************/
 package org.compiere.util;
 
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -138,7 +142,7 @@ public class JapanPaymentExport implements PaymentExport
 		StringBuffer line = null;
 		try
 		{
-			FileWriter fw = new FileWriter(file);
+			PrintWriter p_writer    = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"Shift_JIS")));
 
 			//  write header
 			line = new StringBuffer();
@@ -155,7 +159,7 @@ public class JapanPaymentExport implements PaymentExport
 			.append(ba[BA_AccountNo])   	 // 8 AccountNo,      7
 			.append(strAdd(null,LEFT,STR1,17)) 	 // 9 space,      17
 			.append(Env.NL);
-			fw.write(line.toString());
+			p_writer.write(line.toString());
 
 			//  write FB lines
 			BigDecimal allPayAmt= new BigDecimal(0);
@@ -178,14 +182,14 @@ public class JapanPaymentExport implements PaymentExport
 					.append(bp[BP_BankAccountType])  // 6 BankAccountType,	1
 					.append(bp[BP_AccountNo])   	 // 7 AccountNo,		7
 					.append(bp[BP_A_Name_Kana]) 			 // 8 A_Name,			30
-					.append(strAdd(mpp.getPayAmt().toString(),RIGHT,STR2,10)) // PayAmount, 10
+					.append(strAdd(mpp.getPayAmt().setScale(0, RoundingMode.HALF_UP).toString(),RIGHT,STR2,10)) // PayAmount, 10
 					.append(STR1) 			 		 // Space 1,			1
 					.append(strAdd(null,RIGHT,STR1,10)) 			 // Space 10, 10
 					.append(strAdd(null,RIGHT,STR1,10)) 			 // Space 10, 10
 					.append(strAdd(null,LEFT,STR1,9)) 			 	 // Space 9
 					//.append(comment.toString())      // Comment
 					.append(Env.NL);
-				fw.write(line.toString());
+				p_writer.write(line.toString());
 				noLines++;
 				allPayAmt = allPayAmt.add(mpp.getPayAmt());
 
@@ -198,18 +202,17 @@ public class JapanPaymentExport implements PaymentExport
 				.append(strAdd(allPayAmt.toString(),RIGHT,STR2,12))
 				.append(strAdd(null,LEFT,STR1,101)) 	 // space 101
 				.append(Env.NL);
-			fw.write(line.toString());
+			p_writer.write(line.toString());
 
 			// write end Record
 			line = new StringBuffer();
 			line.append("9")
 				.append(strAdd(null,LEFT,STR1,119))
 				.append(Env.NL);
-			fw.write(line.toString());
-			// Jirimuto modified for Farm Bank data import --end 2010/04/02
+			p_writer.write(line.toString());
 
-			fw.flush();
-			fw.close();
+			p_writer.flush();
+			p_writer.close();
 		}
 		catch (Exception e)
 		{
