@@ -27,6 +27,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 
 import org.compiere.model.MPaySelectionCheck;
+import org.compiere.model.MSysConfig;
 
 /**
  * 	Generic Payment Export
@@ -142,7 +143,11 @@ public class JapanPaymentExport implements PaymentExport
 		StringBuffer line = null;
 		try
 		{
-			PrintWriter p_writer    = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"Shift_JIS")));
+			String encoding = MSysConfig.getValue("JP_JAPAN_PAYMENT_EXPORT_ENCODING", "Shift_JIS",  Env.getAD_Client_ID(Env.getCtx()), 0);
+			if(Util.isEmpty(encoding))
+				encoding = "Shift_JIS";
+
+			PrintWriter p_writer    = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),encoding)));
 
 			//  write header
 			line = new StringBuffer();
