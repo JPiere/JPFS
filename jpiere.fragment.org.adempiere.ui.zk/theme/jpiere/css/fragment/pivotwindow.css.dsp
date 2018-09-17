@@ -38,6 +38,11 @@
     background-color: #FFFFFF !important;
 }
 
+.z-pivot-field-control .z-vlayout .z-grid-body{
+    max-height: 380px;
+	overflow: scroll;
+}
+
  .pivotwindow-searchFieldGrid tr.z-grid-odd
 ,.pivotwindow-otherPivotControllerGrid tr.z-grid-odd{
     background-color: #FFFFFF !important;
