@@ -5,4 +5,4 @@ Bundle-SymbolicName: jpiere.fragment.org.adempiere.server
 Bundle-Version: 6.1.0.qualifier
 Bundle-Vendor: OSS ERP Solutions
 Fragment-Host: org.adempiere.server;bundle-version="5.1.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: jpiere.fragment.org.adempiere.server
