@@ -68,7 +68,7 @@
 }
 
 .editor-input:focus {
-	border: 1px solid #F39700;
+	border: 1px solid #F39700; /*JPIERE*/
 }
 
 .editor-input-disd {
@@ -155,16 +155,6 @@ span.grid-combobox-editor {
 }
 
 .grid-combobox-editor .z-combobox-button {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	border-bottom-right-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-left-radius: 0px;
-	border-top-left-radius: 0px;
-}
-
-.find-window-simple .grid-combobox-editor .z-combobox-button{
 	position: absolute;
 	right: 0px;
 	top: 1px;
@@ -254,6 +244,12 @@ span.grid-combobox-editor {
 .image-field.image-field-readonly {
 	cursor: default;
 	border: none;
+}
+
+.html-field {
+	cursor: pointer;
+	border: 1px solid #C5C5C5;
+	overflow: auto;
 }
 
 .dashboard-field-panel.z-panel, .dashboard-field-panel.z-panel > .z-panel-body,  .dashboard-field-panel.z-panel > .z-panel-body > .z-panelchildren  {
