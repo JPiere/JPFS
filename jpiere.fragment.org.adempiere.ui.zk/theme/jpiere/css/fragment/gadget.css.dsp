@@ -1,7 +1,4 @@
-.fav-new-btn {
-	margin-left: 4px;
-	margin-bottom: 3px;
-	padding-left: 1px;
+.fav-new-btn
 }
 
 .fav-new-btn img {
@@ -289,8 +286,8 @@
 .fav-new-btn.z-toolbarbutton [class^="z-icon-"] {
 	font-size: smaller;
 	color: #333;
-	padding-left: 4px;
-	padding-right: 4px;
+	/*padding-left: 4px;
+	padding-right: 4px;*/
 }
 
 /*JPIERE-0110 Info Gadget*/
