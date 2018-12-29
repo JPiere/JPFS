@@ -157,7 +157,7 @@ span.grid-combobox-editor {
 .grid-combobox-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
-	top: 1px;
+	top: 0px; /**JPIERE**/
 	border-bottom-right-radius: 3px;
 	border-top-right-radius: 3px;
 	border-bottom-left-radius: 0px;
