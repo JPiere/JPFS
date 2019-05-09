@@ -164,6 +164,10 @@ span.grid-combobox-editor {
 	border-top-left-radius: 0px;
 }
 
+.find-window .grid-combobox-editor .z-combobox-button {
+    top: 1px; /**JPIERE**/
+}
+
 .grid-combobox-editor input:focus {
 	border-right: 0px;
 }
