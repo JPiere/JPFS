@@ -6,3 +6,4 @@ Bundle-Version: 6.2.0.qualifier
 Bundle-Vendor: OSS ERP Solutions
 Fragment-Host: org.adempiere.base;bundle-version="2.0.0"
 Automatic-Module-Name: jpiere.fragment.org.adempiere.base
+Bundle-RequiredExecutionEnvironment: JavaSE-11
