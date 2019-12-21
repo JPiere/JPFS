@@ -1,2 +1,4 @@
 syntax: glob
 *.class
+target/
+readme.txt

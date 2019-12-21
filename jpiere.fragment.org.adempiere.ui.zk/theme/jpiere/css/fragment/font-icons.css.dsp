@@ -229,10 +229,10 @@
 .z-icon-Refresh:before {
 	content: "\f021";
 }
-.z-icon-Report:before {	
+.z-icon-Report:before {
 	content: "\f1ea";
 }
-.z-icon-Request:before {	
+.z-icon-Request:before {
 	content: "\f046";
 }
 .z-icon-Reset:before {
