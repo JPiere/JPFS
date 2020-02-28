@@ -29,9 +29,6 @@
 .z-icon-Copy:before {
 	content: "\f0c5";
 }
-.z-icon-CSVImport:before {
-	content: "\f093";
-}
 .z-icon-Customize:before {
 	content: "\f0db";
 }
@@ -200,7 +197,7 @@
 	content: "\f0d6";
 }
 .z-icon-PostIt:before {
-	content: "\f15c";
+	content: "\f24a";
 }
 .z-icon-Preference:before {
 	content: "\f085";
@@ -280,6 +277,15 @@
 
 .z-icon-ZoomAcross:before {
 	content: "\f00e";
+}
+.z-icon-CSVImport:before {
+	content: "\f0f6";
+}
+.z-icon-ShowMore:before {
+	content: "\f142";
+}
+.z-icon-Share:before {
+	content: "\f0ac";
 }
 
 .z-icon-Document:before {/*JPIERE*/

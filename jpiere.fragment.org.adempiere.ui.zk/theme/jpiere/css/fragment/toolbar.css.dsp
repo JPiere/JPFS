@@ -101,3 +101,6 @@
 .font-icon-toolbar-button .z-toolbarbutton-content {
 	color: inherit;
 }
+.font-icon-menuitem i {
+	vertical-align: middle;
+}

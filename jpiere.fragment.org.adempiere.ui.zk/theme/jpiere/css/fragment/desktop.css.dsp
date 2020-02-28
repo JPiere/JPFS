@@ -1,16 +1,16 @@
 <%-- header --%>
 .desktop-header-left {
 	margin: 0;
-	margin-left: 5px;
-	margin-top: 3px;
+	margin-left: 1px;
+	margin-top: 1px;
 	background-color: transparent !important;
 	border: none !important;
 }
 
 .desktop-header-right {
 	margin: 0;
-	margin-top: 3px;
-	padding-right: 5px;
+	margin-top: 1px;
+	padding-right:1px;
 	background-color: transparent !important;
 	border: none !important;
 }
@@ -44,6 +44,7 @@
 
 .desktop-header-popup .desktop-header {
 	border: none;
+	height: 100% !important;
 }
 
 .desktop-header-username {
@@ -252,4 +253,12 @@
 	display:inline-flex;
 	align-items: center;
 	justify-content: center;
+}
+.user-panel-popup .z-popup-content {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.user-panel-popup .z-popup-content > .z-vlayout {
+	overflow-x: auto;
+	padding: 8px;
 }
