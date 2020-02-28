@@ -7,8 +7,9 @@
 .z-treecell-content {
 	padding: 2px 1px;
 }
+
 .tree-moveitem-btn {
-	padding: 2px 4px; 
+	padding: 2px 4px;
 	border-radius: 3px;
 }
 .tree-moveitem-btn.pressed {

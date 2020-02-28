@@ -237,38 +237,40 @@
 }
 
 .recentitems-box .z-toolbar, .favourites-box .z-toolbar {
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 1px;
+	margin-bottom: 1px;
 }
 
 <%-- performance indicator --%>
 .performance-indicator {
-	margin: auto;
+	margin: 0px; 
 	position: relative;
 }
 .performance-indicator img {
 	display: block;
-	margin: auto;
+	margin: 0px;
+	padding:0px;
 }
 .window-view-pi .performance-indicator img {
 }
 .performance-indicator-box {
 	background-color: #eee;
 	border: 1px solid #d8d8d8;
-	border-radius: 5px;
+	border-radius: 11px; 
 	cursor: pointer;
 }
 .performance-indicator-title {
 	text-align: center;
 	background-color: #c8c8c8;
 	border: 1px solid #c8c8c8;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 1px; 
+	padding-bottom: 1px;
+	line-height:12px;
 }
 .performance-panel .z-grid {
 	border: none;
-	margin:0;
-	padding:0;
+	margin:0px; 
+	padding:0px; 
 	position: relative;
 	width: 100%;
 }
