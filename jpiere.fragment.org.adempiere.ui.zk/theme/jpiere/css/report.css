@@ -1,18 +1,14 @@
 .rp-href {
     color: #000000;
-	/*text-decoration: none;
-	border-bottom: 1px solid #003894;
-	padding: 1px;
-    font-size: 10px;
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ;*/
 }
 .rp-table {
 	color: #000000;
-	border-width: 1px;
+	border-width: 0px;
 	border-color: #C6D1CD;
 	border-style: solid;
-	border-collapse: collapse;
-	width: 95%;
+	border-collapse: separate;
+	border-spacing: 0px;
+	width: 98%;
 	background-color: #FFFFFF;
 	border-width: 0px;
 	font-size: 10px;
@@ -24,22 +20,30 @@
 }
 
 .rp-table th {
+
+	position: sticky;
+    top: 0;
+    z-index: 1;
+
 	text-align:left;
 	padding: 4px;
 	font-weight: bold;
 	background-color: #E9F0FF;
 	border-style: solid;
-	border-width: 1px;
 	border-color: #003894 #bbbbbb;
-	border-width: 2px 1px 2px 1px;
+	border-width: 2px 0px 2px 1px;
 }
 
 .rp-table th:last-child {
-	border-width: 2px 0px 2px 0px;
+	border-right-width: 1px;
+}
+
+.rp-table tr:last-child {
+	border-bottom-width: 1px;
 }
 
 .rp-table td {
-	border-width: 1px;
+	border-width: 1px 0px 0px 1px;
 	border-color: #bbbbbb;
 	border-style: solid;
 	padding: 4px;
@@ -50,41 +54,44 @@
 }
 
 .rp-table td:last-child {
-	border-width: 1px;
+	border-right-width: 1px;
 	border-style: solid;
 }
 
 .rp-number {
-	background-color: #FFFFFF;
 	text-align: right !important;
 	padding: 4px;
 }
 .rp-text, .rp-date {
-	background-color: #FFFFFF;
 	text-align: left;
 	padding: 4px 4px 4px 0px;
 }
 
 .rp-lastgrouprow td {
-	border-width: 1px;
+	border-width: 1px 0px 0px 1px;
 }
 
 .rp-lastgrouprow td:last-child {
-	border-width: 1px 0px 1,5px 1px;
-	border-color: #C6D1CD #C6D1CD #C6D1CD white;
+	border-right-width: 1px;
 }
 
 .rp-functionrow td {
-	background-color: #FFFFFF;
+	background-color: #eeeeee;
 	font-weight: bold;
 	font-style:italic;
-	padding: 4 4 30 4;
-	border-style: solid;
-	border-width: 0px 0px 0px 0px;
+	padding: 8px 4px 8px 4px;
+	border-top-style: double;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-width: 4px 0px 1px 1px;
 	color: #000000;
 }
 
 .rp-functionrow td:last-child {
-	border-width: 0px 0px 0px 0px;
+
+	border-top-style: double;
+	border-top-width: 4px;
+	border-right-style: solid;
+	border-right-width: 1px;
 }
 

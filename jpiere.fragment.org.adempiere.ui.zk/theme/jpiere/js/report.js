@@ -5,6 +5,13 @@ function zoom(cmpid, column, value){
 	zAu.send(event);
 }
 
+function zoomWindow(cmpid, column, value, windowuu){
+	zAu.cmd0.showBusy(null);
+	var widget = zk.Widget.$(cmpid);
+	var event = new zk.Event(widget, 'onZoom', {data: [column, value, 'AD_Window_UU', windowuu]}, {toServer: true});
+	zAu.send(event);
+}
+
 function drillAcross(cmpid, column, value){
 	zAu.cmd0.showBusy(null);
 	var widget = zk.Widget.$(cmpid);
@@ -46,7 +53,7 @@ function showColumnMenu(e, columnName, row) {
 var contextMenu;
 
 function getMenu (componentId, foreignColumnName, value){
-	if (contextMenu == null){
+	if (componentId != null){
 	
 		//menu div
 		var menu = document.createElement("div");
@@ -70,9 +77,7 @@ function getMenu (componentId, foreignColumnName, value){
 		href.style.textDecoration = "none";
 		href.style.verticalAlign = "middle";
 		href.href = "javascript:void(0)";
-		href.setAttribute("onclick", "parent.zoom(contextMenu.getAttribute ('componentId'), " +
-								"contextMenu.getAttribute ('foreignColumnName'), " +
-								"contextMenu.getAttribute ('value'))");
+		href.setAttribute("onclick", "parent.zoom('" + componentId + "','" + foreignColumnName + "','" + value + "')");
 		
 		windowMenu.appendChild(href);
 		menu.appendChild(windowMenu);				
@@ -96,9 +101,7 @@ function getMenu (componentId, foreignColumnName, value){
 		reportHref.style.textDecoration = "none";
 		reportHref.style.fontSize = "11px";
 		reportHref.style.verticalAlign = "middle";
-		reportHref.setAttribute("onclick", "parent.drillDown(contextMenu.getAttribute ('componentId'), " +
-								"contextMenu.getAttribute ('foreignColumnName'), " +
-								"contextMenu.getAttribute ('value'))");
+		reportHref.setAttribute("onclick", "parent.drillDown('" + componentId + "','" + foreignColumnName + "','" + value + "')");
 		
 		report.appendChild(reportHref);
 		menu.appendChild(report);
