@@ -8,8 +8,14 @@ when detect side effect, fix to only apply for parameter window*/
 .main-parameter-layout{
 	height: 100%;
 }
+
+.process-modal-dialog .main-parameter-layout{
+	height: auto;
+	flex-basis: auto;
+}
+
 .process-modal-dialog.z-window > .z-window-content {
-	height: 100%;
+	flex: 1 1 auto;
 }
 
 .main-parameter-layout,
@@ -28,6 +34,8 @@ when detect side effect, fix to only apply for parameter window*/
 }
 .top-parameter-layout{
 	overflow: auto;
+	padding-bottom: 2vh;
+	flex-basis: auto;
 }
 
 .bottom-parameter-layout{
@@ -38,7 +46,7 @@ when detect side effect, fix to only apply for parameter window*/
 }
 
 .message-paramenter{
-	max-height: 300pt; 
+	max-height: 300pt;
 	overflow: hidden;
 	margin: 10px;
 }
