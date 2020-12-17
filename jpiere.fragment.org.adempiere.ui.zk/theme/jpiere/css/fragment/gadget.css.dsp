@@ -181,6 +181,8 @@
     background: #E9F0FF !important;
     display: block;
     border: 1px solid #cccccc !important;
+    margin: 0px 0px;
+    border-radius:0px ;
 }
 
 .views-box .z-toolbarbutton:hover {
@@ -197,9 +199,6 @@
     padding: 2px 2px 2px 2px;
 }
 
-.views-box .z-toolbarbutton{
-    border-radius:0px ;
-}
 
 .views-box .z-toolbarbutton-content{
 	text-decoration: none !important;
@@ -243,7 +242,7 @@
 
 <%-- performance indicator --%>
 .performance-indicator {
-	margin: 0px; 
+	margin: 0px;
 	position: relative;
 }
 .performance-indicator img {
@@ -256,21 +255,21 @@
 .performance-indicator-box {
 	background-color: #eee;
 	border: 1px solid #d8d8d8;
-	border-radius: 11px; 
+	border-radius: 11px;
 	cursor: pointer;
 }
 .performance-indicator-title {
 	text-align: center;
 	background-color: #c8c8c8;
 	border: 1px solid #c8c8c8;
-	padding-top: 1px; 
+	padding-top: 1px;
 	padding-bottom: 1px;
 	line-height:12px;
 }
 .performance-panel .z-grid {
 	border: none;
-	margin:0px; 
-	padding:0px; 
+	margin:0px;
+	padding:0px;
 	position: relative;
 	width: 100%;
 }

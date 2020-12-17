@@ -16,7 +16,7 @@
 	font-weight: 100;
 	color: #222222;
 	z-index: 1;
-	padding: 40px 40px 60px 40px;
+	padding: 40px 0px 60px 0px;
 	margin: 0;
 	text-align: center;
 }
@@ -89,7 +89,7 @@
 @media screen and (max-width: 659px) {
 	.login-box-body, .login-box-header, .login-box-footer {
 		background-image: none;
-		width: 90%;
+		width: 98%;	/*Width adjustment for JPiere Login*/
 	}
 	.login-box-footer .confirm-panel, .login-box-footer-pnl {
 		width: 90% !important;
