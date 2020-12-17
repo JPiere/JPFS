@@ -294,3 +294,27 @@
 .z-icon-Inventory:before {/*JPIERE*/
 	content: "\f07a";
 }
+.z-icon-Calendar:before {/*JPIERE*/
+	content: "\f073";
+}
+.z-icon-Calendar-O:before {/*JPIERE*/
+	content: "\f133";
+}
+.z-icon-Clock:before {/*JPIERE*/
+	content: "\f017";
+}
+.z-icon-Exclamation:before {/*JPIERE*/
+	content: "\f12a";
+}
+.z-icon-Exclamation-Triangle:before {/*JPIERE*/
+	content: "\f071";
+}
+.z-icon-Info-Circle:before {/*JPIERE*/
+	content: "\f05a";
+}
+.z-icon-Minus-Circle:before {/*JPIERE*/
+	content: "\f056";
+}
+.z-icon-Window-Close:before {/*JPIERE*/
+	content: "\f2d3";
+}
