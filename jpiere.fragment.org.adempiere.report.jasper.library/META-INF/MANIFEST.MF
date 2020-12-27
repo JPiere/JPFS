@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: jpiere.fragment.org.adempiere.report.jasper.library
 Bundle-SymbolicName: jpiere.fragment.org.adempiere.report.jasper.library
-Bundle-Version: 7.1.0.qualifier
+Bundle-Version: 8.2.0.qualifier
 Bundle-Vendor: OSS ERP Solutions
 Fragment-Host: net.sf.jasperreports.engine;bundle-version="6.3.1"
 Bundle-ClassPath: iTextAsian.jar,

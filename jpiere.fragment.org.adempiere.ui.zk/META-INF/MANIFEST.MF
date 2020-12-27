@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: jpiere.fragment.org.adempiere.ui.zk
 Bundle-SymbolicName: jpiere.fragment.org.adempiere.ui.zk;singleton:=true
-Bundle-Version: 7.1.0.qualifier
-Fragment-Host: org.adempiere.ui.zk;bundle-version="7.1.0"
+Bundle-Version: 8.2.0.qualifier
+Fragment-Host: org.adempiere.ui.zk;bundle-version="8.2.0"
 Bundle-Vendor: OSS ERP Solutions
 Jetty-WarFragmentFolderPath: /
 Automatic-Module-Name: jpiere.fragment.org.adempiere.ui.zk

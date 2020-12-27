@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: jpiere.fragment.org.adempiere.server
 Bundle-SymbolicName: jpiere.fragment.org.adempiere.server
-Bundle-Version: 7.1.0.qualifier
+Bundle-Version: 8.2.0.qualifier
 Bundle-Vendor: OSS ERP Solutions
-Fragment-Host: org.adempiere.server;bundle-version="7.1.0"
+Fragment-Host: org.adempiere.server;bundle-version="8.2.0"
 Automatic-Module-Name: jpiere.fragment.org.adempiere.server

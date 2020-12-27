@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.idempiere</groupId>
 	<artifactId>org.idempiere.parent</artifactId>
-	<version>7.1.0-SNAPSHOT</version>
-	<relativePath>../../../../../../../src/pleiades201912_JPiere71/org.idempiere.parent/pom.xml</relativePath>
+	<version>8.2.0-SNAPSHOT</version>
+	<relativePath>../../../../../../../src/pleiades202011_JPiere82/org.idempiere.parent/pom.xml</relativePath>
   </parent>
 </project>
