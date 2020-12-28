@@ -1,13 +1,13 @@
 .about-window {
-	width: 600px;
-	height: 450px;
+	width: 375px;
+	height: 600px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {
 	.about-window {
 		width: 100%;
 	}
 }
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 600px) {
 	.about-window {
 		height: 100%;
 	}
@@ -286,7 +286,7 @@
 }
 
 .doc-action-dialog {
-	width: 410px !important; /*JPIERE add !important*/
+	width: 410px;
 }
 @media screen and (max-width: 410px) {
 	.doc-action-dialog {
@@ -386,8 +386,3 @@
 	}
 }
 
-@media screen and (max-height: 600px) {
-	.popup-dialog.process-modal-dialog {
-		height: 100%;
-	}
-}

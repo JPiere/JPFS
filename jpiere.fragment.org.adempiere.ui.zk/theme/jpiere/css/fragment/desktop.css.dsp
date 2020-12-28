@@ -29,7 +29,6 @@
 }
 
 .desktop-header-font {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 10px;
 }
 
@@ -100,6 +99,10 @@
 .desktop-tabbox .z-tab .z-tab-text {
 	padding-top: 0px;
 	padding-bottom: 0px;
+}
+
+.desktop-tabbox > .z-tabpanels {
+	flex-grow: 1 1 0;
 }
 
 .desktop-north, .desktop-center {
@@ -253,6 +256,7 @@
 	display:inline-flex;
 	align-items: center;
 	justify-content: center;
+	border-bottom: 0px; 
 }
 .user-panel-popup .z-popup-content {
 	padding-left: 0px;

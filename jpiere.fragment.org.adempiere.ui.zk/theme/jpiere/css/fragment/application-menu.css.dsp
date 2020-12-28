@@ -113,7 +113,10 @@
 .global-search-tabpanel {
 	width: 600px;
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 649px) {
+	.global-search-box.z-bandbox-popup {
+		width: 90% !important;
+	}
 	.global-search-tabpanel {
 		width: 100%;
 	}
@@ -122,14 +125,14 @@
 	width: 180px;
 }
 .global-search-box.z-bandbox > input.z-bandbox-input {
-	width: 156px;
+	width: 180px;
 }
 @media screen and (min-width: 500px) {
 	.global-search-box.z-bandbox {
 		width: 200px;
 	}
 	.global-search-box.z-bandbox > input.z-bandbox-input {
-		width: 176px;
+		width: 200px;
 	}
 }
 @media screen and (min-width: 768px) {
@@ -137,7 +140,7 @@
 		width: 250px;
 	}
 	.global-search-box.z-bandbox > input.z-bandbox-input {
-		width: 226px;
+		width: 250px;
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -145,7 +148,7 @@
 		width: 300px;
 	}
 	.global-search-box.z-bandbox > input.z-bandbox-input {
-		width: 276px;
+		width: 300px;
 	}
 }
 

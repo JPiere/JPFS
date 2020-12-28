@@ -47,8 +47,9 @@ when detect side effect, fix to only apply for parameter window*/
 
 .message-paramenter{
 	max-height: 300pt;
-	overflow: hidden;
+	overflow: auto; 
 	margin: 10px;
+	line-height: normal;
 }
 
 .option-input-parameter{
@@ -70,6 +71,10 @@ when detect side effect, fix to only apply for parameter window*/
 	overflow-x: auto;
 	overflow-y: hidden;
 	padding: 4px;/*JPIERE*/
+}
+
+.result-parameter-layout {
+	overflow: auto;
 }
 
 .popup-dialog.z-window.z-window-overlapped.z-window-shadow,

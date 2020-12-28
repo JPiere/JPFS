@@ -268,7 +268,7 @@
 .z-icon-Wizard:before {
 	content: "\f0d0";
 }
-.z-icon-WorkFlow:before {
+.z-icon-Workflow:before, .z-icon-WorkFlow:before {	
 	content: "\f126";
 }
 .z-icon-Zoom:before {
@@ -286,6 +286,15 @@
 }
 .z-icon-Share:before {
 	content: "\f0ac";
+}
+.z-icon-QuickForm:before {
+	content: "\f0ae";
+}
+.z-icon-UnSort:before {
+	content: "\f074";
+}
+.z-icon-GetMail:before {
+	content: "\f0e0";
 }
 
 .z-icon-Document:before {/*JPIERE*/
