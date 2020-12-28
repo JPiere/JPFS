@@ -72,7 +72,7 @@
 }
 
 .editor-input-disd {
-	padding-right: 2px !important;
+	padding-right: 2px !important;/*JPIERE*/
 }
 
 .editor-button {
@@ -122,16 +122,13 @@
 }
 
 .datetime-box {
-	display: inline-block;
 	white-space:nowrap;
 }
 
 .datetime-box .z-datebox {
-	display: inline;
 }
 
 .datetime-box .z-timebox {
-	display: inline;
 }
 
 span.grid-combobox-editor {
@@ -176,6 +173,22 @@ span.grid-combobox-editor {
 	border-left: 1px solid #0000ff;
 }
 
+.editor-input.z-combobox + .editor-button {
+	background-color: #F7F7F7;
+	width: 22px;
+    height: 24px;
+    min-height: 24px;
+    right: 0px;
+    top: 0px;/*JPIERE*/
+    border: 1px solid #CFCFCF;
+    border-radius: 0;
+    border-left: 1px solid transparent;
+}
+.editor-input.z-combobox > .z-combobox-input {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+}
+
 <%-- payment rule --%>
 .payment-rule-editor {
 	display: inline-block;
@@ -207,11 +220,6 @@ span.grid-combobox-editor {
 .payment-rule-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
-	top: 0px;
-
-	border-left-color: #0099ff;
-    border-left-style: Solid;
-    border-left-width: 1px;
 }
 
 .payment-rule-editor .z-combobox .z-combobox-button-hover {
@@ -266,6 +274,22 @@ span.grid-combobox-editor {
 	overflow: visible;
 }
 
+.idempiere-mandatory, .idempiere-mandatory input, .idempiere-mandatory a {
+    border-color:red;
+}
+
+.idempiere-label {
+    color: #333;
+}
+
+.idempiere-mandatory-label{
+   color: red!important;
+}
+
+.idempiere-zoomable-label {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
  .z-select{
 	height: 24px;
