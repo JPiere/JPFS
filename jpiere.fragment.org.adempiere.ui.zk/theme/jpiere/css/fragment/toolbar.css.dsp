@@ -8,6 +8,7 @@
 
 .z-toolbar.z-toolbar-tabs {
 	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 .toolbar {
@@ -33,6 +34,10 @@
 	padding: 1px;
 	border: none;
 }
+.toolbar-overflow-popup-vertical .toolbar-button, 
+.toolbar-overflow-popup-vertical .toolbar-button .z-toolbarbutton-content {
+	width: auto;
+}
 
 .depressed img {
 	border-width: 1px;
@@ -52,7 +57,6 @@
 }
 
 .z-toolbarbutton [class^="z-icon-"] {
-	font-size: larger;
 	color: inherit;
 }
 .z-toolbarbutton.toolbarbutton-with-text [class^="z-icon-"] {
@@ -103,11 +107,15 @@
 }
 .font-icon-menuitem i {
 	vertical-align: middle;
-}.toolbar-searchbox {
+}
+.toolbar-overflow-popup-vertical .font-icon-toolbar-button.toolbar-button, 
+.toolbar-overflow-popup-vertical .font-icon-toolbar-button.toolbar-button .z-toolbarbutton-content {
+	justify-content: flex-start;
+}
+.toolbar-searchbox {
     margin-right: 10px;
     margin-left: 10px;
     border: 1px;
-    padding: 1px;
 }
 @media screen and (max-width: 768px) {
   .toolbar-searchbox {
