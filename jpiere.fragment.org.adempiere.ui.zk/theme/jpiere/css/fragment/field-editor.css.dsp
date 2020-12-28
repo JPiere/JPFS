@@ -37,7 +37,7 @@
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-right-width: 1px;
-    border-left-width: 0px;
+    border-left-width: 1px;
  }
 
 /*JPIERE-CSS:Finish*/
@@ -174,7 +174,7 @@ span.grid-combobox-editor {
 }
 
 .editor-input.z-combobox + .editor-button {
-	background-color: #F7F7F7;
+	background-color: #FFFFFF;/*JPIERE*/
 	width: 22px;
     height: 24px;
     min-height: 24px;
@@ -287,9 +287,11 @@ span.grid-combobox-editor {
 	overflow: visible;
 }
 
+/*JPIERE
 .idempiere-mandatory, .idempiere-mandatory input, .idempiere-mandatory a {
     border-color:red;
 }
+*/
 
 .idempiere-label {
     color: #333;
