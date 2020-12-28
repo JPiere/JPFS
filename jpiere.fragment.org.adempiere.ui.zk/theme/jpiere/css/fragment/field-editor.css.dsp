@@ -154,7 +154,7 @@ span.grid-combobox-editor {
 .grid-combobox-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
-	top: 0px; /**JPIERE**/
+	top: 0px; /*JPIERE*/
 	border-bottom-right-radius: 3px;
 	border-top-right-radius: 3px;
 	border-bottom-left-radius: 0px;
@@ -179,9 +179,15 @@ span.grid-combobox-editor {
     height: 24px;
     min-height: 24px;
     right: 0px;
-    top: 0px;/*JPIERE*/
-    border: 1px solid #CFCFCF;
-    border-radius: 0;
+    /*JPIERE-Start*/
+    top: 0px;
+    border: 1px solid #0099ff;
+    /*border-radius: 0;*/
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	/*JPIERE-End*/
     border-left: 1px solid transparent;
 }
 .editor-input.z-combobox > .z-combobox-input {
@@ -220,6 +226,13 @@ span.grid-combobox-editor {
 .payment-rule-editor .z-combobox-button {
 	position: absolute;
 	right: 0px;
+
+	/*JPIERE-Start*/
+	top: 0px;
+	border-left-color: #0099ff;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	/*JPIERE-End*/
 }
 
 .payment-rule-editor .z-combobox .z-combobox-button-hover {
