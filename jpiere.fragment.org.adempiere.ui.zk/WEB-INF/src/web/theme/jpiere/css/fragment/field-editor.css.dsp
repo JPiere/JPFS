@@ -174,11 +174,15 @@ span.grid-combobox-editor {
 }
 
 .find-window .editor-input.z-combobox + .editor-button {
-    top: 2px; /*JPIERE*/
+    top: 1px; /*JPIERE*/
 }
 
 .info-panel .editor-input.z-combobox + .editor-button {
-    top: 2px; /*JPIERE*/
+    top: 1px; /*JPIERE*/
+}
+
+.input-paramenter-layout .editor-input.z-combobox + .editor-button {
+    top: 1px; /*JPIERE*/
 }
 
 .editor-input.z-combobox + .editor-button {
@@ -188,7 +192,7 @@ span.grid-combobox-editor {
     min-height: 24px;
     right: 0px;
     /*JPIERE-Start*/
-    top: 1px;
+    top: 0px;
     border: 1px solid #0099ff;
     /*border-radius: 0;*/
 	border-bottom-right-radius: 3px;
