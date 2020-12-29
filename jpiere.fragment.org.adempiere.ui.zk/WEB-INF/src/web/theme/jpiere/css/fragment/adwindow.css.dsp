@@ -138,7 +138,7 @@
 }
 
 .adwindow-detailpane-toolbar {
-	border: none;
+	border-bottom-width: 1px !important;/*JPIERE*/
 	height: 2em;
 	background: none;
 }

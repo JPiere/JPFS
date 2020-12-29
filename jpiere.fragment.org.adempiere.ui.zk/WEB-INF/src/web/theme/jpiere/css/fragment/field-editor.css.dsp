@@ -162,7 +162,7 @@ span.grid-combobox-editor {
 }
 
 .find-window .grid-combobox-editor .z-combobox-button {
-    top: 1px; /**JPIERE**/
+    top: 0px; /*JPIERE*/
 }
 
 .grid-combobox-editor input:focus {
@@ -173,6 +173,14 @@ span.grid-combobox-editor {
 	border-left: 1px solid #0000ff;
 }
 
+.find-window .editor-input.z-combobox + .editor-button {
+    top: 2px; /*JPIERE*/
+}
+
+.info-panel .editor-input.z-combobox + .editor-button {
+    top: 2px; /*JPIERE*/
+}
+
 .editor-input.z-combobox + .editor-button {
 	background-color: #FFFFFF;/*JPIERE*/
 	width: 22px;
@@ -180,7 +188,7 @@ span.grid-combobox-editor {
     min-height: 24px;
     right: 0px;
     /*JPIERE-Start*/
-    top: 0px;
+    top: 1px;
     border: 1px solid #0099ff;
     /*border-radius: 0;*/
 	border-bottom-right-radius: 3px;
