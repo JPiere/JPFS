@@ -50,6 +50,11 @@
     background-color: #FFFFFF !important;
 }
 
+.pivotwindow-searchFieldGrid .editor-input.z-combobox + .editor-button {
+    top: 1px; /*JPIERE*/
+}
+
+
 .pivotwindow-popupcellinfo{
     max-width:480px;
     margin: 2px;
