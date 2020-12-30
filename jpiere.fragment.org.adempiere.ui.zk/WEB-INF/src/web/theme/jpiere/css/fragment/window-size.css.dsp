@@ -1,5 +1,5 @@
 .about-window {
-	width: 375px;
+	width: 600px; /*JPIERE*/
 	height: 600px;
 }
 @media screen and (max-width: 375px) {
@@ -224,7 +224,7 @@
 }
 .quick-entry-dialog > .z-window-content {
 	overflow: auto;
-	padding: 4px;	
+	padding: 4px;
 }
 .quick-entry-dialog > .z-window-content > .confirm-panel {
 	padding-top: 4px;
