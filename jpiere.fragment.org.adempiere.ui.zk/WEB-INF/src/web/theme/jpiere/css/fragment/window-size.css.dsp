@@ -286,7 +286,7 @@
 }
 
 .doc-action-dialog {
-	width: 410px;
+	width: 410px !important; /*JPIERE*/
 }
 @media screen and (max-width: 410px) {
 	.doc-action-dialog {
