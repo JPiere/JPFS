@@ -82,7 +82,7 @@
     background-color:#eeeeee;
 }
 
-.z-flex-item {
+.z-pivot-field-control .z-flex-item {
     min-height: 250px;
 }
 
