@@ -39,8 +39,10 @@
 }
 
 .z-pivot-field-control .z-vlayout .z-grid-body{
-    max-height: 380px;
-	overflow: scroll;
+	/* Intentional overflow : min > max */
+    min-height: 221px;
+    max-height: 220px;
+    overflow: scroll;
 }
 
  .pivotwindow-searchFieldGrid tr.z-grid-odd
@@ -73,6 +75,10 @@
 
 .z-pivot-field-control .z-vlayout-inner{
     background-color:#eeeeee;
+}
+
+.z-flex-item {
+    min-height: 250px;
 }
 
 
