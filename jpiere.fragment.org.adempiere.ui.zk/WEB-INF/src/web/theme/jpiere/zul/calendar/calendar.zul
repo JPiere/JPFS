@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?component name="divtab" macro-uri="~./theme/default/zul/calendar/divtab.zul"?>
-<?component name="divarrow" macro-uri="~./theme/default/zul/calendar/divarrow.zul"?>
+<?component name="divtab" macro-uri="~./theme/jpiere/zul/calendar/divtab.zul"?><!-- JPIERE -->
+<?component name="divarrow" macro-uri="~./theme/jpiere/zul/calendar/divarrow.zul"?><!-- JPIERE -->
 <zk>
 <zscript><![CDATA[
 	import org.compiere.util.Msg;
 	import org.compiere.util.Env;
 	import org.compiere.util.Util;
+	import org.adempiere.webui.theme.ThemeManager;
+
 	var today = Msg.getMsg(Env.getCtx(),"Today");
 	var refresh = Util.cleanAmp(Msg.getMsg(Env.getCtx(),"Refresh"));
 	var switchTimeZone = Msg.getMsg(Env.getCtx(),"SwitchTimeZone");
@@ -17,16 +19,22 @@
 	var FirstDayofWeek = Msg.getMsg(Env.getCtx(),"FirstDayofWeek");
 	var RequestType = Msg.getElement(Env.getCtx(),"RequestType");
 
+	var isFontIcon = ThemeManager.isUseFontIconForImage();
+	var leftBtn = isFontIcon ?  "z-icon-PreviousRecord" : "arrow-left";
+	var rightBtn = isFontIcon ?  "z-icon-NextRecord" : "arrow-right";
+	var fontClass = isFontIcon ? "z-font-Calendar" : "";
+	var calendarClass = isFontIcon ? "z-cal-font-theme" : "";
+
 ]]></zscript>
-<style src="~./theme/jpiere/zul/calendar/calendar.css"/>
+<style src="~./theme/jpiere/zul/calendar/calendar.css"/><!-- JPIERE -->
 <borderlayout id="main">
 <center border="none">
-<calendars firstDayOfWeek="Monday" mold="month" id="cal" xmlns:w="client" w:onBind="try{_overrideMsgCal(); var me=this; setTimeout(function(){me.onSize();},50); }catch(error){} ">
+<calendars class="${calendarClass}" firstDayOfWeek="Monday" mold="month" id="cal" xmlns:w="client" w:onBind="try{_overrideMsgCal(); var me=this; setTimeout(function(){me.onSize();},50); }catch(error){} ">
 	<toolbar sclass="calendar-toolbar">
 		<div class="float-left">
-			<hbox>
-				<divarrow id="divArrowLeft" type="arrow-left"/>
-				<divarrow id="divArrowRight" type="arrow-right"/>
+			<hbox sclass="cal-header-filter">
+				<divarrow id="divArrowLeft" type="${leftBtn}" fontClass="${fontClass}"/>
+				<divarrow id="divArrowRight" type="${rightBtn}" fontClass="${fontClass}"/>
 				<div>
 					<button id="btnCurrentDate" mold="os" label="${today}"/>
 					<button id="btnSwitchTimeZone" mold="os" label="${switchTimeZone}"/>
