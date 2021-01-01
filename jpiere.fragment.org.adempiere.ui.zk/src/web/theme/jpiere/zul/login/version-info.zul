@@ -14,23 +14,45 @@ Copyright (C) 2009 Idalica Corporation
 		line-height: 20px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
-		font-size: 12pt;
+		font-size: 14px;
 		color: #333333 ;
 	}
 </style>
 ]]>
+
+
 <div class="versionInfoBox">
 	<table border="0">
+
 		<tr>
-			<td align="right"><i><b>Version</b></i></td>
+			<td align="right"><i>Login EMail</i></td>
+			<td>:</td>
+			<td aligh="left"><b><span style="color: #003894;">user01@oss-erp.co.jp</span></b></td>
+		</tr>
+
+		<tr>
+			<td align="right"><i>Password</i></td>
+			<td>:</td>
+			<td aligh="left"><b><span style="color: #003894;">password</span></b></td>
+		</tr>
+
+		<tr>
+			<td align="right"><i>Version</i></td>
 			<td>:</td>
 			<td aligh="left">JPiere8.2 - 20210101</td>
 		</tr>
 		<tr>
-			<td align="right"><i><b>Vendor</b></i></td>
+			<td align="right"><i>Vendor</i></td>
 			<td>:</td>
 			<td aligh="left"><a href="https://www.oss-erp.co.jp/"  target="_blank">OSS ERP Solutions Co., Ltd.</a></td>
 		</tr>
+
+		<tr>
+			<td align="right"><i>More Info</i></td>
+			<td>:</td>
+			<td aligh="left"><a href="https://www.compiere-distribution-lab.net/jpiere-lab/jpiere-idempiere-demo/"  target="_blank">Compiere Distribution lab</a></td>
+		</tr>
+
 	</table>
 </div>
 </html>
