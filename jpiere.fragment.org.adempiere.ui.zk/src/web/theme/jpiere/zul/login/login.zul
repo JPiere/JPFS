@@ -10,7 +10,7 @@
        <!-- include src="~./theme/default/zul/login/login-right.zul"/-->
     </east>
     <west sclass="login-west-panel">
-       <include src="~./theme/jpiere/zul/login/login-left.zul" />
+       <!-- include src="~./theme/jpiere/zul/login/login-left.zul" /-->
     </west>
     <north sclass="login-north-panel">
         <!--include src="~./theme/default/zul/login/login-top.zul"/-->
