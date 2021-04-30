@@ -45,7 +45,7 @@
 
 .z-panel-head .z-panel-header {
 	padding: 0 0 2px 0;
-	color: #262626;
+	color: #ffffff; /*JPIERE*/
 	background: #003894;;
 	/*background: #3a5caa;JPiere*/
 	font-weight: 300;
