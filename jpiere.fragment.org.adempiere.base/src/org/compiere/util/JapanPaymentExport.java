@@ -45,26 +45,26 @@ public class JapanPaymentExport implements PaymentExport
 	static private CLogger	s_log = CLogger.getCLogger (JapanPaymentExport.class);
 
 
-	/** BPartner Info Index for Value       */
-	private static final int     BP_VALUE = 0;
-	/** BPartner Info Index for Name        */
-	private static final int     BP_NAME = 1;
-	/** BPartner Info Index for Contact Name    */
-	private static final int     BP_CONTACT = 2;
-	/** BPartner Info Index for Address 1   */
-	private static final int     BP_ADDR1 = 3;
-	/** BPartner Info Index for Address 2   */
-	private static final int     BP_ADDR2 = 4;
-	/** BPartner Info Index for City        */
-	private static final int     BP_CITY = 5;
-	/** BPartner Info Index for Region      */
-	private static final int     BP_REGION = 6;
-	/** BPartner Info Index for Postal Code */
-	private static final int     BP_POSTAL = 7;
-	/** BPartner Info Index for Country     */
-	private static final int     BP_COUNTRY = 8;
-	/** BPartner Info Index for Reference No    */
-	private static final int     BP_REFNO = 9;
+//	/** BPartner Info Index for Value       */
+//	private static final int     BP_VALUE = 0;
+//	/** BPartner Info Index for Name        */
+//	private static final int     BP_NAME = 1;
+//	/** BPartner Info Index for Contact Name    */
+//	private static final int     BP_CONTACT = 2;
+//	/** BPartner Info Index for Address 1   */
+//	private static final int     BP_ADDR1 = 3;
+//	/** BPartner Info Index for Address 2   */
+//	private static final int     BP_ADDR2 = 4;
+//	/** BPartner Info Index for City        */
+//	private static final int     BP_CITY = 5;
+//	/** BPartner Info Index for Region      */
+//	private static final int     BP_REGION = 6;
+//	/** BPartner Info Index for Postal Code */
+//	private static final int     BP_POSTAL = 7;
+//	/** BPartner Info Index for Country     */
+//	private static final int     BP_COUNTRY = 8;
+//	/** BPartner Info Index for Reference No    */
+//	private static final int     BP_REFNO = 9;
 
 
 	/** BankAccount Info Index for Value       */
@@ -138,7 +138,7 @@ public class JapanPaymentExport implements PaymentExport
 			s_log.log(Level.WARNING, "Could not delete - " + file.getAbsolutePath(), e);
 		}
 
-		char x = '"';      //  ease
+		//char x = '"';      //  ease
 		int noLines = 0;
 		StringBuffer line = null;
 		try
