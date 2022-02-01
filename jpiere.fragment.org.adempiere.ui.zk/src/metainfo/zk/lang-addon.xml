@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE language>
+
+<!-- lang.xml
+	Purpose:
+
+	Description:
+
+	History:
+		Saturday Mar 10 23:43:11     2007, Created by Ashley G Ramdass
+
+Copyright (C) 2007 Ashley G Ramdass (ADempiere WebUI).
+-->
+
 <language>
 	<addon-name>JPiere theme</addon-name>
 	<language-name>xul/html</language-name>
 
-	<!-- this js module doesn't actually exists and it is here for iceblue_c theme version -->
-	<!-- since loading of js module is on demand, it doesn't cause any error as long as you don't try to load it -->
+	<version>
+		<version-class>org.adempiere.webui.AdempiereWebUI</version-class>
+		<version-uid>1.0.0</version-uid>
+	</version>
+
+	<component>
+		<component-name>keylistener</component-name>
+		<component-class>org.zkforge.keylistener.Keylistener</component-class>
+		<widget-class>zkforge.keylistener.KeyListener</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/key-listener.js</mold-uri>
+		</mold>
+	</component>
+
+	<component>
+		<component-name>chosenbox</component-name>
+		<component-class>org.zkoss.addon.chosenbox.Chosenbox</component-class>
+		<widget-class>chosenbox.Chosenbox</widget-class>
+		<mold>
+			<mold-name>default</mold-name>
+			<mold-uri>mold/chosenbox.js</mold-uri>
+			<css-uri>css/chosenbox.css.dsp</css-uri>
+		</mold>
+	</component>
+
+	<javascript-module name="org.idempiere.websocket" version="202011211500"/>
+	<javascript-module name="jawwa.atmosphere" version="202110220730"/>
+	<javascript-module name="adempiere.local.storage" version="202011151100"/>
+	<javascript-moudle name="html2canvas" version="1.0.0.rc7"/>
+	<javascript-module name="org.idempiere.commons" version="202111051001"/>
+	<javascript-module name="jquery.maskedinput" version="1.4.1" />
+	<javascript-module name="photobooth"	version="0.7-rsd3" />
+	<javascript-module name="chosenbox" version="202012041500"/>
+	<javascript-module name="zkforge.keylistener" version="202012120100"/>
+
+	<!-- this js module doesn't actually exists and it is here for default theme version -->
+	<!-- since loading of  js module is on demand, it doesn't cause any error as long as you don't try to load it -->
 	<javascript-module name="idempiere.theme.jpiere" version="20210101" />
 </language>
