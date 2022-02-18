@@ -26,12 +26,11 @@ Copyright (C) 2009 Idalica Corporation
 </div>
 
 
-<div class="loginLinksBox"
-	style="position: absolute; bottom: 30px;">
+<div style="margin-top: 100px;" align="center">
+	<hbox align="center">
+		<a href="https://www.zkoss.org/" target="_blank"><image src="~./theme/jpiere/images/zkpowered_s.png"/></a>
+	</hbox>
 
-	<toolbarbutton href="http://www.zkoss.org" image="~./theme/jpiere/images/zkpowered_s.png"
-		tooltiptext="Powered by Zk" target="_blank"
-		/>
 </div>
 
 </zk>
