@@ -270,3 +270,17 @@
 	overflow-x: auto;
 	padding: 8px;
 }
+
+.z-menuitem.selected .z-menuitem-text {
+	font-weight: bold;
+}
+
+.window-container-toolbar-btn.tab-list {
+	font-size: smaller;
+	padding-right: 6px;
+}
+.window-container-toolbar-btn.tab-list i {
+	padding-right: 0px;
+	margin-right: -4px;
+	font-size: larger;
+}
