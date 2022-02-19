@@ -13,6 +13,7 @@
 .z-tab-button :hover {
 	color: blue;
 }
+
 .z-tabbox-icon.z-tabbox-left-scroll, .z-tabbox-icon.z-tabbox-right-scroll {
 	padding: 0px;
     border-radius: 0px;
