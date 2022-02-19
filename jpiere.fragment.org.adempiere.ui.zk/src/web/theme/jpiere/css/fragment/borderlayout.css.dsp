@@ -55,6 +55,7 @@
 	-webkit-filter: brightness(50%);
 	filter: brightness(50%);
 }
+
 .z-north.slide {
 	border-bottom: 1px solid #cfcfcf;
 	box-shadow: 0px 0px 1px 1px #cfcfcf;
@@ -74,4 +75,7 @@
 	border-left: 1px solid #cfcfcf;
 	box-shadow: 0px 0px 1px 1px #cfcfcf;
 	padding-left: 4px;
+}
+.z-north, .z-south, .z-west, .z-center, .z-east {
+	border: none;
 }
