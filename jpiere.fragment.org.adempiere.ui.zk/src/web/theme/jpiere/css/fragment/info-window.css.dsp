@@ -8,18 +8,26 @@
 
 .info-panel .statusBar .z-west,
 .info-panel .statusBar .z-center {
-    background: #F4F4F4;
+    background: #E9F0FF; /*JPIERE*/
 	border: none;
 	padding-top: 4px; /*JPIERE*/
 	padding-left: 4px;
 }
 
 .info-panel .statusBar .z-east {
-    background: #F4F4F4;
+    background: #E9F0FF; /*JPIERE*/
 	border: none;
 	padding-top: 2px;
 	padding-left: 4px;
 	width:24px;
+}
+
+.info-panel .z-north-body{ /*JPIERE*/
+    padding-top: 4px; 
+}
+
+.info-panel .z-center { /*JPIERE*/
+    padding-top: 2px; 
 }
 
 .info-panel .z-south-title{
