@@ -79,7 +79,7 @@ when detect side effect, fix to only apply for parameter window*/
 
 .popup-dialog.z-window.z-window-overlapped.z-window-shadow,
 .popup-dialog.z-window.z-window-noborder.z-window-highlighted.z-window-shadow{
-	width:600px;
+	width:720px; /*JPIERE*/
 }
 @media screen and (max-width: 600px) {
 	.popup-dialog.z-window.z-window-overlapped.z-window-shadow,
