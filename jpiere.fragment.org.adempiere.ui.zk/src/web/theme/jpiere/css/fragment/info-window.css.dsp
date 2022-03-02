@@ -38,6 +38,7 @@
 
 .info-panel .z-listbox {
 	width: 99% !important;
+	height: 99% !important; /*JPIERE*/
 	position: relative;
 	margin: auto;
 }
