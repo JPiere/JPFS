@@ -124,6 +124,10 @@ div.z-listbox-body .z-listcell {
 	/*padding: 2px;*/ /*JPIERE*/
 }
 
+.info-panel .z-listbox-body{/*JPIERE*/
+  height: calc(100% - 30px ) !important;
+}
+
 .z-listbox-autopaging .z-listcell-cnt {
 	height: 20px;
 }
