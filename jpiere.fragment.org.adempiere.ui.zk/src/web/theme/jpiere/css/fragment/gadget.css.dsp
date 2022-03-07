@@ -342,3 +342,18 @@
 .jpiere-infogadget-attachment {
 	background-color: #FFFFFF !important;
 }
+
+.jpiere-infogadget-movie-wrap {
+     position: relative;
+     padding-bottom: 56.25%; /*in case of 16:9*/
+     height: 0;
+     overflow: hidden;
+}
+ 
+.jpiere-infogadget-movie-wrap iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
