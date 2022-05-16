@@ -34,7 +34,7 @@ import org.compiere.model.MSysConfig;
  *  Sample implementation of Payment Export Interface - brought here from MPaySelectionCheck
  *
  * 	@author 	Jorg Janke
- *  @author		Hagiwara Hideaki
+ *  @author		Hagiwara Hideaki - JPIERE-0101
  *
  *  Contributors:
  *    Carlos Ruiz - GlobalQSS - FR 3132033 - Make payment export class configurable per bank
@@ -118,6 +118,20 @@ public class JapanPaymentExport implements PaymentExport
 	 */
 	public int exportToFile (MPaySelectionCheck[] checks, File file, StringBuffer err)
 	{
+		String line_end = MSysConfig.getValue("JP_JAPAN_PAYMENT_EXPORT_LINE_END", Env.NL,  Env.getAD_Client_ID(Env.getCtx()), 0);
+		if(Util.isEmpty(line_end))
+			line_end = Env.NL;
+		
+		if(line_end.equalsIgnoreCase("CRLF") || line_end.equalsIgnoreCase("\\r\\n"))
+		{
+			line_end = "\r\n";
+		}else if(line_end.equalsIgnoreCase("CR") || line_end.equalsIgnoreCase("\\r")) {
+			line_end = "\r";
+		}else if(line_end.equalsIgnoreCase("LF") || line_end.equalsIgnoreCase("\\n")) {
+			line_end = "\n";
+		}
+		
+		
 		if (checks == null || checks.length == 0)
 			return 0;
 		//  Must be a file
@@ -163,7 +177,7 @@ public class JapanPaymentExport implements PaymentExport
 			.append(ba[BA_BankAccountType])  // 7 BankAccountType,1
 			.append(ba[BA_AccountNo])   	 // 8 AccountNo,      7
 			.append(strAdd(null,LEFT,STR1,17)) 	 // 9 space,      17
-			.append(Env.NL);
+			.append(line_end);
 			p_writer.write(line.toString());
 
 			//  write FB lines
@@ -193,7 +207,7 @@ public class JapanPaymentExport implements PaymentExport
 					.append(strAdd(null,RIGHT,STR1,10)) 			 // Space 10, 10
 					.append(strAdd(null,LEFT,STR1,9)) 			 	 // Space 9
 					//.append(comment.toString())      // Comment
-					.append(Env.NL);
+					.append(line_end);
 				p_writer.write(line.toString());
 				noLines++;
 				allPayAmt = allPayAmt.add(mpp.getPayAmt());
@@ -206,14 +220,14 @@ public class JapanPaymentExport implements PaymentExport
 				.append(strAdd(String.valueOf(noLines),RIGHT,STR2,6))
 				.append(strAdd(allPayAmt.toString(),RIGHT,STR2,12))
 				.append(strAdd(null,LEFT,STR1,101)) 	 // space 101
-				.append(Env.NL);
+				.append(line_end);
 			p_writer.write(line.toString());
 
 			// write end Record
 			line = new StringBuffer();
 			line.append("9")
 				.append(strAdd(null,LEFT,STR1,119))
-				.append(Env.NL);
+				.append(line_end);
 			p_writer.write(line.toString());
 
 			p_writer.flush();
