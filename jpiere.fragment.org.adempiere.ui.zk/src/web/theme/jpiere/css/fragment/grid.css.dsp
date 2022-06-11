@@ -126,6 +126,7 @@ div.z-listbox-body .z-listcell {
 
 .info-panel .z-listbox-body{/*JPIERE*/
   height: calc(100% - 30px ) !important;
+  user-select: text; /*for Ctrl+C Copy at Info Window*/
 }
 
 .z-listbox-autopaging .z-listcell-cnt {
