@@ -25,6 +25,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
+import org.compiere.model.MPaySelection;
 import org.compiere.model.MPaySelectionCheck;
 import org.compiere.model.MSysConfig;
 
@@ -254,36 +255,45 @@ public class JapanPaymentExport implements PaymentExport
 	{
 		String[] bp = new String[10];
 
-		String sql = null;
+		String sql = "SELECT ba.RoutingNo,"
+				+ "ba.JP_BankName_Kana,"
+				+ "bpbc.JP_BranchCode,"
+				+ "bpbc.JP_BranchName_Kana,"
+				+ "case when bpbc.BankAccountType='S' then 1 else 2 end,"
+				+ "bpbc.AccountNo,"
+				+ "bpbc.JP_A_Name_Kana,"
+				+ "bpbc.IsDefault as IsDefault "
+				+ "FROM C_BP_BANKACCOUNT bpbc "
+				+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
+				;
+		
 		int JP_BP_BankAccount_ID = m_PaySelectionCheck.get_ValueAsInt(JP_BP_BANKkACCOUNT_ID);
 		
 		if(JP_BP_BankAccount_ID == 0)
 		{
-			sql = "SELECT ba.RoutingNo,"
-					+ "ba.JP_BankName_Kana,"
-					+ "bpbc.JP_BranchCode,"
-					+ "bpbc.JP_BranchName_Kana,"
-					+ "case when bpbc.BankAccountType='S' then 1 else 2 end,"
-					+ "bpbc.AccountNo,"
-					+ "bpbc.JP_A_Name_Kana,"
-					+ "bpbc.IsDefault as IsDefault "
-					+ "FROM C_BP_BANKACCOUNT bpbc "
-					+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
-					+ "WHERE bpbc.C_BPartner_ID= ? "
-					+ " and bpbc.IsActive='Y' "
-					+ " and bpbc.IsACH='Y' "
-					+ "order by bpbc.IsDefault DESC, bpbc.Created ASC ";
+			MPaySelection m_PaySelection =  new MPaySelection(Env.getCtx(),  m_PaySelectionCheck.getC_PaySelection_ID(), null); 
+			boolean IsReceiptJP = m_PaySelection.get_ValueAsBoolean("IsReceiptJP");
+			
+			if(IsReceiptJP)
+			{
+				sql =  sql
+						+ "WHERE bpbc.C_BPartner_ID= ? "
+						+ " and bpbc.IsActive='Y' "
+						+ " and bpbc.IsACH='Y' "
+						+ " and bpbc.BPBankAcctUse IN ('B','D') "	//Both & Direct Debit
+						+ " order by bpbc.IsDefault DESC, bpbc.Created ASC ";
+			}else {
+				sql =  sql
+						+ "WHERE bpbc.C_BPartner_ID= ? "
+						+ " and bpbc.IsActive='Y' "
+						+ " and bpbc.IsACH='Y' "
+						+ " and bpbc.BPBankAcctUse IN ('B','T') "	//Both & Direct Deposit
+						+ " order by bpbc.IsDefault DESC, bpbc.Created ASC ";				
+			}
+			
 		}else {
-			sql = "SELECT ba.RoutingNo,"
-					+ "ba.JP_BankName_Kana,"
-					+ "bpbc.JP_BranchCode,"
-					+ "bpbc.JP_BranchName_Kana,"
-					+ "case when bpbc.BankAccountType='S' then 1 else 2 end,"
-					+ "bpbc.AccountNo,"
-					+ "bpbc.JP_A_Name_Kana,"
-					+ "bpbc.IsDefault as IsDefault "
-					+ "FROM C_BP_BANKACCOUNT bpbc "
-					+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
+			
+			sql = sql
 					+ "WHERE bpbc.C_BP_BankAccount_ID= ? ";
 		}
 		
