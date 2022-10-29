@@ -23,18 +23,21 @@ import java.math.RoundingMode;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 
 import org.compiere.model.MPaySelectionCheck;
 import org.compiere.model.MSysConfig;
 
 /**
- * 	Generic Payment Export
+ * 	
+ *  JPIERE-0101: FB Data Export
+ *  JPIERE-0580: Select BP Bank Account
+ *  
+ *  Generic Payment Export
  *  Sample implementation of Payment Export Interface - brought here from MPaySelectionCheck
  *
  * 	@author 	Jorg Janke
- *  @author		Hagiwara Hideaki - JPIERE-0101
+ *  @author	Hagiwara Hideaki
  *
  *  Contributors:
  *    Carlos Ruiz - GlobalQSS - FR 3132033 - Make payment export class configurable per bank
@@ -108,7 +111,7 @@ public class JapanPaymentExport implements PaymentExport
 	private static final String STR1 = " ";
 	private static final String STR2 = "0";
 
-
+	private static final String JP_BP_BANKkACCOUNT_ID = "JP_BP_BankAccount_ID";
 
 	/**************************************************************************
 	 *  Export to File
@@ -188,7 +191,7 @@ public class JapanPaymentExport implements PaymentExport
 				if (mpp == null)
 					continue;
 				//  BPartner Info
-				String bp[] = getBPartnerInfo(mpp.getC_BPartner_ID());
+				String bp[] = getBPartnerInfo(mpp);
 
 				// Data Record
 				line = new StringBuffer();
@@ -247,29 +250,55 @@ public class JapanPaymentExport implements PaymentExport
 	 *  @param C_BPartner_ID BPartner
 	 *  @return info array
 	 */
-	private static String[] getBPartnerInfo (int C_BPartner_ID)
+	private static String[] getBPartnerInfo (MPaySelectionCheck m_PaySelectionCheck)
 	{
 		String[] bp = new String[10];
 
-		String sql = "SELECT ba.RoutingNo,"
-			+ "ba.JP_BankName_Kana,"
-			+ "bpbc.JP_BranchCode,"
-			+ "bpbc.JP_BranchName_Kana,"
-			+ "case when bpbc.BankAccountType='S' then 1 else 2 end,"
-			+ "bpbc.AccountNo,"
-			+ "bpbc.JP_A_Name_Kana,"
-			+ "bpbc.IsDefault as IsDefault "
-			+ "FROM C_BP_BANKACCOUNT bpbc "
-			+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
-			+ "WHERE bpbc.C_BPartner_ID= " + C_BPartner_ID
-			+ " and bpbc.IsActive='Y' "
-			+ "and bpbc.IsACH='Y' "
-			+ "order by bpbc.Updated Desc ";
+		String sql = null;
+		int JP_BP_BankAccount_ID = m_PaySelectionCheck.get_ValueAsInt(JP_BP_BANKkACCOUNT_ID);
+		
+		if(JP_BP_BankAccount_ID == 0)
+		{
+			sql = "SELECT ba.RoutingNo,"
+					+ "ba.JP_BankName_Kana,"
+					+ "bpbc.JP_BranchCode,"
+					+ "bpbc.JP_BranchName_Kana,"
+					+ "case when bpbc.BankAccountType='S' then 1 else 2 end,"
+					+ "bpbc.AccountNo,"
+					+ "bpbc.JP_A_Name_Kana,"
+					+ "bpbc.IsDefault as IsDefault "
+					+ "FROM C_BP_BANKACCOUNT bpbc "
+					+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
+					+ "WHERE bpbc.C_BPartner_ID= ? "
+					+ " and bpbc.IsActive='Y' "
+					+ " and bpbc.IsACH='Y' "
+					+ "order by bpbc.IsDefault DESC, bpbc.Created ASC ";
+		}else {
+			sql = "SELECT ba.RoutingNo,"
+					+ "ba.JP_BankName_Kana,"
+					+ "bpbc.JP_BranchCode,"
+					+ "bpbc.JP_BranchName_Kana,"
+					+ "case when bpbc.BankAccountType='S' then 1 else 2 end,"
+					+ "bpbc.AccountNo,"
+					+ "bpbc.JP_A_Name_Kana,"
+					+ "bpbc.IsDefault as IsDefault "
+					+ "FROM C_BP_BANKACCOUNT bpbc "
+					+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
+					+ "WHERE bpbc.C_BP_BankAccount_ID= ? ";
+		}
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		try
 		{
-			Statement stmt = null;
-			stmt = DB.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE,null);
-			ResultSet rs = stmt.executeQuery (sql);
+			pstmt = DB.prepareStatement(sql, null);
+			if(JP_BP_BankAccount_ID == 0)
+			{
+				pstmt.setInt(1, m_PaySelectionCheck.getC_BPartner_ID());
+			}else {
+				pstmt.setInt(1, JP_BP_BankAccount_ID);
+			}
+			rs = pstmt.executeQuery();
 
 			if (rs.next())
 			{
@@ -294,7 +323,7 @@ public class JapanPaymentExport implements PaymentExport
 				bp[BP_A_Name_Kana] = rs.getString(7);
 				if (bp[BP_A_Name_Kana] == null || bp[BP_A_Name_Kana].length()!=30)
 					bp[BP_A_Name_Kana] = strAdd(bp[BP_A_Name_Kana],LEFT,STR1,30);
-				rs.beforeFirst();
+
 			}
 			else
 			{
@@ -335,15 +364,17 @@ public class JapanPaymentExport implements PaymentExport
 					break;
 				}
 			}
-			rs.close();
-			stmt.close();
-			stmt = null;
+
 		}
 		catch (SQLException e)
 		{
 			s_log.log(Level.SEVERE, sql, e);
+		}finally {
+			DB.close(rs, pstmt);
+			rs = null;
+			pstmt = null;
 		}
-		// Jirimuto modified for Farm Bank data import --start 2010/04/02
+		
 
 		return bp;
 	}   //  getBPartnerInfo
