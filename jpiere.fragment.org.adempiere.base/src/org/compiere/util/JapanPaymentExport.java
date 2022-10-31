@@ -25,6 +25,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
+import org.compiere.model.MBPartner;
+import org.compiere.model.MBankAccount;
 import org.compiere.model.MPaySelection;
 import org.compiere.model.MPaySelectionCheck;
 import org.compiere.model.MSysConfig;
@@ -158,14 +160,25 @@ public class JapanPaymentExport implements PaymentExport
 		//char x = '"';      //  ease
 		int noLines = 0;
 		StringBuffer line = null;
+		PrintWriter p_writer   = null;
 		try
 		{
 			String encoding = MSysConfig.getValue("JP_JAPAN_PAYMENT_EXPORT_ENCODING", "Shift_JIS",  Env.getAD_Client_ID(Env.getCtx()), 0);
 			if(Util.isEmpty(encoding))
 				encoding = "Shift_JIS";
 
-			PrintWriter p_writer    = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),encoding)));
-
+			//precheck Bank Info
+			int C_PaySelection_ID = checks[0].getParent().get_ID();
+			MPaySelection ps = new MPaySelection(Env.getCtx(), C_PaySelection_ID, null);
+			MBankAccount m_BA = new MBankAccount(Env.getCtx(), ps.getC_BankAccount_ID(), null);
+			String jp_RequesterName = (String)m_BA.get_Value("JP_RequesterName");
+			if(Util.isEmpty(jp_RequesterName))
+			{
+				throw new Exception(m_BA.getName()+ " - " + Msg.getMsg(Env.getCtx(), "JP_Null") + " [ " +Msg.getElement(Env.getCtx(), "JP_RequesterName") + " ] "  );
+			}
+			
+			p_writer    = new PrintWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),encoding)));
+			
 			//  write header
 			line = new StringBuffer();
 			String ba[] = getBankInfo(checks);
@@ -234,11 +247,15 @@ public class JapanPaymentExport implements PaymentExport
 			p_writer.write(line.toString());
 
 			p_writer.flush();
-			p_writer.close();
+			
 		}
 		catch (Exception e)
 		{
 			s_log.log(Level.SEVERE, "", e);
+			err =err.append(e.getLocalizedMessage());
+			return -1;
+		}finally {
+			p_writer.close();
 		}
 
 		return noLines;
@@ -249,8 +266,9 @@ public class JapanPaymentExport implements PaymentExport
 	 *  Based on BP_ static variables
 	 *  @param C_BPartner_ID BPartner
 	 *  @return info array
+	 * @throws Exception 
 	 */
-	private static String[] getBPartnerInfo (MPaySelectionCheck m_PaySelectionCheck)
+	private static String[] getBPartnerInfo (MPaySelectionCheck m_PaySelectionCheck) throws Exception
 	{
 		String[] bp = new String[10];
 
@@ -330,49 +348,58 @@ public class JapanPaymentExport implements PaymentExport
 				if (bp[BP_AccountNo] == null || bp[BP_AccountNo].length()!=7)
 					bp[BP_AccountNo] = strAdd(bp[BP_AccountNo],LEFT,STR1,7);
 				bp[BP_A_Name_Kana] = rs.getString(7);
-				if (bp[BP_A_Name_Kana] == null || bp[BP_A_Name_Kana].length()!=30)
+				if(Util.isEmpty(bp[BP_A_Name_Kana]))
+				{
+					int C_BPartner_ID = m_PaySelectionCheck.getC_BPartner_ID();
+					MBPartner m_BP = MBPartner.get(Env.getCtx(), C_BPartner_ID);
+					throw new Exception(m_BP.getName()+ " - " + Msg.getMsg(Env.getCtx(), "JP_Null") + " [ " +Msg.getElement(Env.getCtx(), "JP_A_Name_Kana") + " ] "  );
+				}else if (bp[BP_A_Name_Kana].length()!=30) {
 					bp[BP_A_Name_Kana] = strAdd(bp[BP_A_Name_Kana],LEFT,STR1,30);
-
+				}
 			}
 			else
 			{
-				bp[BP_RoutingNo] = strAdd(bp[BP_RoutingNo],LEFT,STR1,4);
-				bp[BP_BankName_Kana] = strAdd(bp[BP_BankName_Kana],LEFT,STR1,15);
-				bp[BP_BranchCode] = strAdd(bp[BP_BranchCode],LEFT,STR1,3);
-				bp[BP_BranchName_Kana] = strAdd(bp[BP_BranchName_Kana],LEFT,STR1,15);
-				bp[BP_BankAccountType] = strAdd(bp[BP_BankAccountType],LEFT,STR1,1);
-				bp[BP_AccountNo] = strAdd(bp[BP_AccountNo],LEFT,STR1,7);
-				bp[BP_A_Name_Kana] = strAdd(bp[BP_A_Name_Kana],LEFT,STR1,30);
+				int C_BPartner_ID = m_PaySelectionCheck.getC_BPartner_ID();
+				MBPartner m_BP = MBPartner.get(Env.getCtx(), C_BPartner_ID);
+				throw new Exception(m_BP.getName()+ " - " +Msg.getElement(Env.getCtx(), "C_BP_BankAccount_ID") +" "+ Msg.getMsg(Env.getCtx(), "NotFound") );
+				
+//				bp[BP_RoutingNo] = strAdd(bp[BP_RoutingNo],LEFT,STR1,4);
+//				bp[BP_BankName_Kana] = strAdd(bp[BP_BankName_Kana],LEFT,STR1,15);
+//				bp[BP_BranchCode] = strAdd(bp[BP_BranchCode],LEFT,STR1,3);
+//				bp[BP_BranchName_Kana] = strAdd(bp[BP_BranchName_Kana],LEFT,STR1,15);
+//				bp[BP_BankAccountType] = strAdd(bp[BP_BankAccountType],LEFT,STR1,1);
+//				bp[BP_AccountNo] = strAdd(bp[BP_AccountNo],LEFT,STR1,7);
+//				bp[BP_A_Name_Kana] = strAdd(bp[BP_A_Name_Kana],LEFT,STR1,30);
 			}
 
-			while(rs.next())
-			{
-				if(rs.getString("IsDefault").compareTo("Y")==0)
-				{
-					bp[BP_RoutingNo] = rs.getString(1);
-					if (bp[BP_RoutingNo] == null || bp[BP_RoutingNo].length()!=4)
-						bp[BP_RoutingNo] = strAdd(bp[BP_RoutingNo],LEFT,STR1,4);
-					bp[BP_BankName_Kana] = rs.getString(2);
-					if (bp[BP_BankName_Kana] == null || bp[BP_BankName_Kana].length()!=15)
-						bp[BP_BankName_Kana] = strAdd(bp[BP_BankName_Kana],LEFT,STR1,15);
-					bp[BP_BranchCode] = rs.getString(3);
-					if (bp[BP_BranchCode] == null || bp[BP_BranchCode].length()!=3)
-						bp[BP_BranchCode] = strAdd(bp[BP_BranchCode],LEFT,STR1,3);
-					bp[BP_BranchName_Kana] = rs.getString(4);
-					if (bp[BP_BranchName_Kana] == null || bp[BP_BranchName_Kana].length()!=15)
-						bp[BP_BranchName_Kana] = strAdd(bp[BP_BranchName_Kana],LEFT,STR1,15);
-					bp[BP_BankAccountType] = rs.getString(5);
-					if (bp[BP_BankAccountType] == null || bp[BP_BankAccountType].length()!=1)
-						bp[BP_BankAccountType] = strAdd(bp[BP_BankAccountType],LEFT,STR1,1);
-					bp[BP_AccountNo] = rs.getString(6);
-					if (bp[BP_AccountNo] == null || bp[BP_AccountNo].length()!=7)
-						bp[BP_AccountNo] = strAdd(bp[BP_AccountNo],LEFT,STR1,7);
-					bp[BP_A_Name_Kana] = rs.getString(7);
-					if (bp[BP_A_Name_Kana] == null || bp[BP_A_Name_Kana].length()!=30)
-						bp[BP_A_Name_Kana] = strAdd(bp[BP_A_Name_Kana],LEFT,STR1,30);
-					break;
-				}
-			}
+//			while(rs.next())
+//			{
+//				if(rs.getString("IsDefault").compareTo("Y")==0)
+//				{
+//					bp[BP_RoutingNo] = rs.getString(1);
+//					if (bp[BP_RoutingNo] == null || bp[BP_RoutingNo].length()!=4)
+//						bp[BP_RoutingNo] = strAdd(bp[BP_RoutingNo],LEFT,STR1,4);
+//					bp[BP_BankName_Kana] = rs.getString(2);
+//					if (bp[BP_BankName_Kana] == null || bp[BP_BankName_Kana].length()!=15)
+//						bp[BP_BankName_Kana] = strAdd(bp[BP_BankName_Kana],LEFT,STR1,15);
+//					bp[BP_BranchCode] = rs.getString(3);
+//					if (bp[BP_BranchCode] == null || bp[BP_BranchCode].length()!=3)
+//						bp[BP_BranchCode] = strAdd(bp[BP_BranchCode],LEFT,STR1,3);
+//					bp[BP_BranchName_Kana] = rs.getString(4);
+//					if (bp[BP_BranchName_Kana] == null || bp[BP_BranchName_Kana].length()!=15)
+//						bp[BP_BranchName_Kana] = strAdd(bp[BP_BranchName_Kana],LEFT,STR1,15);
+//					bp[BP_BankAccountType] = rs.getString(5);
+//					if (bp[BP_BankAccountType] == null || bp[BP_BankAccountType].length()!=1)
+//						bp[BP_BankAccountType] = strAdd(bp[BP_BankAccountType],LEFT,STR1,1);
+//					bp[BP_AccountNo] = rs.getString(6);
+//					if (bp[BP_AccountNo] == null || bp[BP_AccountNo].length()!=7)
+//						bp[BP_AccountNo] = strAdd(bp[BP_AccountNo],LEFT,STR1,7);
+//					bp[BP_A_Name_Kana] = rs.getString(7);
+//					if (bp[BP_A_Name_Kana] == null || bp[BP_A_Name_Kana].length()!=30)
+//						bp[BP_A_Name_Kana] = strAdd(bp[BP_A_Name_Kana],LEFT,STR1,30);
+//					break;
+//				}
+//			}
 
 		}
 		catch (SQLException e)
@@ -408,11 +435,14 @@ public class JapanPaymentExport implements PaymentExport
 			+ " INNER JOIN C_BankAccount bc ON (ps.C_BankAccount_ID=bc.C_BankAccount_ID) "
 			+ " INNER JOIN C_Bank ba ON (bc.C_Bank_ID=ba.C_Bank_ID) "
 			+ "WHERE ps.C_PaySelection_ID=? ";
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql, null);
+			pstmt = DB.prepareStatement(sql, null);
 			pstmt.setInt(1, C_PaymentSelection_ID);
-			ResultSet rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery();
 			//
 			if (rs.next())
 			{
@@ -444,12 +474,16 @@ public class JapanPaymentExport implements PaymentExport
 				if (ba[BA_AccountNo] == null || ba[BA_AccountNo].length()!=7 )
 					ba[BA_AccountNo] = strAdd(ba[BA_AccountNo],LEFT,STR1,7);
 			}
-			rs.close();
-			pstmt.close();
+			
 		}
 		catch (SQLException e)
 		{
 			s_log.log(Level.SEVERE, sql, e);
+		}finally {
+			
+			DB.close(rs, pstmt);
+			rs = null;
+			pstmt = null;
 		}
 		return ba;
 	}   //  getBankInfo
