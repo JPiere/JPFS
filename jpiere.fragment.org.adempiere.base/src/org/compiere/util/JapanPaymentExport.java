@@ -112,7 +112,6 @@ public class JapanPaymentExport implements PaymentExport
 	private static final String STR1 = " ";
 	private static final String STR2 = "0";
 
-	private static final String JP_BP_BANKkACCOUNT_ID = "JP_BP_BankAccount_ID";
 
 	/**************************************************************************
 	 *  Export to File
@@ -267,9 +266,9 @@ public class JapanPaymentExport implements PaymentExport
 				+ "INNER JOIN C_Bank ba ON bpbc.C_Bank_ID=ba.C_Bank_ID "
 				;
 		
-		int JP_BP_BankAccount_ID = m_PaySelectionCheck.get_ValueAsInt(JP_BP_BANKkACCOUNT_ID);
+		int C_BP_BankAccount_ID = m_PaySelectionCheck.getC_BP_BankAccount_ID();
 		
-		if(JP_BP_BankAccount_ID == 0)
+		if(C_BP_BankAccount_ID == 0)
 		{
 			MPaySelection m_PaySelection =  new MPaySelection(Env.getCtx(),  m_PaySelectionCheck.getC_PaySelection_ID(), null); 
 			boolean IsReceiptJP = m_PaySelection.get_ValueAsBoolean("IsReceiptJP");
@@ -302,11 +301,11 @@ public class JapanPaymentExport implements PaymentExport
 		try
 		{
 			pstmt = DB.prepareStatement(sql, null);
-			if(JP_BP_BankAccount_ID == 0)
+			if(C_BP_BankAccount_ID == 0)
 			{
 				pstmt.setInt(1, m_PaySelectionCheck.getC_BPartner_ID());
 			}else {
-				pstmt.setInt(1, JP_BP_BankAccount_ID);
+				pstmt.setInt(1, C_BP_BankAccount_ID);
 			}
 			rs = pstmt.executeQuery();
 
