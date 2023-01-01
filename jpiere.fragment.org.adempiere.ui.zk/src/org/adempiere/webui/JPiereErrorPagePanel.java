@@ -22,7 +22,7 @@ import org.adempiere.webui.component.ConfirmPanel;
 import org.adempiere.webui.component.Label;
 import org.adempiere.webui.component.Window;
 import org.adempiere.webui.theme.ITheme;
-import org.adempiere.webui.window.FDialog;
+import org.adempiere.webui.window.Dialog;
 import org.compiere.model.MSysConfig;
 import org.zkoss.zhtml.Div;
 import org.zkoss.zhtml.Table;
@@ -174,7 +174,7 @@ public class JPiereErrorPagePanel extends Window implements EventListener<Event>
 		}
 		catch (Exception e) {
 			String message = e.getMessage();
-			FDialog.warn(0, this, "URLnotValid", message);
+			Dialog.warn(0, "URLnotValid", message);
 		}
 	}
 
