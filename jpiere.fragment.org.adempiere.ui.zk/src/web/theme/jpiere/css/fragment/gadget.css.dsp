@@ -16,24 +16,17 @@
 	border: none;
 }
 
-.statusline-wrapper > .z-panel-head {
-	position: absolute;
-	top: 1;
-	z-index: 1;
-	width: calc(100% - 10px);
+.dashboard-widget.z-panel {
+	display: flex; 
+	flex-direction: column; 
+	justify-content: stretch;
 }
 
 .dashboard-widget > .z-panel-body {
-	height: 100%;
+	flex-grow: 1;
 }
 
 .statusline-wrapper {
-	height: 100%;
-}
-
-.statusline-wrapper > .z-panel-body {
-	position: relative;
-	top: 0;
 	height: 100%;
 }
 
