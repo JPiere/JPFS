@@ -72,6 +72,24 @@
     border: 1px solid #dddddd;
 }
 
+.pivotwindow_row_even_column_even
+{
+	;
+}
+
+.pivotwindow_row_even_column_odd
+{
+	;
+}
+.pivotwindow_row_odd_column_even
+{
+     background-color: #E9F0FF;
+}
+
+.pivotwindow_row_odd_column_odd
+{
+     background-color: #E9F0FF;
+}
 
 .z-pivot-field-control .z-vlayout{
     border: 1px solid #cfcfcf;
