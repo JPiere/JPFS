@@ -48,6 +48,9 @@
 	background-color: #E9F0FF; /*JPIERE*/
 }
 
+.info-panel .z-south-body .z-vbox {
+    height: 108px !important;/*JPIERE*/
+}
 .info-panel .z-window-highlighted .z-window-content {
 	padding: 0px;
 }
