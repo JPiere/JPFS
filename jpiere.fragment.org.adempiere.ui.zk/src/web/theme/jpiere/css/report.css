@@ -131,7 +131,7 @@
 	border-right-width: 1px;
 }
 
-iv.rp-flex-container {
+div.rp-flex-container {
 	display: flex; 
 	flex-direction: column; 
 	height: 100%;
