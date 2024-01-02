@@ -77,10 +77,6 @@
 	background-color: #E4E4E4;
 }
 
-.desktop-tabbox .z-tabs-content {
-    width: 5555px !important;
-}
-
 .desktop-tabbox .z-tab {
 	height: 24px;
 }
