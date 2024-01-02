@@ -10,6 +10,6 @@ Copyright (C) 2009 Idalica Corporation
 <div>
 	<vendorLogo/>
 	<loginInfo if="${desktop.execution.serverName.equals(&quot;127.0.0.1&quot;) or desktop.execution.serverName.startsWith(&quot;demo&quot;) or desktop.execution.serverName.startsWith(&quot;test.&quot;) or desktop.execution.serverName.startsWith(&quot;test-&quot;) or desktop.execution.serverName.startsWith(&quot;triage&quot;)}"/>
-	<!--<versionInfo/>-->
+	<versionInfo/>
 	<loginLinks/>
 </div>
