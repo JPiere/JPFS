@@ -20,7 +20,7 @@
     background: linear-gradient(to bottom, #ffffff 0%,#E9F0FF 90%);
 	width: 100%;
 	height: 46px;
-	border-bottom: 1px solid #91BEE6 !important;
+	border-bottom: 1px solid #91BEE6 !important;/*JPIERE*/
 	padding-left: 4px;
 }
 .desktop-header.mobile {
@@ -169,7 +169,7 @@
 .z-anchorchildren { overflow:visible }
 
 .desktop-hometab {
-	margin-left: 2px !important;
+	margin-left: 2px !important; /*JPIERE*/
 }
 
 .desktop-tabbox .z-tabs .z-toolbar-tabs-body {

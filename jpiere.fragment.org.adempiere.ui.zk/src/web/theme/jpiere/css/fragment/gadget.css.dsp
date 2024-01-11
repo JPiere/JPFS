@@ -1,4 +1,4 @@
-.fav-new-btn
+.fav-new-btn {
 }
 
 .fav-new-btn img {
@@ -173,6 +173,16 @@
 	display: inline-flex;
 	align-items: center;
 }
+
+.dashboard-report-toolbar .z-toolbar-content {
+	display: block;
+}
+
+.dashboard-report-toolbar .rowcount-label {
+	float: right;
+	padding: 5px;
+}
+
 .recentitems-box .trash-toolbarbutton .z-toolbarbutton-content {
 	font-size: 16px;
 }
@@ -400,6 +410,26 @@
 .dashboard-content-help-icon {
 	padding: 5px;
 	cursor: default;
+	visibility: hidden;
+}
+
+.z-caption:hover .dashboard-content-help-icon {
+	visibility: visible;
+}
+
+.dashboard-content-help-popup {
+	display: none;
+}
+
+.dashboard-content-help-icon:hover ~ .dashboard-content-help-popup {
+	display: inline-flex;
+	background: black;
+	color: white;
+	border-radius: 5px;
+	padding: 4px 7px;
+    position: fixed;
+    z-index: 1800;
+    max-width: 300px;
 }
 
 .fill-mandatory-process-para-wrapper {
