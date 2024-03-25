@@ -34,6 +34,14 @@ when detect side effect, fix to only apply for parameter window*/
 .report-option-container {
 	overflow-x: auto;
 }
+
+/* Chromium based browsers + Safari */
+@supports (not (-moz-appearance: none)) {
+	.report-option-container {
+		height: 100% !important;
+	}
+}
+
 .top-parameter-layout{
 	overflow: auto;
 	padding-bottom: 2vh;
@@ -87,7 +95,7 @@ when detect side effect, fix to only apply for parameter window*/
 	.popup-dialog.z-window.z-window-overlapped.z-window-shadow,
 	.popup-dialog.z-window.z-window-noborder.z-window-highlighted.z-window-shadow{
 		width:100%;
-	}
+	}	
 	.process-modal-dialog {
 		width: 100%;
 	}
@@ -116,11 +124,12 @@ when detect side effect, fix to only apply for parameter window*/
 .popup-dialog .input-paramenter-layout{
 	width: 90%;
 }
+
 @media screen and (max-width: 500px) {
 	.option-input-parameter.z-label.print-format-label,
 	.option-input-parameter.z-label.view-report-label {
 		display: none;
-	}
+	}		
 }
 @media screen and (min-width: 501px) {
 	.option-input-parameter.print-format-list > input::-webkit-input-placeholder {
