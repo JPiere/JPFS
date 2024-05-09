@@ -35,6 +35,7 @@ import org.compiere.model.MSysConfig;
  * 	
  *  JPIERE-0101: FB Data Export
  *  JPIERE-0580: Select BP Bank Account
+ *  JPIERE-0615: Payment Export Class
  *  
  *  Generic Payment Export
  *  Sample implementation of Payment Export Interface - brought here from MPaySelectionCheck
@@ -123,19 +124,14 @@ public class JapanPaymentExport implements PaymentExport
 	 */
 	public int exportToFile (MPaySelectionCheck[] checks, File file, StringBuffer err)
 	{
-		String line_end = MSysConfig.getValue("JP_JAPAN_PAYMENT_EXPORT_LINE_END", Env.NL,  Env.getAD_Client_ID(Env.getCtx()), 0);
-		if(Util.isEmpty(line_end))
-			line_end = Env.NL;
-		
-		if(line_end.equalsIgnoreCase("CRLF") || line_end.equalsIgnoreCase("\\r\\n"))
+		String line_end = null;
+		if(Util.isEmpty(err.toString()))
 		{
-			line_end = "\r\n";
-		}else if(line_end.equalsIgnoreCase("CR") || line_end.equalsIgnoreCase("\\r")) {
-			line_end = "\r";
-		}else if(line_end.equalsIgnoreCase("LF") || line_end.equalsIgnoreCase("\\n")) {
-			line_end = "\n";
+			line_end = Env.NL;
+		}else {
+			line_end = err.toString();
+			err.setLength(0);//Initialize
 		}
-		
 		
 		if (checks == null || checks.length == 0)
 			return 0;
