@@ -1,5 +1,5 @@
 .drill-window-tab td {
-	padding: 5px 15px 0 15px;
+	padding: 5px 5px 0 5px; /*JPIERE*/
 }
 
 .drill-window-field-name {
