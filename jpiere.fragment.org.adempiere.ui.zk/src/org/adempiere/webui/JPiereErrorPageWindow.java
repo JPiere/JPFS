@@ -16,7 +16,7 @@ package org.adempiere.webui;
 
 import java.util.Properties;
 
-import org.adempiere.webui.component.FWindow;
+import org.adempiere.webui.component.Window;
 import org.compiere.util.Env;
 
 /**
@@ -28,7 +28,7 @@ import org.compiere.util.Env;
  * @author Hideaki Hagiwara(h.hagiwara@oss-erp.co.jp)
  * @date    July 18, 2007
  */
-public class JPiereErrorPageWindow extends FWindow
+public class JPiereErrorPageWindow extends Window
 {
 	/**
 	 *
