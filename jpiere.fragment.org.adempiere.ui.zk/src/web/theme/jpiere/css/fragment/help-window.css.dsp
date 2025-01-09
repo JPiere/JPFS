@@ -91,5 +91,5 @@
 }
 
 .help-window-content-l tr:hover td {
-  background-color: #eee;
+  background-color: #eee; 
 }

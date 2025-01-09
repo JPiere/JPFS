@@ -62,6 +62,7 @@
 .info-panel.z-window .z-borderlayout > div > .z-north {
 	max-height: 50%;
 }
+
 .info-panel .z-listheader > .z-listheader-content {
 	white-space: nowrap; /*JPIERE*/
 	text-overflow: ellipsis;

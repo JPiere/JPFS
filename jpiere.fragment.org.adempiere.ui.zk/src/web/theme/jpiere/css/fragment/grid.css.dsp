@@ -10,7 +10,7 @@
 	background-image: url(${c:encodeURL('~./theme/default/images/EditRecord16.png')}) !important;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 16px 16px;
+	background-size: 16px 16px;  
 	cursor: pointer;
 }
 .z-grid tbody tr.grid-inactive-row span.row-indicator-selected.z-icon-Edit,
@@ -20,24 +20,23 @@
 	color: #333; 
 }
 
-.z-grid tbody tr.highlight td.z-cell {
+.z-grid tbody tr.highlight td.z-cell { 
 	background-color: #FFFFCC !important;
 	background-image: none !important;
 }
-
 
 .z-grid tbody tr.highlight td.row-indicator-selected {
 	background-color: #FFFFCC !important;
 	background-image: url(${c:encodeURL('~./theme/default/images/EditRecord16.png')}) !important;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 16px 16px;
+	background-size: 16px 16px;  
 	cursor: pointer;
 }
 
 .z-grid tbody tr.highlight td.row-indicator {
 	background-color: transparent !important;
-	background-image: none !important;
+	background-image: none !important; 
 }
 
 div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
@@ -96,8 +95,8 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 
 <%-- grid layout --%>
 .grid-layout {
-	border: none !important;
-	margin: 0 !important;
+	border: none !important; 
+	margin: 0 !important; 
 	padding: 0 !important;
 	background-color: transparent !important;
 }
@@ -124,16 +123,28 @@ div.z-listbox-body .z-listcell {
 	/*padding: 2px;*/ /*JPIERE*/
 }
 
+.z-listbox-autopaging .z-listcell-cnt {
+	height: 20px;
+}
+
+div.grid-view-color-fieldtype-display {
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div.grid-view-color-fieldtype-display > div {
+	width: 95%;
+	height: 80%;
+}
+
+/*JPIERE-Start*/
 .info-panel .z-listbox-body{/*JPIERE*/
   height: calc(100% - 30px ) !important;
   user-select: text; /*for Ctrl+C Copy at Info Window*/
 }
 
-.z-listbox-autopaging .z-listcell-cnt {
-	height: 20px;
-}
-
-/*JPIERE-Start*/
 tr.z-grid-odd td.z-row-inner
 ,tr.z-grid-odd .z-cell
 ,tr.z-grid-odd {/*Form Window*/

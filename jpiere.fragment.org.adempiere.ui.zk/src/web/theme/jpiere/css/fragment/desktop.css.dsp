@@ -3,7 +3,7 @@
 	margin: 0;
 	margin-left: 1px;
 	margin-top: 1px;
-	background-color: transparent !important;
+	background-color: transparent !important; 
 	border: none !important;
 }
 
@@ -11,7 +11,7 @@
 	margin: 0;
 	margin-top: 1px;
 	padding-right:1px;
-	background-color: transparent !important;
+	background-color: transparent !important; 
 	border: none !important;
 }
 
@@ -67,13 +67,13 @@
 }
 
 .desktop-layout {
-	position: absolute;
+	position: absolute; 
 	border: none;
 	background-color: #E4E4E4;
 }
 
 .desktop-tabbox {
-	padding-top: 0px;
+	padding-top: 0px; 
 	background-color: #E4E4E4;
 }
 
@@ -139,12 +139,12 @@
 }
 
 .desktop-left-column + .z-west-splitter,  .desktop-left-column.z-west {
-	border-top: none;
+	border-top: none; 
 	border-right: 1px solid #c5c5c5;
 }
 
 .desktop-right-column + .z-east-splitter,  .desktop-right-column.z-east {
-	border-top: none;
+	border-top: none; 
 	border-left: 1px solid #c5c5c5;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .z-anchorlayout { overflow:auto }
-
+ 
 .z-anchorchildren { overflow:visible }
 
 .desktop-hometab {
@@ -195,9 +195,9 @@
 	padding: 0px !important;
 	margin: 0px !important;
 	-webkit-box-shadow:inset 0px 0px 3px #CCC;
-	-moz-box-shadow:inset 0px 0px 3px #CCC;
-	-o-box-shadow:inset 0px 0px 3px #CCC;
-	-ms-box-shadow:inset 0px 0px 3px #CCC;
+	-moz-box-shadow:inset 0px 0px 3px #CCC;	
+	-o-box-shadow:inset 0px 0px 3px #CCC;	
+	-ms-box-shadow:inset 0px 0px 3px #CCC;	
 	box-shadow:inset 0px 0px 3px #CCC;
 }
 
@@ -207,8 +207,8 @@
 }
 
 .desktop-menu-toolbar {
-	background-color: #ffffff;
-	verticle-align: middle;
+	background-color: #ffffff; 
+	verticle-align: middle; 
 	padding: 2px;
 	border-top: 1px solid #c5c5c5;
 }
@@ -248,9 +248,9 @@
 	width: 22px;
 	height: 22px;
 	padding: 3px 3px;
-	}
+}
 .window-container-toolbar > .z-toolbar-content,
-.window-container-toolbar-btn.z-toolbarbutton,
+.window-container-toolbar-btn.z-toolbarbutton, 
 .window-container-toolbar-btn.z-toolbarbutton .z-toolbarbutton-content,
 .window-container-toolbar-btn.z-toolbarbutton .z-toolbarbutton-content [class^="z-icon"] {
 	display:inline-flex;
@@ -258,6 +258,7 @@
 	justify-content: center;
 	border-bottom: 0px; 
 }
+
 .user-panel-popup .z-popup-content {
 	padding-left: 0px;
 	padding-right: 0px;

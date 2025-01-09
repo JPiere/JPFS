@@ -86,7 +86,7 @@
 	.field-record-info-dialog {
 		height: 100%;
 	}
-}
+}	
 
 .record-info-dialog {
 	width: 800px;
@@ -224,7 +224,7 @@
 }
 .quick-entry-dialog > .z-window-content {
 	overflow: auto;
-	padding: 4px;
+	padding: 4px;	
 }
 .quick-entry-dialog > .z-window-content > .confirm-panel {
 	padding-top: 4px;

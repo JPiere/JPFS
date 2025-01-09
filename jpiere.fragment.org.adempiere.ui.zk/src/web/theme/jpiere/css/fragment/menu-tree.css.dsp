@@ -3,7 +3,7 @@
 .menu-treecell-cnt {
 	border: 0; margin: 0; padding: 0;
 	${fontFamilyC};
-	${fontSizeM};
+	${fontSizeM}; 
 	font-weight: normal;
     overflow-x: hidden;
     white-space: nowrap;
@@ -22,7 +22,7 @@ div.z-tree-body td.menu-tree-cell {
 div.menu-tree-cell-cnt {
 	border: 0; margin: 0; padding: 0;
 	${fontFamilyC};
-	${fontSizeM};
+	${fontSizeM}; 
 	font-weight: normal;
     white-space:nowrap
 }
@@ -39,18 +39,18 @@ td.menu-tree-cell-disd a:visited, td.menu-tree-cell-disd a:hover {
 
 div.z-dottree-body td.menu-tree-cell {
 	cursor: pointer; padding: 0 2px;
-	${fontSizeM};
+	${fontSizeM}; 
 	font-weight: normal; overflow: visible;
 }
 
 div.z-filetree-body td.menu-tree-cell {
 	cursor: pointer; padding: 0 2px;
-	${fontSizeM};
+	${fontSizeM}; 
 	font-weight: normal; overflow: visible;
 }
 
 div.z-vfiletree-body td.menu-tree-cell {
 	cursor: pointer; padding: 0 2px;
-	${fontSizeM};
+	${fontSizeM}; 
 	font-weight: normal; overflow: visible;
 }

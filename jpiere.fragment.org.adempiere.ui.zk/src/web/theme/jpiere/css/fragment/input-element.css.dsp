@@ -37,9 +37,9 @@ input:focus, textarea:focus, .z-combobox-input:focus, z-datebox-input:focus, sel
 	background: #FFFFCC;
 }
 
-.z-textbox-readonly, .z-intbox-readonly, .z-longbox-readonly, .z-doublebox-readonly,
-.z-decimalbox-readonly, .z-datebox-readonly, .z-timebox-readonly, .editor-input-disd,
-.z-textbox[readonly], .z-intbox[readonly], .z-longbox[readonly], .z-doublebox[readonly],
+.z-textbox-readonly, .z-intbox-readonly, .z-longbox-readonly, .z-doublebox-readonly, 
+.z-decimalbox-readonly, .z-datebox-readonly, .z-timebox-readonly, .editor-input-disd, 
+.z-textbox[readonly], .z-intbox[readonly], .z-longbox[readonly], .z-doublebox[readonly], 
 .z-decimalbox[readonly], .z-datebox[readonly], .z-timebox[readonly] {
 	background-color: #F0F0F0;
 }

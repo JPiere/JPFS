@@ -5,7 +5,7 @@ it fix some issue relate resize, but can make side effect
 when detect side effect, fix to only apply for parameter window*/
 .z-window.z-window-noborder.z-window-noheader.z-window-embedded,
 .z-window.z-window-noborder.z-window-noheader.z-window-embedded .z-window-content,
-.main-parameter-layout{
+.main-parameter-layout {
 	height: 100%;
 }
 .process-modal-dialog {
@@ -15,7 +15,6 @@ when detect side effect, fix to only apply for parameter window*/
 	height: auto;
 	flex-basis: auto;
 }
-
 .process-modal-dialog.z-window > .z-window-content {
 	flex: 1 1 auto;
 }
@@ -65,14 +64,14 @@ when detect side effect, fix to only apply for parameter window*/
 }
 
 .message-paramenter{
-	max-height: 300pt;
-	overflow: auto;
+	max-height: 300pt; 
+	overflow: auto; 
 	margin: 10px;
 	line-height: normal;
 }
 
 .option-input-parameter{
-
+	
 }
 
 .bottom-container{

@@ -21,7 +21,6 @@
 	flex-direction: column; 
 	justify-content: stretch;
 }
-
 .dashboard-widget > .z-panel-body {
 	flex-grow: 1;
 }
@@ -65,7 +64,7 @@
 	/*background: #3a5caa;JPiere*/
 	font-weight: 300;
 	font-size: 13px;
-}
+}	
 
 .z-caption .z-caption-content {
 	padding: 0 0 2px 0;
@@ -91,17 +90,17 @@
 }
 
 .dashboard-widget {
-	margin-top: 1px;
-	margin-left: auto;
+	margin-top: 1px; 
+	margin-left: auto; 
 	margin-right: auto;
 	position: relative;
-	width: 99%;
+	width: 99%;	
 	height: 100%;
 }
 
 .dashboard-widget-max {
 	margin: auto;
-	width: auto;
+	width: auto;	
 }
 
 .dashboard-widget.dashboard-widget-max > .z-panel-body > .z-panelchildren {
@@ -109,11 +108,10 @@
 }
 
 .dashboard-report-iframe {
-	min-height:300px;
-	border: 1px solid lightgray;
+	min-height:300px; 
+	border: 1px solid lightgray; 
 	margin:auto;
 	width: 99%;
-	height: 90%;
 }
 
 .favourites-box {
@@ -130,7 +128,7 @@
 
 .favourites-box .z-hbox {
 	padding: 0px 4px;
-    width: 100%;
+	width: 100%; 
 }
 
 .favourites-box .z-toolbar-start {
@@ -190,7 +188,7 @@
 	font-family: FontAwesome;
 	font-size: 20px;
 }
-
+	
 .views-box {
 	width: 100%;
 	margin: auto;
@@ -243,7 +241,7 @@
 
 .activities-box {
 	width: 100%;
- 	margin: auto;
+	margin: auto;
 	padding: 0px 14px;
 	background-color: #E9F0FF;/*JPIERE*/
 	border: 1px solid #c8c8c8;/*JPIERE*/
@@ -268,34 +266,34 @@
 
 <%-- performance indicator --%>
 .performance-indicator {
-	margin: 0px;
-	position: relative;
+	margin: 0px; 
+	position: relative; 
 }
 .performance-indicator img {
-	display: block;
+	display: block; 
 	margin: 0px;
 	padding:0px;
 }
 .window-view-pi .performance-indicator img {
 }
 .performance-indicator-box {
-	background-color: #eee;
-	border: 1px solid #d8d8d8;
-	border-radius: 11px;
+	background-color: #eee; 
+	border: 1px solid #d8d8d8; 
+	border-radius: 5px; 
 	cursor: pointer;
 }
 .performance-indicator-title {
-	text-align: center;
-	background-color: #c8c8c8;
+	text-align: center; 
+	background-color: #c8c8c8; 
 	border: 1px solid #c8c8c8;
-	padding-top: 1px;
+	padding-top: 1px; 
 	padding-bottom: 1px;
 	line-height:12px;
 }
 .performance-panel .z-grid {
 	border: none;
-	margin:0px;
-	padding:0px;
+	margin:0px; 
+	padding:0px; 
 	position: relative;
 	width: 100%;
 }
@@ -331,7 +329,7 @@
 }
 
 .dashboard-widget.dashboard-widget-max .chart-gadget {
-	height: 100% !important;
+	height: 100% !important; 
 }
 
 .statusline-gadget {
@@ -339,14 +337,14 @@
 	flex-direction: column;
  	justify-content: center;
  	align-items: center;
- 	padding: 40px 0px 10px;
  	height: 100%;
+	padding: 10px 0px;
 }
 
 .help-content
 {
 	padding: 2px;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: normal;
 }
 .mobile .help-content
@@ -357,8 +355,8 @@
 .fav-new-btn.z-toolbarbutton [class^="z-icon-"] {
 	font-size: smaller;
 	color: #333;
-	/*padding-left: 4px;
-	padding-right: 4px;*/
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 <%-- User Favorite Dashboard Panel Start --%>

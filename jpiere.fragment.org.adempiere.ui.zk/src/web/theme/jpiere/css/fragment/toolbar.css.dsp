@@ -20,10 +20,10 @@
 }
 
 .toolbar-button {
-	background-color: transparent;
-	margin-left: 1px;
-	margin-right: 1px;
-	width: 28px;
+	background-color: transparent; 	
+	margin-left: 1px; 
+	margin-right: 1px; 
+	width: 28px; 
 	height: 28px;
 	padding: 1px;
 }
@@ -32,7 +32,7 @@
 	width: 24px;
 	height: 24px;
 	padding: 1px;
-	border: none;
+	border: none;	
 }
 .toolbar-overflow-popup-vertical .toolbar-button, 
 .toolbar-overflow-popup-vertical .toolbar-button .z-toolbarbutton-content {
@@ -97,7 +97,7 @@
 .font-icon-toolbar-button.toolbar-button, .font-icon-toolbar-button.toolbar-button .z-toolbarbutton-content {
 	display:inline-flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; 
 }
 .font-icon-toolbar-button:active, .font-icon-toolbar-button:hover {
 	color: #3949AB;

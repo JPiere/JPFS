@@ -235,6 +235,7 @@
 .dashboard-widget .z-calendars-month-cnt {/* JPIERE Restrict at dashboard for ToDo calendar*/
 	height: 300px !important;
 }
+
 .z-calevent-cnt > .z-calevent-text {
 	line-height: normal;
 	height: auto;

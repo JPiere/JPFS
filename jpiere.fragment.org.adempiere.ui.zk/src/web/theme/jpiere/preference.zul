@@ -3,7 +3,7 @@
 <script defer="true">
 <![CDATA[
     adempiere.set("zkTimeoutURL", "sessiontimeout.zul");
-]]>
+]]>	
 </script>
 <zscript>
 <![CDATA[
@@ -13,8 +13,8 @@
 	import org.compiere.model.MSysConfig;
 	import org.zkoss.zul.theme.Themes;
 	import org.zkoss.zk.ui.Executions;
-
-	Env.setContext(Env.getCtx(), ITheme.ZK_TOOLBAR_BUTTON_SIZE, "24");
+	
+	Env.setContext(Env.getCtx(), ITheme.ZK_TOOLBAR_BUTTON_SIZE, "24");	
 	/* Set the next variable if you want to control browser title in theme */
 	/* AEnv.getDesktop().getWebApp().setAppName("iDempiere"); */
 	Env.setContext(Env.getCtx(), ITheme.USE_CSS_FOR_WINDOW_SIZE, "Y");
