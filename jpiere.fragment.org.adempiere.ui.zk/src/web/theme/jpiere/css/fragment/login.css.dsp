@@ -10,22 +10,23 @@
 }
 
 .login-box-body {
-	width: 580px;
+	width: 660px;
     background: rgba(234,240,256,0.5);
 	border-radius: 20px;
 	font-weight: 100;
 	color: #222222;
 	z-index: 1;
-	padding: 40px 0px 60px 0px;
+	padding: 40px 0px 60px 0px;/*JPIERE*/
 	margin: 0;
 	text-align: center;
+	padding-bottom: 100px;
 }
 
 .login-box-header {
 	<%-- background-image: url(../images/login-box-header.png); --%>
 	background-color: transparent;
 	z-index: 2;
-	height: 72px;
+	height: 54px;
 	width: 660px;
 }
 
@@ -77,6 +78,10 @@
 	width: 55%;
 }
 
+.login-field input:not([type="checkbox"]) {
+	width: 220px !important;
+}
+
 .login-btn {
 	padding: 4px 20px !important;
 }
@@ -110,6 +115,16 @@
 	}
 	.login-box-header {
 		height: 0px;
+	}
+}
+@media screen and (max-device-width: 500px) {
+	.login-field input:not([type="checkbox"]) {
+		width: 100% !important;
+	}
+}
+@media screen and (max-device-width: 380px) {
+	.login-west-panel {
+		width: 350px;
 	}
 }
 @media screen and (max-width: 359px) {

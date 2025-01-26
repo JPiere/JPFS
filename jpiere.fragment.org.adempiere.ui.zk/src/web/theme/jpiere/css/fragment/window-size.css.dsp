@@ -1,5 +1,5 @@
 .about-window {
-	width: 600px; /*JPIERE*/
+	width: 800px;
 	height: 600px;
 }
 @media screen and (max-width: 375px) {

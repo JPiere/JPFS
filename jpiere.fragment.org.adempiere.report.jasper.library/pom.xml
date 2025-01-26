@@ -7,6 +7,6 @@
     <groupId>org.idempiere</groupId>
 	<artifactId>org.idempiere.parent</artifactId>
 	<version>${revision}</version>
-	<relativePath>../../../../../../../src/eclipse202312_JPiere11/org.idempiere.parent/pom.xml</relativePath>
+	<relativePath>../../../../../../../src/eclipse202412_JPiere12/org.idempiere.parent/pom.xml</relativePath>
   </parent>
 </project>

@@ -63,7 +63,7 @@ when detect side effect, fix to only apply for parameter window*/
     background-color: #E9F0FF;/*JPIERE*/
 }
 
-.message-paramenter{
+.message-parameter{
 	max-height: 300pt; 
 	overflow: auto; 
 	margin: 10px;

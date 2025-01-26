@@ -5,8 +5,8 @@ Copyright (C) 2009 Idalica Corporation
 -->
 <zk>
 
-<div style="margin: 5px;" align="center">
-	<hbox align="center">
+<div style="margin: 5px;"  class="loginImgCenter">
+	<hbox>
 		<a href="https://www.oss-erp.co.jp/" target="_blank"><image src="~./theme/jpiere/images/login-logo-oes.png"/></a>
 	</hbox>
 </div>

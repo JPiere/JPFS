@@ -6,7 +6,7 @@
 			<window use="org.adempiere.webui.window.LoginWindow" id="loginWindow"/>
 		</vbox>
 	</center>
-  <east sclass="login-east-panel">
+	<east sclass="login-east-panel">
        <!-- include src="~./theme/default/zul/login/login-right.zul"/-->
     </east>
     <west sclass="login-west-panel">

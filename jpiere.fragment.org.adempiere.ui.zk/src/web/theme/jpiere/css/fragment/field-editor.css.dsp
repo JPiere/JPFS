@@ -315,6 +315,13 @@ span.grid-combobox-editor {
     text-decoration: underline;
 }
 
+<%-- full size image hover --%>
+.fullsize-image {
+	padding: 5px;
+  	border: 1px solid #ccc;
+  	background: #e3f4f9;
+}
+
  .z-select{
 	height: 24px;
     border: 1px solid #0099ff;
