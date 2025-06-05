@@ -1,3 +1,4 @@
+<%@ taglib uri="http://www.idempiere.org/dsp/web/util" prefix="u" %>
 <%-- header --%>
 .desktop-header-left {
 	margin: 0;
@@ -23,9 +24,13 @@
 	border-bottom: 1px solid #91BEE6 !important;/*JPIERE*/
 	padding-left: 4px;
 }
+
 .desktop-header.mobile {
 	height: 36px;
 	padding: 4px 4px;
+}
+.desktop-header.mobile .systemStatus {
+	display:none;
 }
 
 .desktop-header-font {
