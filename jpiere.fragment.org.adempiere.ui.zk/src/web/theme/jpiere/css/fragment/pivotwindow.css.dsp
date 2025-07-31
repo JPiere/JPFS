@@ -104,4 +104,17 @@
     min-height: 250px;
 }
 
+.z-pivottable-vertical-scroll .z-pivottable-wrapper
+{
+    height: auto !important;
+}
 
+.z-pivottable-scroll-horizontal 
+{
+    position: static !important;
+}
+
+.z-pivottable .z-paging 
+{
+    padding: 2px;
+}
