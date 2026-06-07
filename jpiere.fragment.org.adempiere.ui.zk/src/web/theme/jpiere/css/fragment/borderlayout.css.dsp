@@ -6,6 +6,7 @@
 	border: none;
 }
 
+<%-- customization of border layout --%>
 .z-south-collapsed, .z-north-collapsed {
 	height: 24px;
 }

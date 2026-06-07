@@ -34,6 +34,8 @@
 	padding: 1px;
 	border: none;	
 }
+
+<%-- toolbar button in overflow popup --%>
 .toolbar-overflow-popup-vertical .toolbar-button, 
 .toolbar-overflow-popup-vertical .toolbar-button .z-toolbarbutton-content {
 	width: auto;

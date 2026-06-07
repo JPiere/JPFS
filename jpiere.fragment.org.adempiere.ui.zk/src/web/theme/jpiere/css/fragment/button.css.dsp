@@ -1,3 +1,4 @@
+<%-- customization of buttons --%>
 .z-button {
   display: inline-block;
   margin: 0px;

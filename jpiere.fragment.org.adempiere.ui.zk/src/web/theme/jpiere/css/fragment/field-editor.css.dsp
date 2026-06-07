@@ -55,6 +55,7 @@
 	position: relative;
 }
 
+<%-- input field --%>
 .editor-input {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Firefox */
@@ -74,7 +75,7 @@
 .editor-input-disd {
 	padding-right: 2px !important;/*JPIERE*/
 }
-	
+<%-- button for field --%>
 .editor-button {
 	padding: 0px;
 	margin: 0px;
@@ -121,6 +122,7 @@
 .number-box .grid-editor-input.z-decimalbox {
 }
 
+<%-- datetime box --%>
 .datetime-box {
 	white-space:nowrap;
 }
@@ -129,6 +131,7 @@
 .datetime-box .z-timebox {
 }
 
+<%-- combobox editor in grid view --%>
 span.grid-combobox-editor {
 	width: 100% !important;
 	position: relative;
@@ -286,6 +289,7 @@ span.grid-combobox-editor {
 	z-index: 1;
 }
 
+<%-- html field --%>
 .html-field {
 	cursor: pointer;
 	border: 1px solid #C5C5C5;

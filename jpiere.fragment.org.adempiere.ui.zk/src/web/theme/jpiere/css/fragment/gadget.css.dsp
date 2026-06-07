@@ -83,6 +83,7 @@
 	cursor: move;
 }
 
+<%-- dashboard widget --%>
 .dashboard-layout {
 	width: 100%;
 	height: 100%;
@@ -113,7 +114,7 @@
 	margin:auto;
 	width: 99%;
 }
-
+<%-- favourites gadget --%>
 .favourites-box {
 	width: 100%;
 	margin: auto;
@@ -150,6 +151,7 @@
 	margin-bottom: 2px;
 }
 
+<%-- recent items gadget --%>
 .recentitems-box {
 	width: 100%;
 	margin: auto;
@@ -188,7 +190,8 @@
 	font-family: FontAwesome;
 	font-size: 20px;
 }
-	
+
+<%-- views gadget --%>	
 .views-box {
 	width: 100%;
 	margin: auto;
@@ -238,7 +241,7 @@
 .views-box .z-vbox-separator{
     height: 2px;
 }
-
+<%-- activities gadget --%>
 .activities-box {
 	width: 100%;
 	margin: auto;
@@ -328,10 +331,18 @@
 	}
 }
 
+<%-- chart gadget --%>
 .dashboard-widget.dashboard-widget-max .chart-gadget {
 	height: 100% !important; 
 }
+.chart-gadget {
+	text-align: center !important;
+}
 
+<%-- status line gadget --%>
+.statusline-wrapper {
+	height: 100%;
+}
 .statusline-gadget {
 	display: flex;
 	flex-direction: column;
@@ -341,6 +352,7 @@
 	padding: 10px 0px;
 }
 
+<%-- help gadget --%>
 .help-content
 {
 	padding: 2px;

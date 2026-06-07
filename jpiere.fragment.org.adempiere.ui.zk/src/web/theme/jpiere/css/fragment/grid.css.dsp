@@ -93,7 +93,7 @@ div.z-column-cnt, div.z-grid-header div.z-auxheader-cnt {
 	background-color: #FFF;
 }
 
-<%-- grid layout --%>
+<%-- grid layout for form --%>
 .grid-layout {
 	border: none !important; 
 	margin: 0 !important; 
@@ -127,6 +127,7 @@ div.z-listbox-body .z-listcell {
 	height: 20px;
 }
 
+<%-- color editor --%>
 div.grid-view-color-fieldtype-display {
 	height: 20px;
 	display: flex;

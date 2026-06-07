@@ -23,6 +23,7 @@
 	overflow: visible !important;
 }
 
+<%-- main vlayout of AD window --%>
 .adwindow-layout {
 	position:absolute; 
 	border: none;
@@ -35,6 +36,7 @@
 	border: none;
 }
 
+<%-- toolbar, breadcrumb and status bar --%>
 .adwindow-north {
 	min-height: 56px;
 	width: 100%;
@@ -51,11 +53,13 @@
 	border-top: 1px solid #C5C5C5 !important;
 }
 
+<%-- north status bar --%>
 .adwindow-status {
 	min-height: 22px;
 	background-color:#E9F0FF; /*JPIERE*/
 }
 
+<%-- record info text, east of status bar --%>
 .adwindow-status-docinfo {
 	display: inline-block;
 	position: absolute;
@@ -71,6 +75,7 @@
 	color: red;
 }
 
+<%-- status text, west of status bar --%>
 .adwindow-status-docstatus {
 	display: inline-block;
 	float: left;
@@ -120,6 +125,8 @@
 .adwindow-breadcrumb .z-toolbarbutton-content {
 	line-height: inherit;
 }
+
+<%-- dropdown menu icon --%>
 .adwindow-breadcrumb-menu::after {
 	font-family: FontAwesome;
 	font-weight: normal;
@@ -129,6 +136,7 @@
     margin-left: 3px;
 }
 
+<%-- div container of detail tabbox --%>
 .adwindow-detailpane {
 	width: 100%; 
 	overflow-y: visible;
@@ -146,6 +154,7 @@
 	background-color: #fff
 }
 
+<%-- toolbar of detail panel --%>
 .adwindow-detailpane-toolbar {
 	border-bottom-width: 1px !important;/*JPIERE*/
 	height: 2em;
@@ -190,6 +199,7 @@
 	background-color: #D3D3D3;
 }
 
+<%-- south of grid view for record and paging navigation --%>
 .adwindow-detailpane-adtab-grid-south {
 	background-color: transparent; 
 	position: absolute; 
@@ -209,6 +219,7 @@
 	line-height: 16px;
 }
 
+<%-- south region of AD tab for detail panel --%>
 .adwindow-gridview-detail {
 	min-height: 200px;
 	height: 35%;
@@ -228,6 +239,7 @@
 	position: absolute; height: 100%; width: 100%;
 }
 
+<%-- AD tab in detail panel with tab level greater than 0 --%>
 .adwindow-detailpane-sub-tab::before {
 	content: '';
 	position: absolute;
@@ -281,6 +293,7 @@
 	background-color: #E9F0FF;/*JPIERE*/
 }
 
+<%-- title text for collapsed detail panel --%>
 .adtab-form-borderlayout .z-south-collapsed:before { 
 	content: '${u:cleanAmp(u:getMsg(u:getCtx(), "Detail"))}';
 	position: absolute; 

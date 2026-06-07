@@ -8,6 +8,7 @@ when detect side effect, fix to only apply for parameter window*/
 .main-parameter-layout {
 	height: 100%;
 }
+<%-- process modal dialog --%>
 .process-modal-dialog {
 	width: 720px; /*JPIERE*/
 }
@@ -48,12 +49,14 @@ when detect side effect, fix to only apply for parameter window*/
 	}
 }
 
+<%-- process/report parameters --%>
 .top-parameter-layout{
 	overflow: auto;
 	padding-bottom: 2vh;
 	flex-basis: auto;
 }
 
+<%-- run history and action buttons --%>
 .bottom-parameter-layout{
 	padding: 4px 4px 0px 4px;
 	/*border-top: 1px solid rgba(0, 0, 0, 0.2); JPIERE - Comment Out */
@@ -89,6 +92,7 @@ when detect side effect, fix to only apply for parameter window*/
 	overflow-y: hidden;
 }
 
+<%-- execution result panel --%>
 .result-parameter-layout {
 	overflow: auto;
 }

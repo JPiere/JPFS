@@ -1,4 +1,5 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
+<%-- z-tree customization --%>
 .z-treecell-content {
 	${fontFamilyC};
 	${fontSizeM};

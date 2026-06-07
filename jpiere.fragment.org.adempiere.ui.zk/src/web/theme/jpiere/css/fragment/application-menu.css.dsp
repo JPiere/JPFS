@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" %>
 
+<%-- menu item link --%>
 .menu-href {
 	font-size: 11px;
 	font-weight: normal;
@@ -41,11 +42,13 @@
 	line-height: 10px;
 }
 
+<%-- combo search box for tree --%>
 .tree-search-combo .z-comboitem-img img {
 	width: 16px;
 	height: 16px;
 }
 
+<%-- search panel for menu tree (deprecated) --%>
 .menu-search-panel .z-comboitem-image { 
 	padding-bottom:4px; 
 }
@@ -103,6 +106,8 @@
 	width: 16px;
 } 
 
+<%-- global search (document and application menu) --%>
+<%-- current selected document link --%>
 .document-search-current-link {
 	background-image:url(${c:encodeThemeURL('~./zul/img/tree/item-sel.gif')});
 }
@@ -184,7 +189,7 @@
 	align-items: center;
 	display: inline-flex;
 }
-
+<%-- application menu search result list item --%>
 .menu-search-list-toolbar-cell.z-listcell > div.z-listcell-content {
 	display: inline-flex; 
 	align-items: center;
@@ -194,6 +199,7 @@
 	font-size: larger;
 }
 
+<%-- dropdown menu item --%>
 .z-menu-noimage.z-menupopup .z-menu-content > img.z-menu-image {
 	display: none;
 }

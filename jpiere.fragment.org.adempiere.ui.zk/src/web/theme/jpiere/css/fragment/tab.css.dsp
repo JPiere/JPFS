@@ -1,3 +1,4 @@
+<%-- z-tab customization --%>
 .z-tab-close {
 	top:4px; 
 	margin-right:2px;

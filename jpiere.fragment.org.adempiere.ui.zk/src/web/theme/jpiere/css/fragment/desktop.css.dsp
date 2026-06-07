@@ -1,5 +1,6 @@
 <%@ taglib uri="http://www.idempiere.org/dsp/web/util" prefix="u" %>
 <%-- header --%>
+<%-- left panel for logo and global search --%>
 .desktop-header-left {
 	margin: 0;
 	margin-left: 1px;
@@ -7,7 +8,6 @@
 	background-color: transparent !important; 
 	border: none !important;
 }
-
 .desktop-header-right {
 	margin: 0;
 	margin-top: 1px;
@@ -33,10 +33,12 @@
 	display:none;
 }
 
+<%-- user name and links --%>
 .desktop-header-font {
 	font-size: 10px;
 }
 
+<%-- popup container for collapsed desktop header --%>
 .desktop-header-popup {
 	width: 800px;
 	border-radius: 2px;
@@ -71,12 +73,14 @@
 	white-space: nowrap;
 }
 
+<%-- main desktop layout (border layout) --%>
 .desktop-layout {
 	position: absolute; 
 	border: none;
 	background-color: #E4E4E4;
 }
 
+<%-- tabbox for application windows --%>
 .desktop-tabbox {
 	padding-top: 0px; 
 	background-color: #E4E4E4;
@@ -127,6 +131,7 @@
 	background-color: #FFFFFF
 }
 
+<%-- left panel for side gadgets --%>
 .desktop-left-column {
 	width: 200px;
 	border: none;
@@ -135,6 +140,7 @@
 	padding-top: 4px; /*JPIERE*/
 }
 
+<%-- right panel for side gadgets --%>
 .desktop-right-column {
 	width: 200px;
 	border: none;
@@ -169,6 +175,7 @@
 	overflow-x: hidden;
 }
 
+<%-- dashboard layout --%>
 .z-anchorlayout { overflow:auto }
  
 .z-anchorchildren { overflow:visible }
@@ -210,7 +217,7 @@
 	z-index: 9999;
 	background-color: #fff;
 }
-
+<%-- bottom toolbar of application menu tree popup --%>
 .desktop-menu-toolbar {
 	background-color: #ffffff; 
 	verticle-align: middle; 
